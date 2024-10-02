@@ -1,10 +1,7 @@
 .pricingCalculator {
-  max-width: 1200px;
+  max-width: 90%;
   margin: 0 auto;
   padding: 2rem;
-  background-color: #1a1a1a;
-  color: #ffffff;
-  font-family: Arial, sans-serif;
 }
 
 .title {
@@ -35,6 +32,7 @@
 .planCard.selected {
   background-color: #2d3748;
   box-shadow: 0 0 0 2px #4299e1;
+  color: #ffffff;
 }
 
 .planName {
