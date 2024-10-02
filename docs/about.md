@@ -1,6 +1,16 @@
-# Polyglot Observability
-
 ---
+title: Gigapipe: Polyglot Observability
+shortTitle: Polyglot Observability
+description: All-in-One Polyglot Observability
+---
+
+## Polyglot Observability
+
+> Unify logs, metrics, traces & eBPF in a single data layer.
+
+Gigapipe provides a range of integrated observability applications immediately compatible with many market standard formats, allowing clients to plug in and integrate with their stack without having to change a single line of code. 
+
+<!--
 pageType: doc
 
 features:
@@ -23,4 +33,4 @@ features:
     details: You can import all of your existing Dashboards and Datasources. _Plug your data and continue where you left off._
     icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/cog.png"/>
     span: 3
----
+-->
