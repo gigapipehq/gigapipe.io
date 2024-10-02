@@ -20,21 +20,21 @@ hero:
 features:
   - title: Speed
     details: Monitor your applications and Infrastructure immediately with qryn Cloud
-    icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/clock.png" style="margin-bottom: 15px;"/>
+    icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/clock.png" />
     span: 3
 
   - title: Value
     details: Metered usage, only pay for what you monitor!.
-    icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/wallet.png" style="margin-bottom: 15px;"/>
+    icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/wallet.png" />
     span: 3
 
   - title: Flexibility
     details: Drop Gigapipe directly into your infrastructure, or lift it right out. Just change the host!
-    icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/resize.png" style="margin-bottom: 15px;"/>
+    icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/resize.png" />
     span: 3
 
   - title: Compatibility
     details: Compatible with all market standard formats and query languages
-    icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/cog.png" style="margin-bottom: 15px;"/>
+    icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/cog.png" />
     span: 3
 ---
