@@ -1,0 +1,160 @@
+.pricingCalculator {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  color: #a0aec0;
+  margin-bottom: 1.5rem;
+}
+
+.planGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.planCard {
+  border: 1px solid #2d3748;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.planCard.selected {
+  background-color: #2d3748;
+  box-shadow: 0 0 0 2px #4299e1;
+}
+
+.planName {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.specsList {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.specItem {
+  font-size: 0.875rem;
+  color: #a0aec0;
+  margin-bottom: 0.25rem;
+}
+
+.planPrice {
+  font-weight: bold;
+  color: #4299e1;
+}
+
+.optionsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.switchContainer {
+  display: flex;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-right: 0.75rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2d3748;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.storageContainer input {
+  width: 80px;
+  padding: 0.25rem 0.5rem;
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+  border-radius: 0.25rem;
+  color: #ffffff;
+  margin-left: 0.75rem;
+}
+
+.pricingSummary {
+  border-top: 1px solid #2d3748;
+  padding-top: 1.5rem;
+}
+
+.totalPrice {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4299e1;
+  margin-bottom: 0.5rem;
+}
+
+.priceBreakdown {
+  font-size: 0.875rem;
+  color: #a0aec0;
+  margin-bottom: 0.5rem;
+}
+
+.savings {
+  font-size: 0.875rem;
+  color: #48bb78;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
