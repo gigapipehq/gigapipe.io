@@ -7,8 +7,8 @@ hero:
   tagline: <p style="line-height:1.5em;font-size:1.25em">All-in-One Solution for your Logs, Metrics, Traces and Profiles</p>
   actions:
     - theme: brand
-      text: Introduction
-      link: /en/guide/introduction
+      text: About Us
+      link: about.md
     - theme: alt
       text: Signup
       link: https://docs.google.com/forms/d/e/1FAIpQLSeb_eMwgtpbOk0ejAVW7ihKAzkt0WKnLwCQFyHkIzl5DAU2ig/viewform
