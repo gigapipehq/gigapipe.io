@@ -21,22 +21,23 @@ hero:
 
 
 features:
-  - title: <p style="margin-top:10px;">Fast</p>
+
+  - title: Fast
     details: ClickHouse + DuckDB OLAP
     icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/clock.png" />
     span: 3
+    
+  - title: Polyglot
+    details: Loki, Prometheus, Tempo, Pyroscope
+    icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/resize.png" />
+    span: 3
 
-  - title: <p style="margin-top:10px;">Unmetered</p>
+  - title: Unmetered
     details: Flat Pricing, All-You-Can-Eat
     icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/wallet.png" />
     span: 3
 
-  - title: <p style="margin-top:10px;">Polyglot</p>
-    details: Compatible Loki, Prometheus, Tempo, Pyroscope
-    icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/resize.png" />
-    span: 3
-
-  - title: <p style="margin-top:10px;">Standard</p>
+  - title: Instant
     details: Opentelemetry Compatible
     icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/cog.png" />
     span: 3
