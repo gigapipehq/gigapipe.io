@@ -9,6 +9,9 @@ hero:
     - theme: brand
       text: About
       link: about
+    - theme: brand
+      text: Pricing
+      link: pricing
     - theme: alt
       text: Signup
       link: https://docs.google.com/forms/d/e/1FAIpQLSeb_eMwgtpbOk0ejAVW7ihKAzkt0WKnLwCQFyHkIzl5DAU2ig/viewform
