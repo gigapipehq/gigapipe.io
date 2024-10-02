@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import styles from './PricingCalculator.module.css'
 
+export const frontmatter = {
+  sidebar: false,
+};
+
 const plans = [
   {
     name: 'Basic',
@@ -43,7 +47,7 @@ const plans = [
   }
 ]
 
-const extraStoragePrice = 49 // per TB per month
+const extraStoragePrice = 50 // per TB per month
 
 const PricingCalculator: React.FC = () => {
   const [selectedPlan, setSelectedPlan] = useState(plans[0])
