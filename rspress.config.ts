@@ -12,6 +12,7 @@ export default defineConfig({
   description: 'Gigapipe: Polyglot Observability',
   themeConfig: {
     darkMode: true,
+    sidebar: false, 
     socialLinks: [
       {
         icon: 'github',
