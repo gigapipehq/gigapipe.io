@@ -21,23 +21,23 @@ hero:
 
 
 features:
-  - title: Fast
-    details: Powered by the qryn polyglot stack with ClickHouse + DuckDB OLAP
+  - title: <p style="margin-top:10px;">Fast</p>
+    details: ClickHouse + DuckDB OLAP
     icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/clock.png" />
     span: 3
 
-  - title: Unmetered
-    details: Unmetered usage, Flat pricing and Zero monthly surprises
+  - title: <p style="margin-top:10px;">Unmetered</p>
+    details: Flat Pricing, All-You-Can-Eat
     icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/wallet.png" />
     span: 3
 
-  - title: Flexible
-    details: All-in-one, Drop-in compatible with Loki, Prometheus, Tempo, Pyroscope
+  - title: <p style="margin-top:10px;">Polyglot</p>
+    details: Compatible Loki, Prometheus, Tempo, Pyroscope
     icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/resize.png" />
     span: 3
 
-  - title: Voracious
-    details: Compatible with Opentelemetry and dozens of Agents and Vendor formats
+  - title: <p style="margin-top:10px;">Standard</p>
+    details: Opentelemetry Compatible
     icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/cog.png" />
     span: 3
 ---
