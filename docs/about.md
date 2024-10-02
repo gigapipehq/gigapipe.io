@@ -1,9 +1,3 @@
----
-title: Gigapipe: Polyglot Observability
-shortTitle: Polyglot Observability
-description: All-in-One Polyglot Observability
----
-
 ## Polyglot Observability
 
 > Unify logs, metrics, traces & eBPF in a single data layer.
