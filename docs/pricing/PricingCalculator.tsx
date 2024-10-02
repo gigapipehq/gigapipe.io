@@ -40,19 +40,6 @@ const plans = [
       monthly: 250,
       yearly: 2500
     }
-  },
-  {
-    name: 'Large-HA',
-    specs: {
-      ram: '128GB RAM',
-      storage: '1.2TB NVMe',
-      cpu: '24x Intel vCPU',
-      transfer: '64TB/Month Transfer'
-    },
-    price: {
-      monthly: 500,
-      yearly: 5000
-    }
   }
 ]
 
