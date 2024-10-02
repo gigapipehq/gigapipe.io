@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: About Us
-      link: about.md
+      link: about
     - theme: alt
       text: Signup
       link: https://docs.google.com/forms/d/e/1FAIpQLSeb_eMwgtpbOk0ejAVW7ihKAzkt0WKnLwCQFyHkIzl5DAU2ig/viewform
