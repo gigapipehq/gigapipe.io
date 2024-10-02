@@ -3,7 +3,7 @@ pageType: home
 
 hero:
   name: Gigapipe
-  text: <p style="font-size:2,3em">Polyglot Observability</p>
+  text: <p style="font-size:2em">Polyglot Observability</p>
   tagline: <p style="font-size:1em">Just Logs, Metrics, Traces & Profiles</p>
   actions:
     - theme: brand
