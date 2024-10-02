@@ -9,6 +9,7 @@ export default defineConfig({
     light: "/gigapipe-logo-color.svg",
     dark: "/Gigapipe-logo-outline@3x.svg",
   },
+  description: 'Gigapipe: Polyglot Observability',
   themeConfig: {
     darkMode: true,
     socialLinks: [
