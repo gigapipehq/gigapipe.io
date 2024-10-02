@@ -10,9 +10,9 @@ export default defineConfig({
     dark: "/Gigapipe-logo-outline@3x.svg",
   },
   description: 'Gigapipe: Polyglot Observability',
-  themeConfig: {
-    darkMode: true,
-    sidebar: false, 
+  darkMode: true,
+  sidebar: false, 
+  themeConfig: {  
     socialLinks: [
       {
         icon: 'github',
