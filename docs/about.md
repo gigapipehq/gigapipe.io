@@ -1,10 +1,7 @@
+# Polyglot Observability
+
 ---
 pageType: doc
-
-hero:
-  name: Gigapipe
-  text: A polyglot _drop-in_ replacement for **Grafana Cloud**
-  tagline: Polyglot Observability
 
 features:
   - title: Nothing to Install
