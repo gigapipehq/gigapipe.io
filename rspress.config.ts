@@ -1,6 +1,7 @@
 import { defineConfig } from 'rspress/config';
 
 export default defineConfig({
+  description: 'Gigapipe: Polyglot Observability',
   root: 'docs',
   base: '/homepage/',
     title: 'Gigapipe',
