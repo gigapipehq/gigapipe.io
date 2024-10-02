@@ -66,9 +66,7 @@ const PricingCalculator: React.FC = () => {
   const savings = selectedPlan.price.monthly * 12 - selectedPlan.price.yearly
 
   return (
-    <div className={styles.pricingCalculator}>
-      <p className={styles.description}>Choose your plan and options</p>
-      
+    <div className={styles.pricingCalculator}>      
       <div className={styles.planGrid}>
         {plans.map((plan) => (
           <div 
