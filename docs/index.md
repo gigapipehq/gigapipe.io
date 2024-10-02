@@ -4,7 +4,7 @@ pageType: home
 hero:
   name: Gigapipe
   text: Polyglot Observability
-  tagline: All-in-One Solution for your Logs, Metrics, Traces and Profiles
+  tagline: <p style="line-height:1.5em;font-size:1.25em">All-in-One Solution for your Logs, Metrics, Traces and Profiles</p>
   actions:
     - theme: brand
       text: Introduction
@@ -12,15 +12,29 @@ hero:
     - theme: alt
       text: Signup
       link: https://docs.google.com/forms/d/e/1FAIpQLSeb_eMwgtpbOk0ejAVW7ihKAzkt0WKnLwCQFyHkIzl5DAU2ig/viewform
+  image:
+    src: /logo.svg
+    alt: Gigapipe    
+
 
 features:
-  - title: 'Ready to Use'
-    details: Nothing new to learn. Get straight to work using the queries you love and Grafana.
-    icon: 📦
-  - title: 'Feature Rich'
-    details: Drop-in compatible with Opentelemetry, Loki, Prometheus, Tempo and Pyroscope and more.
-    icon: 🎨
-  - title: 'Predictable'
-    details: Unmetered model with flat pricing and zero surprises.
-    icon: 🚀
+  - title: Speed
+    details: Monitor your applications and Infrastructure immediately with qryn Cloud
+    icon: <img src="/clock.png"/>
+    span: 3
+
+  - title: Value
+    details: Metered usage, only pay for what you monitor!.
+    icon: <img src="/wallet.png"/>
+    span: 3
+
+  - title: Flexibility
+    details: Drop Gigapipe directly into your infrastructure, or lift it right out. Just change the host!
+    icon: <img src="/resize.png"/>
+    span: 3
+
+  - title: Compatibility
+    details: Compatible with all market standard formats and query languages
+    icon: <img src="/cog.png"/>
+    span: 3
 ---
