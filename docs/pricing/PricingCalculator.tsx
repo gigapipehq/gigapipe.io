@@ -7,8 +7,8 @@ const plans = [
     specs: {
       ram: '32GB RAM',
       storage: '640GB NVMe',
-      cpu: '8x Intel Silver vCPU',
-      transfer: '16TB/Month Outbound Transfer'
+      cpu: '8x Intel vCPU',
+      transfer: '16TB/Month Transfer'
     },
     price: {
       monthly: 99,
@@ -20,8 +20,8 @@ const plans = [
     specs: {
       ram: '48GB RAM',
       storage: '960GB NVMe',
-      cpu: '12x Intel Silver vCPU',
-      transfer: '24TB/Month Outbound Transfer'
+      cpu: '12x Intel vCPU',
+      transfer: '24TB/Month Transfer'
     },
     price: {
       monthly: 150,
@@ -33,8 +33,8 @@ const plans = [
     specs: {
       ram: '64GB RAM',
       storage: '1.2TB NVMe',
-      cpu: '12x Intel Silver vCPU',
-      transfer: '32TB/Month Outbound Transfer'
+      cpu: '12x Intel vCPU',
+      transfer: '32TB/Month Transfer'
     },
     price: {
       monthly: 250,
@@ -47,7 +47,7 @@ const plans = [
       ram: '128GB RAM',
       storage: '1.2TB NVMe',
       cpu: '24x Intel vCPU',
-      transfer: '64TB/Month Outbound Transfer'
+      transfer: '64TB/Month Transfer'
     },
     price: {
       monthly: 500,
@@ -80,7 +80,6 @@ const PricingCalculator: React.FC = () => {
 
   return (
     <div className={styles.pricingCalculator}>
-      <h2 className={styles.title}>Pricing Calculator</h2>
       <p className={styles.description}>Choose your plan and options</p>
       
       <div className={styles.planGrid}>
