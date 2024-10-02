@@ -42,3 +42,12 @@ features:
     icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/cog.png" />
     span: 3
 ---
+
+<style>
+  .flex-center {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+  }
+</style>
