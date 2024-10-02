@@ -1,5 +1,5 @@
 ---
-pageType: custom
+pageType: doc
 
 hero:
   name: Gigapipe
