@@ -3,6 +3,7 @@ import styles from './PricingCalculator.module.css'
 
 export const frontmatter = {
   sidebar: false,
+  pageType: 'custom'
 };
 
 const plans = [
