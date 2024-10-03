@@ -1,5 +1,7 @@
 import { PackageManagerTabs } from '@theme';
 import { Steps } from '@theme';
+import { Tab, Tabs } from 'rspress/theme';
+
 
 # Get Started
 
@@ -34,6 +36,23 @@ Gigapipe provides you with a managed Observability stack - _just bring your own 
 <br/>
 
 ### Supported Agents
+
+<Tabs>
+      <Tab label="Logs">
+      Grafana Alloy, Grafana Agent, Vector, Opentelemetry Collector, Logtail, Telegraf, Fluentd, Logstash or any Loki compatible client
+      </Tab>
+      <Tab label="Metrics">
+      Grafana Alloy, Vector, Telegraf, Opentelemetry Collector or any Prometheus compatible client
+      </Tab>
+      <Tab label="Traces">
+      Grafana Alloy, Vector, Opentelemetry Collector, eBPF Agent or any Tempo compatible client
+      </Tab>
+      <Tab label="Profiles">
+      Grafana Pyroscope or any pprof compatible client
+      </Tab>
+</Tabs>
+
+### Custom
 
 `@rspack/core` exports the [webpack-sources](https://github.com/webpack/webpack-sources) module through `sources`. It provides a set of classes for creating and manipulating source code fragments and source maps. When developing Rspack plugins, you can use these classes to handle and manipulate source code.
 
