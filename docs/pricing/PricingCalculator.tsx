@@ -53,15 +53,15 @@ const extraStoragePrice = 50 // per TB per month
 const serverLocations = [
   { city: 'Dallas', region: 'US Central', country: 'US', discount: false },
   { city: 'Atlanta', region: 'US East', country: 'US', discount: false },
-  { city: 'Los Angeles', region: 'US West', country: 'US', discount: true },
+  { city: 'Los Angeles', region: 'US West', country: 'US', discount: false },
   { city: 'Chicago', region: 'US Central', country: 'US', discount: false },
   { city: 'Seattle', region: 'US West', country: 'US', discount: false },
-  { city: 'New York', region: 'US East', country: 'US', discount: true },
+  { city: 'New York', region: 'US East', country: 'US', discount: false },
   { city: 'Frankfurt', region: 'Germany', country: 'DE', discount: false },
   { city: 'Amsterdam', region: 'Netherlands', country: 'NL', discount: false },
-  { city: 'London', region: 'England', country: 'GB', discount: true },
+  { city: 'London', region: 'England', country: 'GB', discount: false },
   { city: 'Mumbai', region: 'India', country: 'IN', discount: false },
-  { city: 'Tokyo', region: 'Japan', country: 'JP', discount: true },
+  { city: 'Tokyo', region: 'Japan', country: 'JP', discount: false },
   { city: 'Singapore', region: 'Singapore', country: 'SG', discount: false },
   { city: 'Sydney', region: 'Australia', country: 'AU', discount: false },
   { city: 'Toronto', region: 'Canada', country: 'CA', discount: false }
@@ -141,7 +141,7 @@ const PricingCalculator: React.FC = () => {
         
         <div className={styles.locationContainer}>
             <label htmlFor="server-location">
-              <b>Datacenter</b>: 
+              Datacenter: &nbsp; 
               <select
                 id="server-location"
                 value={selectedLocation.city}
