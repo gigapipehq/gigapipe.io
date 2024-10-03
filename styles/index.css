@@ -24,7 +24,7 @@ body {
     background-blend-mode: lighten;
 }
 
-.floating {  
+.rspress-home-hero-image {  
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -33,9 +33,9 @@ body {
     margin-top: 5px;
 }
 
-@keyframes floating {
+@keyframes rspress-home-hero-image {
     0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 15px); }
+    50%  { transform: translate(0, 10px); }
     100%   { transform: translate(0, -0px); }    
 }
 
