@@ -12,7 +12,7 @@ export default function EarlyAccessForm() {
     comments: ''
   })
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (e) => {
     const { name, value } = e.target
     setFormData(prevData => ({
       ...prevData,
@@ -24,7 +24,7 @@ export default function EarlyAccessForm() {
     return formData.name && formData.company && formData.email && formData.package
   }
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
     setIsSubmitting(true)
 
@@ -52,7 +52,7 @@ export default function EarlyAccessForm() {
 
   const formStyle = {
     display: 'flex',
-    flexDirection: 'column' as const,
+    flexDirection: 'column',
     gap: '1rem',
     maxWidth: '400px',
     alignItems: 'flex-start'
@@ -75,49 +75,74 @@ export default function EarlyAccessForm() {
   }
 
   if (isSubmitted) {
-    return (
-      <div style={{ marginTop: '2rem' }}>
-        <h2>Thank you for your request!</h2>
-        <p>We'll be in touch soon!</p>
-      </div>
+    return React.createElement('div', { style: { marginTop: '2rem' } },
+      React.createElement('h2', null, 'Thank you for your request!'),
+      React.createElement('p', null, "We'll be in touch soon!")
     )
   }
 
-  return (
-    <form onSubmit={handleSubmit} style={formStyle}>
-      <input
-        type="text"
-        name="name"
-        placeholder="Name *"
-        required
-        value={formData.name}
-        onChange={handleChange}
-        style={inputStyle}
-      />
-      <input
-        type="text"
-        name="company"
-        placeholder="Company *"
-        required
-        value={formData.company}
-        onChange={handleChange}
-        style={inputStyle}
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Business Email *"
-        required
-        value={formData.email}
-        onChange={handleChange}
-        style={inputStyle}
-      />
-      <input
-        type="tel"
-        name="phone"
-        placeholder="Phone Number (Optional)"
-        value={formData.phone}
-        onChange={handleChange}
-        style={inputStyle}
-      />
-      <select
+  return React.createElement('form', { onSubmit: handleSubmit, style: formStyle },
+    React.createElement('input', {
+      type: 'text',
+      name: 'name',
+      placeholder: 'Name *',
+      required: true,
+      value: formData.name,
+      onChange: handleChange,
+      style: inputStyle
+    }),
+    React.createElement('input', {
+      type: 'text',
+      name: 'company',
+      placeholder: 'Company *',
+      required: true,
+      value: formData.company,
+      onChange: handleChange,
+      style: inputStyle
+    }),
+    React.createElement('input', {
+      type: 'email',
+      name: 'email',
+      placeholder: 'Business Email *',
+      required: true,
+      value: formData.email,
+      onChange: handleChange,
+      style: inputStyle
+    }),
+    React.createElement('input', {
+      type: 'tel',
+      name: 'phone',
+      placeholder: 'Phone Number (Optional)',
+      value: formData.phone,
+      onChange: handleChange,
+      style: inputStyle
+    }),
+    React.createElement('select', {
+      name: 'package',
+      required: true,
+      value: formData.package,
+      onChange: handleChange,
+      style: inputStyle
+    },
+      React.createElement('option', { value: '' }, 'Select a package *'),
+      React.createElement('option', { value: 'basic' }, 'Basic'),
+      React.createElement('option', { value: 'medium' }, 'Medium'),
+      React.createElement('option', { value: 'large' }, 'Large')
+    ),
+    React.createElement('textarea', {
+      name: 'comments',
+      placeholder: 'Comments (Optional)',
+      value: formData.comments,
+      onChange: handleChange,
+      style: { ...inputStyle, minHeight: '100px' }
+    }),
+    React.createElement('button', {
+      type: 'submit',
+      disabled: isSubmitting || !isFormValid(),
+      style: {
+        ...buttonStyle,
+        opacity: isSubmitting || !isFormValid() ? 0.5 : 1
+      }
+    }, isSubmitting ? 'Submitting...' : 'Request Early Access')
+  )
+}
