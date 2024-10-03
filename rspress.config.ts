@@ -19,7 +19,7 @@ export default defineConfig({
       { text: "Home", 
         link: "/" 
       },
-      { text: "Sign Up", 
+      { text: "Access", 
         link: "signup" 
       },
        { text: "Docs", 
