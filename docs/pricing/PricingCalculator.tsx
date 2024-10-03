@@ -50,10 +50,28 @@ const plans = [
 
 const extraStoragePrice = 50 // per TB per month
 
+const serverLocations = [
+  { city: 'Dallas', region: 'US Central', country: 'US', discount: false },
+  { city: 'Atlanta', region: 'US East', country: 'US', discount: false },
+  { city: 'Los Angeles', region: 'US West', country: 'US', discount: true },
+  { city: 'Chicago', region: 'US Central', country: 'US', discount: false },
+  { city: 'Seattle', region: 'US West', country: 'US', discount: false },
+  { city: 'New York', region: 'US East', country: 'US', discount: true },
+  { city: 'Frankfurt', region: 'Germany', country: 'DE', discount: false },
+  { city: 'Amsterdam', region: 'Netherlands', country: 'NL', discount: false },
+  { city: 'London', region: 'England', country: 'GB', discount: true },
+  { city: 'Mumbai', region: 'India', country: 'IN', discount: false },
+  { city: 'Tokyo', region: 'Japan', country: 'JP', discount: true },
+  { city: 'Singapore', region: 'Singapore', country: 'SG', discount: false },
+  { city: 'Sydney', region: 'Australia', country: 'AU', discount: false },
+  { city: 'Toronto', region: 'Canada', country: 'CA', discount: false }
+]
+
 const PricingCalculator: React.FC = () => {
   const [selectedPlan, setSelectedPlan] = useState(plans[0])
   const [isYearly, setIsYearly] = useState(true)
   const [extraStorage, setExtraStorage] = useState(0)
+  const [selectedLocation, setSelectedLocation] = useState(serverLocations[0])
 
   const handlePlanChange = (planName: string) => {
     const plan = plans.find(p => p.name === planName)
@@ -63,6 +81,11 @@ const PricingCalculator: React.FC = () => {
   const handleExtraStorageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseInt(e.target.value)
     setExtraStorage(isNaN(value) ? 0 : value)
+  }
+
+  const handleLocationChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const location = serverLocations.find(l => l.city === e.target.value)
+    if (location) setSelectedLocation(location)
   }
 
   const basePlanPrice = isYearly ? selectedPlan.price.yearly : selectedPlan.price.monthly
@@ -127,6 +150,24 @@ const PricingCalculator: React.FC = () => {
               className={styles.storageInput}
             />
           </label>
+        </div>
+        <div className={styles.locationContainer}>
+            <label htmlFor="server-location">
+              Server Location
+              <select
+                id="server-location"
+                value={selectedLocation.city}
+                onChange={handleLocationChange}
+                className={styles.locationSelect}
+              >
+                {serverLocations.map((location) => (
+                  <option key={location.city} value={location.city}>
+                    {location.city} ({location.region})
+                    {location.discount ? ' - 10% Off' : ''}
+                  </option>
+                ))}
+              </select>
+            </label>
         </div>
       </div>
 
