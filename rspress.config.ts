@@ -16,9 +16,6 @@ export default defineConfig({
   sidebar: false, 
   themeConfig: {  
     nav: [
-      { text: "Home", 
-        link: "/" 
-      },
       { text: "Access", 
         link: "signup" 
       },
@@ -31,7 +28,10 @@ export default defineConfig({
       { text: "Legal", 
         link: "legal" 
       },
-       { text: "Contact", 
+      { text: "Blog", 
+        link: "https://blog.qryn.dev" 
+      },
+      { text: "Contact", 
         link: "mailto://info@gigapipe.com" 
       }
     ],
