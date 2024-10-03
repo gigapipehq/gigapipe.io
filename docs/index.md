@@ -24,23 +24,19 @@ features:
 
   - title: Fast
     details: ClickHouse + DuckDB OLAP
-    icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/clock.png" />
-    span: 3
+    icon: 🟣
     
   - title: Polyglot
-    details: Loki, Prometheus, Tempo, Pyroscope
-    icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/resize.png" />
-    span: 3
+    details: Logs, Metrics, Traces
+    icon: 💜
 
   - title: Unmetered
-    details: Flat Pricing, All-You-Can-Eat
-    icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/wallet.png" />
-    span: 3
+    details: Flat Price, All-You-Can-Eat
+    icon: ☂️
 
   - title: Instant
     details: Opentelemetry Compatible
-    icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/cog.png" />
-    span: 3
+    icon: 🍇
 ---
 
 <style>
