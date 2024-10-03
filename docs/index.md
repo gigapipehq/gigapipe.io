@@ -29,16 +29,16 @@ features:
     
   - title: Polyglot
     details: <p className="text-center">Drop-in Loki, Prometheus, Tempo, Pyroscope compatible</p>
-    icon: 💬
+    icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/qryn.png" width=24 />
     span: 3
 
   - title: Unmetered
-    details: <p className="text-center">Flat pricing options with Zero monthly suprises</p>
+    details: <p className="text-center">Flat cost Observability<br>Zero monthly suprises</p>
     icon: 💸
     span: 3
 
   - title: Open
-    details: <p className="text-center">Open-Source engine, Opentelemetry Native</p>
+    details: <p className="text-center">Transparent, Open-Source,<br>Opentelemetry Native</p>
     icon: ⚗️
     span: 3
 ---
