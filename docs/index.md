@@ -28,17 +28,17 @@ features:
     span: 3
     
   - title: Polyglot
-    details: <p className="text-center">Drop-in compatible with Loki, Prometheus, Tempo and Pyroscope</p>
+    details: <p className="text-center">Drop-in Loki, Prometheus, Tempo, Pyroscope compatible</p>
     icon: 💬
     span: 3
 
   - title: Unmetered
-    details: <p className="text-center">Flat pricing options with unlimited usage and zero monthly suprises</p>
+    details: <p className="text-center">Flat pricing options with Zero monthly suprises</p>
     icon: 💸
     span: 3
 
   - title: Open
-    details: <p className="text-center">Open Source Core with native OpenTelemetry support</p>
+    details: <p className="text-center">Open-Source engine, Opentelemetry Native</p>
     icon: ⚗️
     span: 3
 ---
