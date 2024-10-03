@@ -22,23 +22,23 @@ hero:
 
 features:
 
-  - title: Faster
-    details: ClickHouse DB + DuckDB OLAP
+  - title: Fast
+    details: <p className="text-center">ClickHouse DB + DuckDB OLAP<br>NVMe lightspeed storage</p>
     icon: ⚡
     span: 3
     
   - title: Polyglot
-    details: Logs, Metrics, Traces, Profiles
+    details: <p className="text-center">Logs, Metrics, Traces, Profiles</p>
     icon: 💬
     span: 3
 
   - title: Unmetered
-    details: Flat Pricing with Zero Surprises
+    details: <p className="text-center">Flat Pricing with Fixed Cost and Zero Surprises</p>
     icon: 💸
     span: 3
 
-  - title: Standard
-    details: Native Opentelemetry Support
+  - title: Open
+    details: <p className="text-center">Native Opentelemetry Support, Opensource Core</p>
     icon: ⚗️
     span: 3
 ---
