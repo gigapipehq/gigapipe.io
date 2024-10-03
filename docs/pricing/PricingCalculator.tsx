@@ -138,22 +138,10 @@ const PricingCalculator: React.FC = () => {
           </label>
           <span>{isYearly ? 'Yearly Billing' : 'Monthly Billing'}</span>
         </div>
-        <div className={styles.storageContainer}>
-          <label htmlFor="extra-storage">
-            Extra S3 Storage (TB)
-            <input
-              type="number"
-              id="extra-storage"
-              min="0"
-              value={extraStorage}
-              onChange={handleExtraStorageChange}
-              className={styles.storageInput}
-            />
-          </label>
-        </div>
+        
         <div className={styles.locationContainer}>
             <label htmlFor="server-location">
-              Server Location
+              Datacenter
               <select
                 id="server-location"
                 value={selectedLocation.city}
@@ -169,6 +157,21 @@ const PricingCalculator: React.FC = () => {
               </select>
             </label>
         </div>
+
+        <div className={styles.storageContainer}>
+          <label htmlFor="extra-storage">
+            Extra S3 Storage (TB)
+            <input
+              type="number"
+              id="extra-storage"
+              min="0"
+              value={extraStorage}
+              onChange={handleExtraStorageChange}
+              className={styles.storageInput}
+            />
+          </label>
+        </div>
+        
       </div>
 
       <div className={styles.pricingSummary}>
