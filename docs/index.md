@@ -6,13 +6,13 @@ hero:
   text: <p style="font-size:0.6em">Polyglot Observability</p>
   tagline: <p style="font-size:1em">Just Logs, Metrics, Traces & Profiles</p>
   actions:
-    - theme: brand
+    - theme: alt
       text: About
       link: about
-    - theme: brand
+    - theme: alt
       text: Pricing
       link: pricing
-    - theme: alt
+    - theme: brand
       text: Signup
       link: https://docs.google.com/forms/d/e/1FAIpQLSeb_eMwgtpbOk0ejAVW7ihKAzkt0WKnLwCQFyHkIzl5DAU2ig/viewform
   image:
