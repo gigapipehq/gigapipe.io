@@ -23,7 +23,7 @@ hero:
 features:
 
   - title: Faster
-    details: ClickHouse + DuckDB OLAP
+    details: ClickHouse DB + DuckDB OLAP
     icon: ⚡
     span: 3
     
@@ -33,12 +33,12 @@ features:
     span: 3
 
   - title: Unmetered
-    details: Flat Pricing, Zero Surprises
+    details: Flat Pricing with Zero Surprises
     icon: 💸
     span: 3
 
   - title: Standard
-    details: Native Opentelemetry
+    details: Native Opentelemetry Support
     icon: ⚗️
     span: 3
 ---
