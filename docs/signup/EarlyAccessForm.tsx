@@ -24,12 +24,16 @@ export default function EarlyAccessForm() {
     return formData.name && formData.company && formData.email && formData.package
   }
 
+
+  const FORM_URL = "https://script.google.com/macros/s/AKfycbxFlsiZsy6SeadtT-1VQQ1z3qDIw_bHWuC6Sd691bIce4IO_seRHR9KHF9z5FF5WXX8Hw/exec"
+  // const FORM_URL = "https://public.herotofu.com/v1/469dc240-819c-11ef-9cd5-83be6ab60c60"
+  
   const handleSubmit = async (event) => {
     event.preventDefault()
     setIsSubmitting(true)
 
     try {
-      const response = await fetch('https://public.herotofu.com/v1/469dc240-819c-11ef-9cd5-83be6ab60c60', {
+      const response = await fetch(FORM_URL, {
         method: 'POST',
         body: JSON.stringify(formData),
         headers: {
