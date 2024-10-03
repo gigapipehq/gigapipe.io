@@ -26,7 +26,7 @@ features:
     icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/qryn.png" />
     span: 3
 
-  - title: Fast
+  - title: Performant
     details: <p className="text-center">ClickHouse + DuckDB OLAP<br>w/ NVMe lightspeed storage</p>
     icon: ⚡
     span: 3
@@ -36,7 +36,7 @@ features:
     icon: 💸
     span: 3
 
-  - title: Open
+  - title: Opensource
     details: <p className="text-center">Transparent, Open-Source,<br>Opentelemetry Native</p>
     icon: ⚗️
     span: 3
