@@ -16,10 +16,13 @@ export default defineConfig({
   sidebar: false, 
   themeConfig: {  
     nav: [
-       { text: "Access", 
+      { text: "Home", 
+        link: "/" 
+      },
+      { text: "Sign Up", 
         link: "signup" 
       },
-       { text: "Documentation", 
+       { text: "Docs", 
         link: "docs" 
       },
       { text: "Pricing", 
@@ -27,6 +30,9 @@ export default defineConfig({
       },
       { text: "Legal", 
         link: "legal" 
+      },
+       { text: "Contact", 
+        link: "mailto://info@gigapipe.com" 
       }
     ],
     socialLinks: [
