@@ -20,8 +20,9 @@
 }
 
 body {
-    background-image: url("https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/header-bg-optimised-scaled.jpg");
+    background-image: url("https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/header-bg-optimised-scaled-4.jpg");
     background-blend-mode: lighten;
+    background-size: cover;
 }
 
 img[alt*="Gigapipe"] {
