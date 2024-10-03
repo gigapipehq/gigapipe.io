@@ -14,7 +14,7 @@ hero:
       link: pricing
     - theme: brand
       text: Signup
-      link: https://docs.google.com/forms/d/e/1FAIpQLSeb_eMwgtpbOk0ejAVW7ihKAzkt0WKnLwCQFyHkIzl5DAU2ig/viewform
+      link: signup
   image:
     src: /logo.svg
     alt: Gigapipe    
