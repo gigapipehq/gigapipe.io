@@ -27,7 +27,7 @@ features:
     span: 3
 
   - title: Fast
-    details: <p className="text-center">ClickHouse DB + DuckDB OLAP<br>w/ NVMe lightspeed storage</p>
+    details: <p className="text-center">ClickHouse + DuckDB OLAP<br>w/ NVMe lightspeed storage</p>
     icon: ⚡
     span: 3
     
