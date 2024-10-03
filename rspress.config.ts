@@ -28,7 +28,7 @@ export default defineConfig({
       { text: "Docs", 
         link: "docs" 
       },
-      { text: "Legal", 
+      { text: "Terms", 
         link: "legal" 
       },
       { text: "Blog", 
