@@ -22,21 +22,25 @@ hero:
 
 features:
 
-  - title: Fast
+  - title: Powerful
     details: ClickHouse + DuckDB OLAP
-    icon: 🟣
+    icon: ⚡
+    span: 3
     
   - title: Polyglot
     details: Logs, Metrics, Traces
-    icon: 💜
+    icon: 💬
+    span: 3
 
   - title: Unmetered
-    details: Flat Price, All-You-Can-Eat
-    icon: ☂️
+    details: Flat Pricing, No Surprises
+    icon: 💸
+    span: 3
 
-  - title: Instant
+  - title: Standard
     details: Opentelemetry Compatible
-    icon: 🍇
+    icon: ⚗️
+    span: 3
 ---
 
 <style>
