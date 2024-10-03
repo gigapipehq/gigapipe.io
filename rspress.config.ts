@@ -16,10 +16,16 @@ export default defineConfig({
   sidebar: false, 
   themeConfig: {  
     nav: [
+       { text: "Access", 
+        link: "signup" 
+      },
+       { text: "Documentation", 
+        link: "docs" 
+      },
       { text: "Pricing", 
         link: "pricing" 
       },
-      { text: "Service Terms", 
+      { text: "Legal", 
         link: "legal" 
       }
     ],
