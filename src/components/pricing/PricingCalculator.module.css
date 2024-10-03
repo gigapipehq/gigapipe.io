@@ -1,6 +1,8 @@
 .pricingCalculator {
   margin: 0 auto;
   padding: 2rem;
+  background-color: #080808bf;
+  border-radius: 15px;
 }
 
 .title {
