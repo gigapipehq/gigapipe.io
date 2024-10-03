@@ -55,13 +55,14 @@ export default function EarlyAccessForm() {
     flexDirection: 'column' as const,
     gap: '1rem',
     maxWidth: '400px',
-    margin: '0 auto'
+    alignItems: 'flex-start'
   }
 
   const inputStyle = {
     padding: '0.5rem',
     borderRadius: '4px',
-    border: '1px solid #ccc'
+    border: '1px solid #ccc',
+    width: '100%'
   }
 
   const buttonStyle = {
@@ -75,7 +76,7 @@ export default function EarlyAccessForm() {
 
   if (isSubmitted) {
     return (
-      <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+      <div style={{ marginTop: '2rem' }}>
         <h2>Thank you for your request!</h2>
         <p>We'll be in touch soon!</p>
       </div>
@@ -120,34 +121,3 @@ export default function EarlyAccessForm() {
         style={inputStyle}
       />
       <select
-        name="package"
-        required
-        value={formData.package}
-        onChange={handleChange}
-        style={inputStyle}
-      >
-        <option value="">Select a package *</option>
-        <option value="basic">Basic</option>
-        <option value="medium">Medium</option>
-        <option value="large">Large</option>
-      </select>
-      <textarea
-        name="comments"
-        placeholder="Comments (Optional)"
-        value={formData.comments}
-        onChange={handleChange}
-        style={{ ...inputStyle, minHeight: '100px' }}
-      ></textarea>
-      <button
-        type="submit"
-        disabled={isSubmitting || !isFormValid()}
-        style={{
-          ...buttonStyle,
-          opacity: isSubmitting || !isFormValid() ? 0.5 : 1
-        }}
-      >
-        {isSubmitting ? 'Submitting...' : 'Request Early Access'}
-      </button>
-    </form>
-  )
-}
