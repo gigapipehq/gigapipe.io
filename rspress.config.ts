@@ -1,5 +1,6 @@
 import { defineConfig } from 'rspress/config';
 
+
 export default defineConfig({
   root: 'docs',
   base: '/homepage/',
@@ -21,6 +22,11 @@ export default defineConfig({
       },
       {
         icon: 'linkedin',
+        mode: 'link',
+        content: 'https://www.linkedin.com/company/gigapipe',
+      },
+      {
+        icon: { svg: `<image src="/qryn.png"/>`},
         mode: 'link',
         content: 'https://www.linkedin.com/company/gigapipe',
       },
