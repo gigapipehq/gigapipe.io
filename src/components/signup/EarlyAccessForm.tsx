@@ -12,7 +12,7 @@ export default function EarlyAccessForm() {
     comments: ''
   })
 
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     const { name, value } = e.target
     setFormData(prevData => ({
       ...prevData,
@@ -28,7 +28,7 @@ export default function EarlyAccessForm() {
   const FORM_URL = "https://script.google.com/macros/s/AKfycbypIQWKvFDiAVAQZZCWlFGdU61YdXr9WKLHrH7DJqnC7fURvKX4qBu0W4dzmaEu3Yx69g/exec"
   // const FORM_URL = "https://public.herotofu.com/v1/469dc240-819c-11ef-9cd5-83be6ab60c60"
   
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event:any) => {
     event.preventDefault()
     setIsSubmitting(true)
 
