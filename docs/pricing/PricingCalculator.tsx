@@ -141,7 +141,7 @@ const PricingCalculator: React.FC = () => {
         
         <div className={styles.locationContainer}>
             <label htmlFor="server-location">
-              Datacenter
+              <b>Datacenter</b>: 
               <select
                 id="server-location"
                 value={selectedLocation.city}
