@@ -1,5 +1,5 @@
 import { defineConfig } from 'rspress/config';
-
+import  path from 'path'
 
 export default defineConfig({
   root: 'docs',
@@ -12,6 +12,7 @@ export default defineConfig({
   },
   description: 'Gigapipe: Polyglot Observability',
   darkMode: true,
+  globalStyles: path.join(__dirname, 'styles/index.css'),
   sidebar: false, 
   themeConfig: {  
     socialLinks: [

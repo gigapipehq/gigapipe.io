@@ -1,0 +1,28 @@
+:root {
+    --rp-c-brand: #7d12ff;
+    --rp-c-brand-dark: #661fbc;
+    --rp-c-brand-light: #8839e9;
+    --main-light-color: #f4f4f4;
+    --secondary-light-color: #e3e3e3;
+    --main-dark-color: #1e13286f;
+    --rp-c-bg: light-dark(var(--main-light-color), var(--main-dark-color));
+    --rp-home-feature-bg: light-dark(
+        var(--secondary-light-color),
+        var(--main-dark-color)
+    );
+    --rp-home-hero-name-background: -webkit-linear-gradient(
+        120deg,
+        var(--rp-c-brand-light) 30%,
+        var(--rp-c-brand-dark),
+        var(--rp-c-brand)
+    );
+    color-scheme: dark light;
+}
+
+    body {
+        background-image: url("https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/header-bg-optimised-scaled.jpg");
+        background-blend-mode: lighten;
+    }
+
+
+
