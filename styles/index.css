@@ -10,6 +10,7 @@
         var(--secondary-light-color),
         var(--main-dark-color)
     );
+    --rp-home-hero-
     --rp-home-hero-name-background: -webkit-linear-gradient(
         120deg,
         var(--rp-c-brand-light) 30%,
@@ -24,7 +25,7 @@ body {
     background-blend-mode: lighten;
 }
 
-.rspress-home-hero-image {  
+.floating {  
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -33,7 +34,7 @@ body {
     margin-top: 5px;
 }
 
-@keyframes rspress-home-hero-image {
+@keyframes floating {
     0% { transform: translate(0,  0px); }
     50%  { transform: translate(0, 10px); }
     100%   { transform: translate(0, -0px); }    
