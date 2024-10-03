@@ -39,7 +39,7 @@ export default defineConfig({
       {
         icon: 'github',
         mode: 'link',
-        content: 'https://github.com/gigapipe',
+        content: 'https://github.com/gigapipehq',
       },
       {
         icon: 'linkedin',
