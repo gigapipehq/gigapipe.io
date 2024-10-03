@@ -1,30 +1,16 @@
-'use client'
-
-import { useState } from 'react'
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { toast } from "@/components/ui/use-toast"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
+import React, { useState } from 'react'
 
 export default function EarlyAccessForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [selectedPackage, setSelectedPackage] = useState("")
+  const [message, setMessage] = useState('')
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     setIsSubmitting(true)
+    setMessage('')
 
     const form = event.currentTarget
     const formData = new FormData(form)
-    formData.append('package', selectedPackage) // Add the selected package to formData
 
     try {
       const response = await fetch('https://public.herotofu.com/v1/469dc240-819c-11ef-9cd5-83be6ab60c60', {
@@ -36,68 +22,57 @@ export default function EarlyAccessForm() {
       })
 
       if (response.ok) {
-        toast({
-          title: "Success!",
-          description: "Your early access request has been submitted.",
-        })
+        setMessage('Your early access request has been submitted successfully!')
         form.reset()
-        setSelectedPackage("")
       } else {
         throw new Error('Submission failed')
       }
     } catch (error) {
-      toast({
-        title: "Error",
-        description: "There was a problem submitting your request. Please try again.",
-        variant: "destructive",
-      })
+      setMessage('There was a problem submitting your request. Please try again.')
     } finally {
       setIsSubmitting(false)
     }
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="space-y-2">
-        <Label htmlFor="name">Name *</Label>
-        <Input id="name" name="name" required />
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div>
+        <label htmlFor="name" className="block mb-1">Name *</label>
+        <input id="name" name="name" required className="w-full px-3 py-2 border rounded" />
       </div>
-      <div className="space-y-2">
-        <Label htmlFor="company">Company *</Label>
-        <Input id="company" name="company" required />
+      <div>
+        <label htmlFor="company" className="block mb-1">Company *</label>
+        <input id="company" name="company" required className="w-full px-3 py-2 border rounded" />
       </div>
-      <div className="space-y-2">
-        <Label htmlFor="email">Business Email *</Label>
-        <Input id="email" name="email" type="email" required />
+      <div>
+        <label htmlFor="email" className="block mb-1">Business Email *</label>
+        <input id="email" name="email" type="email" required className="w-full px-3 py-2 border rounded" />
       </div>
-      <div className="space-y-2">
-        <Label htmlFor="phone">Phone Number (Optional)</Label>
-        <Input id="phone" name="phone" type="tel" />
+      <div>
+        <label htmlFor="phone" className="block mb-1">Phone Number (Optional)</label>
+        <input id="phone" name="phone" type="tel" className="w-full px-3 py-2 border rounded" />
       </div>
-      <div className="space-y-2">
-        <Label htmlFor="package">Package *</Label>
-        <Select
-          value={selectedPackage}
-          onValueChange={setSelectedPackage}
-          required
-        >
-          <SelectTrigger className="w-full">
-            <SelectValue placeholder="Select a package" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="basic">Basic</SelectItem>
-            <SelectItem value="medium">Medium</SelectItem>
-            <SelectItem value="large">Large</SelectItem>
-          </SelectContent>
-        </Select>
+      <div>
+        <label htmlFor="package" className="block mb-1">Package *</label>
+        <select id="package" name="package" required className="w-full px-3 py-2 border rounded">
+          <option value="">Select a package</option>
+          <option value="basic">Basic</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
       </div>
-      <div className="space-y-2">
-        <Label htmlFor="comments">Comments (Optional)</Label>
-        <Textarea id="comments" name="comments" />
+      <div>
+        <label htmlFor="comments" className="block mb-1">Comments (Optional)</label>
+        <textarea id="comments" name="comments" className="w-full px-3 py-2 border rounded" rows={4}></textarea>
       </div>
-      <Button type="submit" disabled={isSubmitting}>
+      <button 
+        type="submit" 
+        disabled={isSubmitting}
+        className="w-full px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700 disabled:opacity-50"
+      >
         {isSubmitting ? 'Submitting...' : 'Request Early Access'}
-      </Button>
+      </button>
+      {message && <p className={message.includes('successfully') ? 'text-green-600' : 'text-red-600'}>{message}</p>}
     </form>
   )
 }
