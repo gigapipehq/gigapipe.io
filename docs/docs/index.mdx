@@ -1,4 +1,3 @@
-import { Collapse, CollapsePanel } from '@components/Collapse';
 import { PackageManagerTabs } from '@theme';
 
 # JavaScript API
@@ -66,16 +65,6 @@ The `hooks` property on a `Compiler` instance is used to register a plugin to an
 
 > See [Compiler API](/api/javascript-api/compiler) for more details.
 
-<Collapse>
-  <CollapsePanel
-    className="collapse-code-panel"
-    header="Compiler.ts"
-    key="compiler"
-  >
-    <CompilerType />
-  </CollapsePanel>
-</Collapse>
-
 ## Run
 
 The `run` method is then used to kickstart all compilation work. Upon completion, the given `callback` function is executed. The final logging of stats and errors should be done in this `callback` function.
@@ -132,15 +121,6 @@ Filesystem inaccuracies may trigger multiple builds for a single change. In the 
 
 > See [`Compiler.watch`](/api/javascript-api/compiler#watch) for more details.
 
-<Collapse>
-  <CollapsePanel
-    className="collapse-code-panel"
-    header="Watching.ts"
-    key="watching"
-  >
-    <WatchingType />
-  </CollapsePanel>
-</Collapse>
 
 ## Stats Object
 
@@ -157,12 +137,6 @@ When using the `MultiCompiler`, a `MultiStats` instance is returned that fulfill
 :::
 
 > See [Stats API](/api/javascript-api/stats) for more details.
-
-<Collapse>
-  <CollapsePanel className="collapse-code-panel" header="Stats.ts" key="stats">
-    <StatsType />
-  </CollapsePanel>
-</Collapse>
 
 ## MultiCompiler
 
