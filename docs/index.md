@@ -54,17 +54,3 @@ features:
     margin-bottom: 10px;
   }
 </style>
-
-# Polyglot Observability
-
-> Polyglot comes from Greek _polyglōttos_, a combination of **poly** - _"many" or "multi"_ - and **glōtta** for _"language_.
-
-_That's us_. Gigapipe is a Polyglot platform designed around the Observability standards the world already loves 💜
-
-### Independence
-
-Our stack is _protocol compatible_ with many projects and products - _without depending on any_. Our Core and APIs are independently developed and _fully opensource_.
-
-### Performance and Reliability
-
-Our stack leverages the **ClickHouse** and **DuckDB** OLAP engines for storage and to provide fast analytics and scalable performance. We develop our extensions standing on the shoulders of giants.
