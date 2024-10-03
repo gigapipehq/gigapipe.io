@@ -17,12 +17,17 @@ export default defineConfig({
       {
         icon: 'github',
         mode: 'link',
-        content: 'https://github.com/gigapipehq',
+        content: 'https://github.com/gigapipe',
       },
       {
         icon: 'linkedin',
         mode: 'link',
         content: 'https://www.linkedin.com/company/gigapipe',
+      },
+      {
+        icon: "/qryn.svg",
+        mode: 'link',
+        content: 'https://blog.qryn.dev',
       },
     ],
   },
