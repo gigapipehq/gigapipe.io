@@ -23,7 +23,7 @@ hero:
 features:
 
   - title: Faster
-    details: ClickHouse DB + DuckDB OLAP
+    details: <p className="text-center">ClickHouse DB + DuckDB OLAP</p>
     icon: ⚡
     span: 3
     
@@ -44,6 +44,10 @@ features:
 ---
 
 <style>
+  * > body{
+    background-image: url("/header-bg-optimised-scaled.jpg");
+ background-color: #cccccc;
+  }
   .flex-center {
     justify-content: center;
     align-items: center;
