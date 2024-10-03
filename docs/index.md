@@ -6,13 +6,13 @@ hero:
   text: <p style="font-size:0.6em">Polyglot Observability</p>
   tagline: <p style="font-size:1em">Just Logs, Metrics, Traces & Profiles</p>
   actions:
-    - theme: brand
+    - theme: alt
       text: About
       link: about
-    - theme: brand
+    - theme: alt
       text: Pricing
       link: pricing
-    - theme: alt
+    - theme: brand
       text: Signup
       link: https://docs.google.com/forms/d/e/1FAIpQLSeb_eMwgtpbOk0ejAVW7ihKAzkt0WKnLwCQFyHkIzl5DAU2ig/viewform
   image:
@@ -21,24 +21,23 @@ hero:
 
 
 features:
+  - title: Polyglot
+    details: <p className="text-center">Drop-in Loki, Prometheus, Tempo, Pyroscope compatible</p>
+    icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/qryn.png" />
+    span: 3
 
-  - title: Faster
-    details: <p className="text-center">ClickHouse DB + DuckDB OLAP</p>
+  - title: Fast
+    details: <p className="text-center">ClickHouse DB + DuckDB OLAP<br>w/ NVMe lightspeed storage</p>
     icon: ⚡
     span: 3
     
-  - title: Polyglot
-    details: Logs, Metrics, Traces, Profiles
-    icon: 💬
-    span: 3
-
   - title: Unmetered
-    details: Flat Pricing with Zero Surprises
+    details: <p className="text-center">Flat cost Observability<br>Zero monthly suprises</p>
     icon: 💸
     span: 3
 
-  - title: Standard
-    details: Native Opentelemetry Support
+  - title: Open
+    details: <p className="text-center">Transparent, Open-Source,<br>Opentelemetry Native</p>
     icon: ⚗️
     span: 3
 ---
