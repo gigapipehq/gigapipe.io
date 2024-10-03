@@ -22,16 +22,16 @@ hero:
 
 features:
 
+ - title: Polyglot
+    details: <p className="text-center">Drop-in Loki, Prometheus, Tempo, Pyroscope compatible</p>
+    icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/qryn.png" width="99%" />
+    span: 3
+
   - title: Fast
     details: <p className="text-center">ClickHouse DB + DuckDB OLAP<br>w/ NVMe lightspeed storage</p>
     icon: ⚡
     span: 3
     
-  - title: Polyglot
-    details: <p className="text-center">Drop-in Loki, Prometheus, Tempo, Pyroscope compatible</p>
-    icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/qryn.png" width=24 />
-    span: 3
-
   - title: Unmetered
     details: <p className="text-center">Flat cost Observability<br>Zero monthly suprises</p>
     icon: 💸
