@@ -18,7 +18,7 @@ export default defineConfig({
       {
         icon: 'github',
         mode: 'link',
-        content: 'https://github.com/gigapipehq',
+        content: 'https://github.com/gigapipe',
       },
       {
         icon: 'linkedin',
@@ -28,7 +28,7 @@ export default defineConfig({
       {
         icon: { svg: `<image src="/qryn.png"/>`},
         mode: 'link',
-        content: 'https://www.linkedin.com/company/gigapipe',
+        content: 'https://blog.qryn.dev',
       },
     ],
   },

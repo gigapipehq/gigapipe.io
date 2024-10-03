@@ -11,7 +11,8 @@ const plans = [
     name: 'Basic',
     specs: {
       ram: '32GB RAM',
-      storage: '640GB NVMe',
+      disk: '640GB NVMe', 
+      storage: '1TB NVMe',
       cpu: '8x Intel vCPU',
       transfer: '16TB/Month Transfer'
     },
@@ -24,7 +25,8 @@ const plans = [
     name: 'Medium',
     specs: {
       ram: '48GB RAM',
-      storage: '960GB NVMe',
+      disk: '960GB NVMe',
+      storage: '2TB NVMe',
       cpu: '12x Intel vCPU',
       transfer: '24TB/Month Transfer'
     },
@@ -37,7 +39,8 @@ const plans = [
     name: 'Large',
     specs: {
       ram: '64GB RAM',
-      storage: '1.2TB NVMe',
+      disk: '1.2TB NVMe',
+      storage: '3TB NVMe',
       cpu: '12x Intel vCPU',
       transfer: '32TB/Month Transfer'
     },
