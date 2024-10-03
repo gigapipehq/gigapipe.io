@@ -10,7 +10,7 @@ hero:
       text: About
       link: about
     - theme: alt
-      text: Pricing
+      text: Plans
       link: pricing
     - theme: brand
       text: Signup
