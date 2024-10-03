@@ -22,11 +22,11 @@ export default defineConfig({
       { text: "Access", 
         link: "signup" 
       },
-       { text: "Docs", 
-        link: "docs" 
-      },
       { text: "Pricing", 
         link: "pricing" 
+      },
+      { text: "Docs", 
+        link: "docs" 
       },
       { text: "Legal", 
         link: "legal" 
