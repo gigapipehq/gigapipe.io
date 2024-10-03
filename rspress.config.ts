@@ -15,6 +15,14 @@ export default defineConfig({
   globalStyles: path.join(__dirname, 'styles/index.css'),
   sidebar: false, 
   themeConfig: {  
+    nav: [
+      { text: "Pricing", 
+        link: "pricing" 
+      },
+      { text: "Service Terms", 
+        link: "legal" 
+      }
+    ],
     socialLinks: [
       {
         icon: 'github',
