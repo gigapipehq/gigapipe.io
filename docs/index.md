@@ -22,7 +22,7 @@ hero:
 
 features:
 
- - title: Polyglot
+  - title: Polyglot
     details: <p className="text-center">Drop-in Loki, Prometheus, Tempo, Pyroscope compatible</p>
     icon: <img src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/qryn.png" width="99%" />
     span: 3
