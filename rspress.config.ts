@@ -25,10 +25,9 @@ export default defineConfig({
         content: 'https://www.linkedin.com/company/gigapipe',
       },
       {
-        icon: 'github',
+        icon: 'qryn.svg',
         mode: 'dom',
-        content: '<a href="https://blog.qryn.dev" target="_blank"><img src="https://user-images.githubusercontent.com/1423657/218816262-e0e8d7ad-44d0-4a7d-9497-0d383ed78b83.png" width="24px" height="24px" alt="logo" id="logo" class="mr-4 rspress-logo dark:hidden"></a>',
-        
+        content: 'https://blog.qryn.dev',
       },
     ],
   },
