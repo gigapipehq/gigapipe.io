@@ -76,11 +76,14 @@ export default function EarlyAccessForm() {
 
   if (isSubmitted) {
     return React.createElement('div', { style: { marginTop: '2rem' } },
-      React.createElement('h2', null, 'Thank you for your request!'),
-      React.createElement('p', null, "We'll be in touch soon!")
+      React.createElement('h2', null, 'Thank you for your request! "We'll be in touch soon!")
+    )
+  } else {
+    return React.createElement('div', { style: { marginTop: '2rem' } },
+      React.createElement('h2', null, 'We're excited to offer early access to Gigapipe! Fill out the form below to request an account")
     )
   }
-
+  
   return React.createElement('form', { onSubmit: handleSubmit, style: formStyle },
     React.createElement('input', {
       type: 'text',
