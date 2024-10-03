@@ -10,7 +10,6 @@
         var(--secondary-light-color),
         var(--main-dark-color)
     );
-    --rp-home-hero-
     --rp-home-hero-name-background: -webkit-linear-gradient(
         120deg,
         var(--rp-c-brand-light) 30%,
