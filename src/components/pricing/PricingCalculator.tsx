@@ -121,7 +121,7 @@ const PricingCalculator: React.FC = () => {
                 ))}
               </ul>
               <div className={styles.planPrice}>
-                ${isYearly ? plan.price.yearly : plan.price.monthly}/{isYearly ? 'year' : 'month'}
+                €{isYearly ? plan.price.yearly : plan.price.monthly}/{isYearly ? 'year' : 'month'}
               </div>
             </label>
           </div>
@@ -179,14 +179,14 @@ const PricingCalculator: React.FC = () => {
 
       <div className={styles.pricingSummary}>
         <div className={styles.totalPrice}>
-          Total: ${totalPrice}/{isYearly ? 'year' : 'month'}
+          Total: €{totalPrice}/{isYearly ? 'year' : 'month'}
         </div>
         <div className={styles.priceBreakdown}>
-          Base plan: ${basePlanPrice}/{isYearly ? 'year' : 'month'}
-          {extraStorage > 0 && ` + Extra storage: $${extraStorageCost}/${isYearly ? 'year' : 'month'}`}
+          Base plan: €{basePlanPrice}/{isYearly ? 'year' : 'month'}
+          {extraStorage > 0 && ` + Extra storage: €${extraStorageCost}/${isYearly ? 'year' : 'month'}`}
         </div>
         <div className={styles.savings}>
-          You save ${savings} per year with annual billing!
+          You save €{savings} per year with annual billing!
         </div>
       </div>
     </div>
