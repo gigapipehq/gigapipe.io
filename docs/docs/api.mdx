@@ -1,0 +1,171 @@
+import { Tab, Tabs } from 'rspress/theme';
+
+# 🔻 API Support
+
+Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and supports the following APIs
+
+<Tabs>
+            <Tab label="Loki">
+            | **Name**             | **Type**         | **QRYN**      | **QRYN Cloud**      | **APIs.**                  |   
+            |----------------------|------------------|---------------|---------------------|----------------------------|
+            | Push                 | POST             | 🟢             | 🟢             | `/loki/api/v1/push`        |
+            | Query                | GET              | 🟢             | 🟢             | `/loki/api/v1/query`       |
+            | Query Range          | GET              | 🟢             | 🟢             | `/loki/api/v1/query_range` | 
+            | Labels               | GET              | 🟢             | 🟢             | `/loki/api/v1/label`       | 
+            | Label Values         | GET              | 🟢             | 🟢             | `/loki/api/v1/label/name/values` | 
+            | Tail                 | GET              | 🟢             | 🟢             | `/loki/api/v1/tail`        | 
+            | Ready                | GET              | 🟢             | 🟢             | `/ready`                   | 
+            
+            
+            ##### Compatible Agents
+            
+            ⭐ Any Loki compatible client can be used without modifications
+            
+            📦 [Grafana Alloy](https://grafana.com/docs/alloy/latest/)<br/>
+            📦 [Grafana Agent](https://grafana.com/docs/agent/latest/)<br/>
+            📦 [Vector](https://vector.dev/)<br/>
+            📦 [Opentelemetry](https://github.com/metrico/otel-collector)<br/>
+            📦 [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/)<br/>
+            📦 [Fluentd](https://www.fluentd.org/)<br/>
+            📦 [Logstash](https://opensearch.org/docs/latest/tools/logstash/index/)<br/>
+            </Tab>
+            <Tab label="Prometheus">
+            | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud**| **APIs.**                       |
+            |----------------------|--------------------|----------------|----------------|-----------------------------------|
+            | Remote Write         | POST               | 🟢             | 🟢             |  `/api/v1/prom/remote/write`      |
+            | Query Range          | GET/POST           | 🟢             | 🟢             | `/api/v1/query_range`             |
+            | Query                | GET/POST           | 🟢             | 🟢             | `/api/v1/query`                   |
+            | Labels               | GET/POST           | 🟢             | 🟢             | `/api/v1/labels`                  |
+            | Label Values         | GET/POST           | 🟢             | 🟢             | `/api/v1/label/:name/values`      |
+            | Series Values        | GET/POST           | 🟢             | 🟢             | `/api/v1/series`                  |
+            | Rules                | GET                | 🟢             | 🟢             | `/api/v1/rules`                   |
+            
+            ##### Compatible Agents
+            
+            ⭐ Any Prometheus compatible client can be used without modifications
+            
+            📦 [Grafana Alloy](https://grafana.com/docs/alloy/latest/)<br/>
+            📦 [Grafana Agent](https://grafana.com/docs/agent/latest/)<br/>
+            📦 [Vector](https://vector.dev/)<br/>
+            📦 [Opentelemetry](https://github.com/metrico/otel-collector)<br/>
+            </Tab>
+            <Tab label="Tempo">
+            | **Name**             | **Type**           | **QRYN**            | **QRYN Cloud**| **APIs.**                   | 
+            |----------------------|--------------------|---------------------|---------------|-----------------------------------|
+            | Push (Tempo)         | POST               | 🟢                  | 🟢             | `/tempo/api/push`                 | 
+            | Push (Zipkin)        | POST               | 🟢                  | 🟢             | `/api/v2/spans`                   |
+            | Push (OTLP)          | POST               | 🟢                  | 🟢             | `/v1/traces` (OTLP)               |
+            | Query Traces         | GET                | 🟢                  | 🟢             | `/api/traces/{traceId}`           |
+            | Query Traces (JSON)  | GET                | 🟢                  | 🟢             | `/api/traces/{traceId}/json`      |
+            | Trace Tags           | GET                | 🟢                  | 🟢             | `/api/search/tags`                | 
+            | Trace Tag Values     | GET                | 🟢                  | 🟢             | `/api/search/tag/{name}/values`   |
+            | Push Cloud.          | POST               | 🟡                  | 🟢             | `/tempo/spans`                    |
+            
+            ##### Compatible Agents
+            
+            ⭐ Any Tempo/Jaeger compatible client can be used without modifications
+            
+            📦 [Grafana Alloy](https://grafana.com/docs/alloy/latest/)<br/>
+            📦 [Grafana Agent](https://grafana.com/docs/agent/latest/)<br/>
+            📦 [Zipkin](https://zipkin.io/)<br/>
+            📦 [Opentelemetry](https://github.com/metrico/otel-collector)<br/>
+            </Tab>
+            <Tab label="Opentelemetry">
+            | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud** | **APIs.**                       |   
+            |----------------------|--------------------|----------------|----------------|---------------------------------|
+            | OTLPPush             | POST               | 🟢             |🟢             | `/v1/traces`         |
+            | OTLPLogPush          | POST               | 🟢             |🟢             | `/v1/logs`         |
+
+            #### Compatible Protocols
+
+            ⭐ Supports 100s of protocols via [Opentelemetry Contribs](https://github.com/open-telemetry/opentelemetry-collector-contrib)
+
+            ##### Compatible Agents
+
+            ⭐ Any Opentelemetry compatible collector can be used without modifications
+
+            📦 [OTEL Collector for qryn](https://github.com/metrico/otel-collector/)<br/>
+            📦 [Grafana Alloy](https://grafana.com/docs/alloy/latest/)<br/>
+            📦 [Grafana Agent](https://grafana.com/docs/agent/latest/)<br/>
+            </Tab>
+            <Tab label="Influx">
+            | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud** | **APIs.**                       |   
+            |----------------------|--------------------|----------------|----------------|---------------------------------|
+            | Write                | POST               | 🟢             |🟢             | `/influx/api/v2/write`       |
+            | Health               | GET                | 🟢             |🟢             | `/influx/health`        |
+
+            ##### Compatible Agents
+            ⭐ Any InfluxDB v2 compatible client can be used with qryn without modifications
+            
+            📦 [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/)<br/>
+            </Tab>
+            <Tab label="Elastic">
+            | **Name**             | **Type**           | **QRYN**      | **QRYN Cloud**| **APIs.**                   |  
+            |----------------------|--------------------|---------------|---------------|-----------------------------|
+            | Index                | POST               | 🟢             | 🟢          |  `/:target/_doc`            |
+            | Index                | POST               | 🟢             | 🟢          | `/:target/_create/:id`      |
+            | Index                | PUT                | 🟢             | 🟢          | `/:target/_doc/`            |
+            | Index                | PUT                | 🟢             | 🟢          | `/:target/_create/:id`      | 
+            | Bulk                 | POST               | 🟢             | 🟢          | `/_bulk`                    |
+            | Bulk                 | POST               | 🟢             | 🟢          | `/:target/_bulk`            |
+
+            > The `_index` and `_id` tags are automatically added to each insert based on the API request
+            
+            #### Index API
+            ```bash
+            curl -X POST "qryn:3100/test-index/_doc/1234" -H 'Content-Type: application/json' -d'
+            ```
+            ```json
+            {
+              "message": "hello",
+              "user": "cloki"
+            }
+            ```
+            
+            #### Bulk API
+            ```json
+            { "index" : { "_index" : "test-index", "_id" : "1234" } }
+            { "message" : "hello", "user": "qryn" }
+            ```
+            ```bash
+            curl -s -H "Content-Type: application/x-ndjson" -XPOST http://qryn/_bulk --data-binary "@bulkreq"
+            ```
+            
+            > Replace the **qryn** URL from the example to match your actual deployment!
+            
+            Either type will get converted to the following `LogQL` insert
+            ```json
+            {
+                  "stream": {
+                    "_index": "test-index",
+                    "_id": "1234",
+                    "type": "elastic"
+                  },
+                  "values": [
+                      [ "<unix epoch in nanoseconds>", "{\"message\": \"hello\", \"user\":\"qryn'"}" ]
+                  ]
+                }
+            ```
+            
+            ##### Notes
+            - _The implementation is not focused on speed. Bulking capacity depends on fastify settings._
+            - _A static type tag is also attached to events ingested through the elastic compatible APIs_
+            - _delete, update bulk actions and other APIs are not supported_
+
+            </Tab>
+            <Tab label="Datadog">
+            | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud** | **APIs.**                       |   
+            |----------------------|--------------------|----------------|----------------|---------------------------------|
+            | Logs                 | POST               | 🟢             |🟢             | `/api/v2/logs` |
+            | Series               | POST               | 🟢             |🟢             | `/api/v2/series`  |
+            | Insert (Cloudflare Format) | POST         | 🟡             |🟢             | `/cf/api/v1/insert` |
+
+            </Tab>
+            <Tab label="NewRelic">
+            | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud** | **APIs.**                       |   
+            |----------------------|--------------------|----------------|----------------|---------------------------------|
+            | [Logs](https://docs.newrelic.com/docs/logs/log-api/introduction-log-api/)| POST               | 🟢             |🟡             | `/log/v1` |
+            
+            </Tab>
+</Tabs>
+

@@ -18,15 +18,19 @@ export default defineConfig({
     sidebar: {
       '/docs/docs/':[
         {
-          text: "Getting Started",
+          text: "Documentation",
           items: [
             {
-              text: "Demo",
+              text: "Get Started",
+              link: '/docs'
+            },
+            {
+              text: "Explore Data",
               link: '/docs/demo'
             },
             {
-              text: "Home",
-              link: '/docs'
+              text: "API Endpoints",
+              link: '/docs/api'
             }
           ]
           
