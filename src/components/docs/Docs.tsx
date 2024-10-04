@@ -1,21 +1,16 @@
 import React from "react";
 import { HomeHero, HomeFeature } from "rspress/theme";
 
-
 const Docs = () => {
     return (
-        <div
-         style={{position:'absolute'}}
-         >
+        <div style={{ position: "absolute", width: "100%", left: 0, top: 75 }}>
             <HomeHero
-            
                 frontmatter={{
                     title: "Gigapipe Home",
                     titleSuffix: "Polyglot Observability",
                     hero: {
-                        
                         name: "Gigapipe",
-                        text: "Polyglot Observability",
+                        text: "<p className='text-3xl'>Polyglot Observability</p>",
                         tagline: "Just Logs, Metrics, Traces & Profiles",
                         actions: [
                             { text: "About", link: "/about", theme: "alt" },
@@ -27,7 +22,6 @@ const Docs = () => {
                             alt: "Gigapipe",
                         },
                     },
-
                 }}
                 routePath="/"
             />
@@ -53,24 +47,24 @@ const Docs = () => {
                         },
 
                         {
-                          title: "Unmetered",
-                          details: "<p className='text-center'>Flat cost Observability<br>Zero monthly suprises</p>",
-                          icon: "💸",
-                          span: 3,
+                            title: "Unmetered",
+                            details:
+                                "<p className='text-center'>Flat cost Observability<br>Zero monthly suprises</p>",
+                            icon: "💸",
+                            span: 3,
                         },
 
                         {
-                          title: "Opensource",
-                          details: "<p className='text-center'>Transparent, Open-Source,<br>Opentelemetry Native</p>",
-                          icon:"⚗️",
-                          span: 3
+                            title: "Opensource",
+                            details:
+                                "<p className='text-center'>Transparent, Open-Source,<br>Opentelemetry Native</p>",
+                            icon: "⚗️",
+                            span: 3,
                         },
-
                     ],
                 }}
                 routePath="/"
             />
-
         </div>
     );
 };
