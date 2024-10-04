@@ -11,9 +11,30 @@ export default defineConfig({
     dark: "/Gigapipe-logo-outline@3x.svg",
   },
   description: 'Gigapipe: Polyglot Observability',
-  darkMode: true,
+  
   globalStyles: path.join(__dirname, 'styles/index.css'),
   themeConfig: {  
+    darkMode: true,
+    sidebar: {
+      '/docs/docs/':[
+        {
+          text: "Getting Started",
+          items: [
+            {
+              text: "Demo",
+              link: '/docs/demo'
+            },
+            {
+              text: "Home",
+              link: '/docs'
+            }
+          ]
+          
+        }
+      
+
+      ]
+    },
     nav: [
       { text: "About", 
         link: "about" 
