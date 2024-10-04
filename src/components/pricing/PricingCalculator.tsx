@@ -132,35 +132,9 @@ const PricingCalculator: React.FC = () => {
       </div>
 
       <div className={styles.optionsRow}>
-        <div className={styles.switchContainer}>
-          <label htmlFor="billing-cycle" className={styles.switch}>
-            <input
-              type="checkbox"
-              id="billing-cycle"
-              checked={isYearly}
-              onChange={() => setIsYearly(!isYearly)}
-            />
-            <span className={styles.slider}></span>
-          </label>
-          <span>{isYearly ? 'Yearly Billing' : 'Monthly Billing'}</span>
-        </div>
-        
-        <div className={styles.switchContainer}>
-          <label htmlFor="snapshots" className={styles.switch}>
-            <input
-              type="checkbox"
-              id="snapshots"
-              checked={includeSnapshots}
-              onChange={() => setIncludeSnapshots(!includeSnapshots)}
-            />
-            <span className={styles.slider}></span>
-          </label>
-          <span>Snapshots</span>
-        </div>
-        
+
         <div className={styles.locationContainer}>
             <label htmlFor="server-location">
-              Datacenter: &nbsp; 
               <select
                 id="server-location"
                 value={selectedLocation.city}
@@ -176,10 +150,38 @@ const PricingCalculator: React.FC = () => {
               </select>
             </label>
         </div>
+        
+        <div className={styles.switchContainer}>
+          <label htmlFor="billing-cycle" className={styles.switch}>
+            <input
+              type="checkbox"
+              id="billing-cycle"
+              checked={isYearly}
+              onChange={() => setIsYearly(!isYearly)}
+            />
+            <span className={styles.slider}></span>
+          </label>
+          <span>{isYearly ? 'Yearly' : 'Monthly'}</span>
+        </div>
+        
+        <div className={styles.switchContainer}>
+          <label htmlFor="snapshots" className={styles.switch}>
+            <input
+              type="checkbox"
+              id="snapshots"
+              checked={includeSnapshots}
+              onChange={() => setIncludeSnapshots(!includeSnapshots)}
+            />
+            <span className={styles.slider}></span>
+          </label>
+          <span>Snapshots</span>
+        </div>
+        
+        
 
         <div className={styles.storageContainer}>
           <label htmlFor="extra-storage">
-            Extra S3 Storage (TB)
+            Extra Storage (TB)
             <input
               type="number"
               id="extra-storage"
