@@ -114,7 +114,7 @@ input:checked + .slider:before {
 }
 
 .storageContainer input {
-  width: 80px;
+  width: 50px;
   padding: 0.25rem 0.5rem;
   background-color: #2d3748;
   border: 1px solid #4a5568;
