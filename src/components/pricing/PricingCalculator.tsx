@@ -9,10 +9,10 @@ export const frontmatter = {
 const plans = [
   {
     name: 'Basic',
+    disk: '640GB NVMe', 
     specs: {
       ram: '32GB RAM',
-      disk: '640GB NVMe', 
-      storage: '1TB Rotation',
+      storage: '1TB NVMe',
       cpu: '8x Intel vCPU',
       transfer: '16TB/Month Transfer'
     },
@@ -23,10 +23,10 @@ const plans = [
   },
   {
     name: 'Medium',
+    disk: '960GB NVMe',
     specs: {
       ram: '48GB RAM',
-      disk: '960GB NVMe',
-      storage: '2TB Rotation',
+      storage: '2TB NVMe',
       cpu: '12x Intel vCPU',
       transfer: '24TB/Month Transfer'
     },
@@ -37,10 +37,10 @@ const plans = [
   },
   {
     name: 'Large',
+    disk: '1.2TB NVMe',
     specs: {
       ram: '64GB RAM',
-      disk: '1.2TB NVMe',
-      storage: '3TB Rotation',
+      storage: '3TB NVMe',
       cpu: '12x Intel vCPU',
       transfer: '32TB/Month Transfer'
     },
