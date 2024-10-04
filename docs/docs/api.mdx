@@ -6,10 +6,10 @@ import { Tab, Tabs } from 'rspress/theme';
 Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and supports the following APIs
 
 <Tabs>
-<Tab label="Loki">
+            <Tab label="Loki">
 ## ** Loki **
 
-?> **qryn** implements a full **Loki/LogQL** API to ingest, query and manage Logs
+> **qryn** implements a full **Loki/LogQL** API to ingest, query and manage Logs
 
 ##### API Endpoints
 
@@ -37,12 +37,11 @@ Any Loki compatible client can be used with qryn without modifications
 * Logstash
 * _others_
 
-</Tab>
-              
-<Tab label="Prometheus">
+            </Tab>
+            <Tab label="Prometheus">
 ## ** Prometheus **
 
-?> **qryn** implements a full **Prometheus/PromQL** API to ingest, query and manage Metrics
+> **qryn** implements a full **Prometheus/PromQL** API to ingest, query and manage Metrics
 
 ##### API Endpoints
 
@@ -66,12 +65,11 @@ Any Prometheus compatible client can be used with qryn without modifications
 * Telegraf
 * _others_
 
-</Tab>
-            
-<Tab label="Tempo">
+            </Tab>
+            <Tab label="Tempo">
 ## ** Tempo **
 
-?> **qryn** implements the **Tempo/TempoQL** API to ingest, query and manage Traces
+> **qryn** implements the **Tempo/TempoQL** API to ingest, query and manage Traces
 
 ##### API Endpoints
 
@@ -94,12 +92,11 @@ Any Tempo/Jaeger compatible client can be used with qryn without modifications
 * Opentelemetry Collector
 * _others_
 
-</Tab>
-            
-<Tab label="Opentelemetry">
+            </Tab>
+            <Tab label="Opentelemetry">
 ## ** OTel **
 
-?> **qryn** implements the **Opentelemetry/OTLPPush** API to ingest Traces, Logs and Metrics
+> **qryn** implements the **Opentelemetry/OTLPPush** API to ingest Traces, Logs and Metrics
 
 ⚡ qryn is officially integrated with opentelemetry supports any log, trace or metric format
 Ingested data can be queried using any of the avialable qryn APIs (LogQL, PromQL, TraceQL)
@@ -124,12 +121,11 @@ Any Opentelemetry compatible collector can be used with qryn without modificatio
 * Opentelemetry Collector
 * _others_
 
-</Tab>
-
-<Tab label="Influx">
+            </Tab>
+            <Tab label="Influx">
 ## ** Influx **
 
-?> **qryn** implements the **Influx v2** Write API subset for ingestion of Logs _(and [metrics](metrics/ingestion#influx))_
+> **qryn** implements the **Influx v2** Write API subset for ingestion of Logs _(and [metrics](metrics/ingestion#influx))_
 
 ##### API Endpoints
 
@@ -159,16 +155,13 @@ curl -i -XPOST 'http://qryn:3100/influx/api/v2/write' \
   --data-raw 'cpu_load_short,host=server01,region=us-west value=0.64 1434055562000000000'
 ```  
 
-!> Replace the **qryn** URL from the example to match your actual deployment!
+> Replace the **qryn** URL from the example to match your actual deployment!
 
-?> That's it! You're now shipping logs straight off your bash scripts!
-
-</Tab>
-
-<Tab label="Datadog">
+            </Tab>
+            <Tab label="Datadog">
 ## ** Datadog **
 
-?> **qryn** implements a **Datadog v2 Write** API subset for ingestion of Logs and Metrics
+> **qryn** implements a **Datadog v2 Write** API subset for ingestion of Logs and Metrics
 
 ##### API Endpoints
 
@@ -178,12 +171,11 @@ curl -i -XPOST 'http://qryn:3100/influx/api/v2/write' \
 | Series               | POST               | 🟢             |🟢             | `/api/v2/series`  |
 | Insert (Cloudflare Format) | POST         | 🟡             |🟢             | `/cf/api/v1/insert` |
 
-</Tab>
-
-<Tab label="Elastic">
+            </Tab>
+            <Tab label="Elastic">
 ## ** Elastic **
 
-?> **qryn** implements an basic **Elastic API** subset for ingestion of JSON objects as tagged logs.
+> **qryn** implements an basic **Elastic API** subset for ingestion of JSON objects as tagged logs.
 
 ##### API Endpoints
 
@@ -196,7 +188,7 @@ curl -i -XPOST 'http://qryn:3100/influx/api/v2/write' \
 | Bulk                 | POST               | 🟢             | 🟢          | `/_bulk`                    |
 | Bulk                 | POST               | 🟢             | 🟢          | `/:target/_bulk`            |
 
-?> The `_index` and `_id` tags are automatically added to each insert based on the API request
+> The `_index` and `_id` tags are automatically added to each insert based on the API request
 
 #### Index API
 ```bash
@@ -218,7 +210,7 @@ curl -X POST "qryn:3100/test-index/_doc/1234" -H 'Content-Type: application/json
 curl -s -H "Content-Type: application/x-ndjson" -XPOST http://qryn/_bulk --data-binary "@bulkreq"
 ```
 
-!> Replace the **qryn** URL from the example to match your actual deployment!
+> Replace the **qryn** URL from the example to match your actual deployment!
 
 
 Either type will get converted to the following `LogQL` insert
@@ -235,20 +227,16 @@ Either type will get converted to the following `LogQL` insert
     }
 ```
 
-?> That's it! You're now shipping logs straight off your Elastic agents!
-
-
 ##### Notes
 - _The implementation is not focused on speed. Bulking capacity depends on fastify settings._
 - _A static type tag is also attached to events ingested through the elastic compatible APIs_
 - _delete, update bulk actions and other APIs are not supported_
 
-</Tab>
-
-<Tab label="NewRelic">
+            </Tab>
+            <Tab label="NewRelic">
 ## ** NewRelic **
 
-?> **qryn** implements an basic **NewRelic API** subset for ingestion of Logs
+> **qryn** implements an basic **NewRelic API** subset for ingestion of Logs
 
 ##### API Endpoints
 
@@ -256,6 +244,6 @@ Either type will get converted to the following `LogQL` insert
 |----------------------|--------------------|----------------|----------------|---------------------------------|
 | [Logs](https://docs.newrelic.com/docs/logs/log-api/introduction-log-api/)| POST               | 🟢             |🟡             | `/log/v1` |
 
-</Tab>
+            </Tab>
 
 </Tabs>
