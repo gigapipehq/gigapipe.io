@@ -27,6 +27,10 @@ export default defineConfig({
             {
               text: "Explore Data",
               link: '/docs/demo'
+            },
+            {
+              text: "API Endpoints",
+              link: '/docs/api'
             }
           ]
           
