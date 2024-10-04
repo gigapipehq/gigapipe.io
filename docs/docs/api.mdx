@@ -6,7 +6,6 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
 
 <Tabs>
             <Tab label="Loki">
-            
             | **Name**             | **Type**         | **QRYN**      | **QRYN Cloud**      | **APIs.**                  |   
             |----------------------|------------------|---------------|---------------------|----------------------------|
             | Push                 | POST             | 🟢             | 🟢             | `/loki/api/v1/push`        |
@@ -70,51 +69,6 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
             📦 [Grafana Agent](https://grafana.com/docs/agent/latest/)<br/>
             📦 [Zipkin](https://zipkin.io/)<br/>
             📦 [Opentelemetry](https://github.com/metrico/otel-collector)<br/>
-            </Tab>
-            <Tab label="Opentelemetry">
-            | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud** | **APIs.**                       |   
-            |----------------------|--------------------|----------------|----------------|---------------------------------|
-            | OTLPPush             | POST               | 🟢             |🟢             | `/v1/traces`         |
-            | OTLPLogPush          | POST               | 🟢             |🟡              | `/v1/logs`         |
-            
-            #### OpenTelemetry Collector for qryn
-            The [qryn otel-collector](https://github.com/metrico/otel-collector) is designed to store observability data _(Traces, Logs, Metrics)_ from multiple vendors/platforms into ClickHouse using qryn fingerprinting and table formats transparently accessible through qryn via _LogQL, PromQL, Tempo and Pyroscope_ queries.
-            
-            ##### Compatible Agents
-            Any Opentelemetry compatible collector can be used with qryn without modifications
-            </Tab>
-            <Tab label="Influx">
-            | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud** | **APIs.**                       |   
-            |----------------------|--------------------|----------------|----------------|---------------------------------|
-            | Write                | POST               | 🟢             |🟢             | `/influx/api/v2/write`<br>`/write`          |
-            | Health               | GET                | 🟢             |🟢             | `/influx/health`<br>`/health`          |
-            
-            ##### Compatible Agents
-            ⭐ Any InfluxDB v2 compatible client can be used with qryn without modifications
-            
-            📦 [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/)<br/>
-            </Tab>
-            <Tab label="Datadog">
-            | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud** | **APIs.**                       |   
-            |----------------------|--------------------|----------------|----------------|---------------------------------|
-            | Logs                 | POST               | 🟢             |🟢             | `/api/v2/logs` |
-            | Series               | POST               | 🟢             |🟢             | `/api/v2/series`  |
-            | Insert (Cloudflare Format) | POST         | 🟡             |🟢             | `/cf/api/v1/insert` |
-            </Tab>
-            <Tab label="Elastic">
-            | **Name**             | **Type**           | **QRYN**      | **QRYN Cloud**| **APIs.**                   |  
-            |----------------------|--------------------|---------------|---------------|-----------------------------|
-            | Index                | POST               | 🟢             | 🟢          |  `/:target/_doc`            |
-            | Index                | POST               | 🟢             | 🟢          | `/:target/_create/:id`      |
-            | Index                | PUT                | 🟢             | 🟢          | `/:target/_doc/`            |
-            | Index                | PUT                | 🟢             | 🟢          | `/:target/_create/:id`      | 
-            | Bulk                 | POST               | 🟢             | 🟢          | `/_bulk`                    |
-            | Bulk                 | POST               | 🟢             | 🟢          | `/:target/_bulk`            |
-            </Tab>
-            <Tab label="Newrelic">
-            | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud** | **APIs.**                       |   
-            |----------------------|--------------------|----------------|----------------|---------------------------------|
-            | [Logs](https://docs.newrelic.com/docs/logs/log-api/introduction-log-api/)| POST               | 🟢             |🟡             | `/log/v1` |
             </Tab>
 </Tabs>
 
