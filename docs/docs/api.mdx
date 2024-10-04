@@ -92,8 +92,12 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
             | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud** | **APIs.**                       |   
             |----------------------|--------------------|----------------|----------------|---------------------------------|
             | Write                | POST               | 🟢             |🟢             | `/influx/api/v2/write`       |
-            | Health               | GET                | 🟢             |🟢             | `/influx/health`<br>`/health`          |
+            | Health               | GET                | 🟢             |🟢             | `/influx/health`        |
+
+            ##### Compatible Agents
+            ⭐ Any InfluxDB v2 compatible client can be used with qryn without modifications
             
+            📦 [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/)<br/>
             </Tab>
             <Tab label="Elastic">
             | **Name**             | **Type**           | **QRYN**      | **QRYN Cloud**| **APIs.**                   |  
@@ -104,6 +108,49 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
             | Index                | PUT                | 🟢             | 🟢          | `/:target/_create/:id`      | 
             | Bulk                 | POST               | 🟢             | 🟢          | `/_bulk`                    |
             | Bulk                 | POST               | 🟢             | 🟢          | `/:target/_bulk`            |
+
+            > The `_index` and `_id` tags are automatically added to each insert based on the API request
+            
+            #### Index API
+            ```bash
+            curl -X POST "qryn:3100/test-index/_doc/1234" -H 'Content-Type: application/json' -d'
+            ```
+            ```json
+            {
+              "message": "hello",
+              "user": "cloki"
+            }
+            ```
+            
+            #### Bulk API
+            ```json
+            { "index" : { "_index" : "test-index", "_id" : "1234" } }
+            { "message" : "hello", "user": "qryn" }
+            ```
+            ```bash
+            curl -s -H "Content-Type: application/x-ndjson" -XPOST http://qryn/_bulk --data-binary "@bulkreq"
+            ```
+            
+            > Replace the **qryn** URL from the example to match your actual deployment!
+            
+            Either type will get converted to the following `LogQL` insert
+            ```json
+            {
+                  "stream": {
+                    "_index": "test-index",
+                    "_id": "1234",
+                    "type": "elastic"
+                  },
+                  "values": [
+                      [ "<unix epoch in nanoseconds>", "{\"message\": \"hello\", \"user\":\"qryn'"}" ]
+                  ]
+                }
+            ```
+            
+            ##### Notes
+            - _The implementation is not focused on speed. Bulking capacity depends on fastify settings._
+            - _A static type tag is also attached to events ingested through the elastic compatible APIs_
+            - _delete, update bulk actions and other APIs are not supported_
 
             </Tab>
             <Tab label="Datadog">
