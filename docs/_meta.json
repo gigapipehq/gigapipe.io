@@ -1,0 +1,9 @@
+[
+  {
+    "type": "dir",
+    "name": "docs",
+    "label": "Docs",
+    "collapsible": true,
+    "collapsed": false
+  }
+]
