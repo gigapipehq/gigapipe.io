@@ -75,10 +75,7 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
             |----------------------|--------------------|----------------|----------------|---------------------------------|
             | OTLPPush             | POST               | 🟢             |🟢             | `/v1/traces`         |
             | OTLPLogPush          | POST               | 🟢             |🟡              | `/v1/logs`         |
-            
-            #### OpenTelemetry Collector for qryn
-            The [qryn otel-collector](https://github.com/metrico/otel-collector) is designed to store observability data _(Traces, Logs, Metrics)_ from multiple vendors/platforms into ClickHouse using qryn fingerprinting and table formats transparently accessible through qryn via _LogQL, PromQL, Tempo and Pyroscope_ queries.
-            
+
             ##### Compatible Agents
             Any Opentelemetry compatible collector can be used with qryn without modifications
             </Tab>
@@ -89,6 +86,7 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
             | Health               | GET                | 🟢             |🟢             | `/influx/health`<br>`/health`          |
             
             ##### Compatible Agents
+
             ⭐ Any InfluxDB v2 compatible client can be used with qryn without modifications
             
             📦 [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/)<br/>
@@ -113,7 +111,7 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
             <Tab label="Newrelic">
             | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud** | **APIs.**                       |   
             |----------------------|--------------------|----------------|----------------|---------------------------------|
-            | [Logs](https://docs.newrelic.com/docs/logs/log-api/introduction-log-api/)| POST               | 🟢             |🟡             | `/log/v1` |
+            | [Logs](https://docs.newrelic.com/docs/logs/log-api/introduction-log-api/)| POST   | 🟢    |🟡    | `/log/v1` |
             </Tab>
  
 </Tabs>
