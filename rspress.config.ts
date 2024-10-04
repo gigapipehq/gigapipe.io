@@ -28,9 +28,6 @@ export default defineConfig({
       { text: "Docs", 
         link: "docs" 
       },
-      { text: "Terms", 
-        link: "legal" 
-      },
       { text: "Blog", 
         link: "https://blog.qryn.dev" 
       },
