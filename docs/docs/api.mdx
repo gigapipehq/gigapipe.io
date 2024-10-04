@@ -89,10 +89,30 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
             📦 [Grafana Agent](https://grafana.com/docs/agent/latest/)<br/>
             </Tab>
             <Tab label="Influx">
+            | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud** | **APIs.**                       |   
+            |----------------------|--------------------|----------------|----------------|---------------------------------|
+            | Write                | POST               | 🟢             |🟢             | `/influx/api/v2/write`       |
+            | Health               | GET                | 🟢             |🟢             | `/influx/health`<br>`/health`          |
+            
             </Tab>
             <Tab label="Elastic">
+            | **Name**             | **Type**           | **QRYN**      | **QRYN Cloud**| **APIs.**                   |  
+            |----------------------|--------------------|---------------|---------------|-----------------------------|
+            | Index                | POST               | 🟢             | 🟢          |  `/:target/_doc`            |
+            | Index                | POST               | 🟢             | 🟢          | `/:target/_create/:id`      |
+            | Index                | PUT                | 🟢             | 🟢          | `/:target/_doc/`            |
+            | Index                | PUT                | 🟢             | 🟢          | `/:target/_create/:id`      | 
+            | Bulk                 | POST               | 🟢             | 🟢          | `/_bulk`                    |
+            | Bulk                 | POST               | 🟢             | 🟢          | `/:target/_bulk`            |
+
             </Tab>
             <Tab label="Datadog">
+            | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud** | **APIs.**                       |   
+            |----------------------|--------------------|----------------|----------------|---------------------------------|
+            | Logs                 | POST               | 🟢             |🟢             | `/api/v2/logs` |
+            | Series               | POST               | 🟢             |🟢             | `/api/v2/series`  |
+            | Insert (Cloudflare Format) | POST         | 🟡             |🟢             | `/cf/api/v1/insert` |
+
             </Tab>
             <Tab label="NewRelic">
             | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud** | **APIs.**                       |   
