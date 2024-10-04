@@ -20,16 +20,15 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
             
             ##### Compatible Agents
             
-            Any Loki compatible client can be used with qryn without modifications
+            ⭐ Any Loki compatible client can be used with qryn without modifications
             
-            * Grafana Agent
-            * Vector
-            * Opentelemetry Collector
-            * Logtail
-            * Telegraf
-            * Fluentd
-            * Logstash
-            * _others_
+            📦 [Grafana Alloy](https://grafana.com/docs/alloy/latest/)<br/>
+            📦 [Grafana Agent](https://grafana.com/docs/agent/latest/)<br/>
+            📦 [Vector](https://vector.dev/)<br/>
+            📦 [Opentelemetry](https://github.com/metrico/otel-collector)<br/>
+            📦 [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/)<br/>
+            📦 [Fluentd](https://www.fluentd.org/)<br/>
+            📦 [Logstash](https://opensearch.org/docs/latest/tools/logstash/index/)<br/>
             </Tab>
             <Tab label="Prometheus">
             | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud**| **APIs.**                       |
@@ -44,14 +43,12 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
             
             ##### Compatible Agents
             
-            Any Prometheus compatible client can be used with qryn without modifications
+            ⭐ Any Prometheus compatible client can be used with qryn without modifications
             
-            * Grafana Agent
-            * Vector
-            * Opentelemetry
-            * Telegraf
-            * _others_
-
+            📦 [Grafana Alloy](https://grafana.com/docs/alloy/latest/)<br/>
+            📦 [Grafana Agent](https://grafana.com/docs/agent/latest/)<br/>
+            📦 [Vector](https://vector.dev/)<br/>
+            📦 [Opentelemetry](https://github.com/metrico/otel-collector)<br/>
             </Tab>
             <Tab label="Tempo">
             | **Name**             | **Type**           | **QRYN**            | **QRYN Cloud**| **APIs.**                   | 
@@ -67,11 +64,12 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
             
             ##### Compatible Agents
             
-            Any Tempo/Jaeger compatible client can be used with qryn without modifications
+            ⭐ Any Tempo/Jaeger compatible client can be used with qryn without modifications
             
-            * Grafana Agent
-            * Opentelemetry Collector
-            * _others_
+            📦 [Grafana Alloy](https://grafana.com/docs/alloy/latest/)<br/>
+            📦 [Grafana Agent](https://grafana.com/docs/agent/latest/)<br/>
+            📦 [Zipkin](https://zipkin.io/)<br/>
+            📦 [Opentelemetry](https://github.com/metrico/otel-collector)<br/>
             </Tab>
             <Tab label="Opentelemetry">
             | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud** | **APIs.**                       |   
@@ -79,18 +77,11 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
             | OTLPPush             | POST               | 🟢             |🟢             | `/v1/traces`         |
             | OTLPLogPush          | POST               | 🟢             |🟡              | `/v1/logs`         |
             
-            
             #### OpenTelemetry Collector for qryn
-            
             The [qryn otel-collector](https://github.com/metrico/otel-collector) is designed to store observability data _(Traces, Logs, Metrics)_ from multiple vendors/platforms into ClickHouse using qryn fingerprinting and table formats transparently accessible through qryn via _LogQL, PromQL, Tempo and Pyroscope_ queries.
             
             ##### Compatible Agents
-            
             Any Opentelemetry compatible collector can be used with qryn without modifications
-            
-            * Grafana Agent
-            * Opentelemetry Collector
-            * _others_
             </Tab>
             <Tab label="Influx">
             | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud** | **APIs.**                       |   
@@ -98,13 +89,10 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
             | Write                | POST               | 🟢             |🟢             | `/influx/api/v2/write`<br>`/write`          |
             | Health               | GET                | 🟢             |🟢             | `/influx/health`<br>`/health`          |
             
-            
             ##### Compatible Agents
+            ⭐ Any InfluxDB v2 compatible client can be used with qryn without modifications
             
-            Any InfluxDB v2 compatible client can be used with qryn without modifications
-            
-            * Telegraf
-            * _others_
+            📦 [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/)<br/>
             </Tab>
             <Tab label="Datadog">
             | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud** | **APIs.**                       |   
@@ -112,7 +100,6 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
             | Logs                 | POST               | 🟢             |🟢             | `/api/v2/logs` |
             | Series               | POST               | 🟢             |🟢             | `/api/v2/series`  |
             | Insert (Cloudflare Format) | POST         | 🟡             |🟢             | `/cf/api/v1/insert` |
-
             </Tab>
             <Tab label="Elastic">
             | **Name**             | **Type**           | **QRYN**      | **QRYN Cloud**| **APIs.**                   |  
@@ -123,57 +110,11 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
             | Index                | PUT                | 🟢             | 🟢          | `/:target/_create/:id`      | 
             | Bulk                 | POST               | 🟢             | 🟢          | `/_bulk`                    |
             | Bulk                 | POST               | 🟢             | 🟢          | `/:target/_bulk`            |
-            
-            > The `_index` and `_id` tags are automatically added to each insert based on the API request
-            
-            #### Index API
-            ```bash
-            curl -X POST "qryn:3100/test-index/_doc/1234" -H 'Content-Type: application/json' -d'
-            ```
-            ```json
-            {
-              "message": "hello",
-              "user": "cloki"
-            }
-            ```
-            
-            #### Bulk API
-            ```json
-            { "index" : { "_index" : "test-index", "_id" : "1234" } }
-            { "message" : "hello", "user": "qryn" }
-            ```
-            ```bash
-            curl -s -H "Content-Type: application/x-ndjson" -XPOST http://qryn/_bulk --data-binary "@bulkreq"
-            ```
-            
-            > Replace the **qryn** URL from the example to match your actual deployment!
-            
-            
-            Either type will get converted to the following `LogQL` insert
-            ```json
-            {
-                  "stream": {
-                    "_index": "test-index",
-                    "_id": "1234",
-                    "type": "elastic"
-                  },
-                  "values": [
-                      [ "<unix epoch in nanoseconds>", "{\"message\": \"hello\", \"user\":\"qryn'"}" ]
-                  ]
-                }
-            ```
-            
-            ##### Notes
-            - _The implementation is not focused on speed. Bulking capacity depends on fastify settings._
-            - _A static type tag is also attached to events ingested through the elastic compatible APIs_
-            - _delete, update bulk actions and other APIs are not supported_
-
             </Tab>
             <Tab label="Newrelic">
             | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud** | **APIs.**                       |   
             |----------------------|--------------------|----------------|----------------|---------------------------------|
             | [Logs](https://docs.newrelic.com/docs/logs/log-api/introduction-log-api/)| POST               | 🟢             |🟡             | `/log/v1` |
-
             </Tab>
 </Tabs>
 
