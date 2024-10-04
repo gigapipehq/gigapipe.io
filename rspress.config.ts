@@ -34,7 +34,7 @@ export default defineConfig({
       { text: "Blog", 
         link: "https://blog.qryn.dev" 
       },
-      { text: "Contact Us", 
+      { text: "Contact", 
         link: "mailto://info@gigapipe.com" 
       }
     ],
