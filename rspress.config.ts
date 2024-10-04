@@ -13,6 +13,7 @@ export default defineConfig({
   description: 'Gigapipe: Polyglot Observability',
   darkMode: true,
   globalStyles: path.join(__dirname, 'styles/index.css'),
+  sidebar: true, 
   themeConfig: {  
     nav: [
       { text: "About", 
