@@ -29,6 +29,7 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
             📦 [Fluentd](https://www.fluentd.org/)<br/>
             📦 [Logstash](https://opensearch.org/docs/latest/tools/logstash/index/)<br/>
             </Tab>
+
             <Tab label="Prometheus">
             | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud**| **APIs.**                       |
             |----------------------|--------------------|----------------|----------------|-----------------------------------|
@@ -49,26 +50,6 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
             📦 [Vector](https://vector.dev/)<br/>
             📦 [Opentelemetry](https://github.com/metrico/otel-collector)<br/>
             </Tab>
-            <Tab label="Tempo">
-            | **Name**             | **Type**           | **QRYN**            | **QRYN Cloud**| **APIs.**                   | 
-            |----------------------|--------------------|---------------------|---------------|-----------------------------------|
-            | Push (Tempo)         | POST               | 🟢                  | 🟢             | `/tempo/api/push`                 | 
-            | Push (Zipkin)        | POST               | 🟢                  | 🟢             | `/api/v2/spans`                   |
-            | Push (OTLP)          | POST               | 🟢                  | 🟢             | `/v1/traces` (OTLP)               |
-            | Query Traces         | GET                | 🟢                  | 🟢             | `/api/traces/{traceId}`           |
-            | Query Traces (JSON)  | GET                | 🟢                  | 🟢             | `/api/traces/{traceId}/json`      |
-            | Trace Tags           | GET                | 🟢                  | 🟢             | `/api/search/tags`                | 
-            | Trace Tag Values     | GET                | 🟢                  | 🟢             | `/api/search/tag/{name}/values`   |
-            | Push Cloud.          | POST               | 🟡                  | 🟢             | `/tempo/spans`                    |
-            
-            ##### Compatible Agents
-            
-            ⭐ Any Tempo/Jaeger compatible client can be used with qryn without modifications
-            
-            📦 [Grafana Alloy](https://grafana.com/docs/alloy/latest/)<br/>
-            📦 [Grafana Agent](https://grafana.com/docs/agent/latest/)<br/>
-            📦 [Zipkin](https://zipkin.io/)<br/>
-            📦 [Opentelemetry](https://github.com/metrico/otel-collector)<br/>
-            </Tab>
+ 
 </Tabs>
 
