@@ -19,7 +19,7 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
             
             ##### Compatible Agents
             
-            ⭐ Any Loki compatible client can be used with qryn without modifications
+            ⭐ Any Loki compatible client can be used without modifications
             
             📦 [Grafana Alloy](https://grafana.com/docs/alloy/latest/)<br/>
             📦 [Grafana Agent](https://grafana.com/docs/agent/latest/)<br/>
@@ -42,7 +42,7 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
             
             ##### Compatible Agents
             
-            ⭐ Any Prometheus compatible client can be used with qryn without modifications
+            ⭐ Any Prometheus compatible client can be used without modifications
             
             📦 [Grafana Alloy](https://grafana.com/docs/alloy/latest/)<br/>
             📦 [Grafana Agent](https://grafana.com/docs/agent/latest/)<br/>
@@ -63,7 +63,7 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
             
             ##### Compatible Agents
             
-            ⭐ Any Tempo/Jaeger compatible client can be used with qryn without modifications
+            ⭐ Any Tempo/Jaeger compatible client can be used without modifications
             
             📦 [Grafana Alloy](https://grafana.com/docs/alloy/latest/)<br/>
             📦 [Grafana Agent](https://grafana.com/docs/agent/latest/)<br/>
@@ -78,12 +78,21 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
 
             ##### Compatible Agents
 
-            ⭐ Any Opentelemetry compatible collector can be used with qryn without modifications
+            ⭐ Any Opentelemetry compatible collector can be used without modifications
 
             📦 [OTEL qryn](https://github.com/metrico/otel-collector/)<br/>
             </Tab>
             <Tab label="Influx">
-            # TEST
+            | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud** | **APIs.**                       |   
+            |----------------------|--------------------|----------------|----------------|---------------------------------|
+            | Write                | POST               | 🟢             |🟢             | `/influx/api/v2/write`<br>`/write`          |
+            | Health               | GET                | 🟢             |🟢             | `/influx/health`<br>`/health`          |
+            
+            ##### Compatible Agents
+
+            ⭐ Any InfluxDB v2 compatible client can be used without modifications
+            
+            📦 [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/)<br/>
             </Tab>
  
 </Tabs>
