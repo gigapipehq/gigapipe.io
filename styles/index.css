@@ -4,7 +4,7 @@
     --rp-c-brand-light: #8839e9;
     --main-light-color: #f4f4f4;
     --secondary-light-color: #e3e3e3;
-    --main-dark-color: #1e13286f;
+    --main-dark-color: #0f0b18;
     --rp-c-bg: light-dark(var(--main-light-color), var(--main-dark-color));
     --rp-home-feature-bg: light-dark(
         var(--secondary-light-color),
@@ -22,7 +22,8 @@
 body {
     background-image: url("https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/header-bg-optimised-scaled-4.jpg");
     background-blend-mode: lighten;
-    background-size: cover;
+    background-repeat: no-repeat;
+ 
 }
 
 img[alt*="Gigapipe"] {
