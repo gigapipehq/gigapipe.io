@@ -16,14 +16,14 @@ export default defineConfig({
   sidebar: false, 
   themeConfig: {  
     nav: [
-      { text: "Sign Up", 
-        link: "signup" 
-      },
       { text: "About", 
         link: "about" 
       },
       { text: "Plans", 
         link: "pricing" 
+      },
+      { text: "Sign Up", 
+        link: "signup" 
       },
       { text: "Docs", 
         link: "docs" 
