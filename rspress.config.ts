@@ -14,7 +14,6 @@ export default defineConfig({
   darkMode: true,
   globalStyles: path.join(__dirname, 'styles/index.css'),
   themeConfig: {  
-    sidebar: true, 
     nav: [
       { text: "About", 
         link: "about" 
