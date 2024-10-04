@@ -52,6 +52,7 @@ const plans = [
 ]
 
 const extraStoragePrice = 50 // per TB per month
+const snapshotsPrice = 50 // per month
 
 const serverLocations = [
   { city: 'Dallas', region: 'US Central', country: 'US', discount: false },
@@ -75,6 +76,7 @@ const PricingCalculator: React.FC = () => {
   const [isYearly, setIsYearly] = useState(true)
   const [extraStorage, setExtraStorage] = useState(0)
   const [selectedLocation, setSelectedLocation] = useState(serverLocations[0])
+  const [includeSnapshots, setIncludeSnapshots] = useState(false)
 
   const handlePlanChange = (planName: string) => {
     const plan = plans.find(p => p.name === planName)
@@ -93,7 +95,8 @@ const PricingCalculator: React.FC = () => {
 
   const basePlanPrice = isYearly ? selectedPlan.price.yearly : selectedPlan.price.monthly
   const extraStorageCost = extraStorage * extraStoragePrice * (isYearly ? 12 : 1)
-  const totalPrice = basePlanPrice + extraStorageCost
+  const snapshotsCost = includeSnapshots ? snapshotsPrice * (isYearly ? 12 : 1) : 0
+  const totalPrice = basePlanPrice + extraStorageCost + snapshotsCost
   const savings = selectedPlan.price.monthly * 12 - selectedPlan.price.yearly
 
   return (
@@ -142,6 +145,19 @@ const PricingCalculator: React.FC = () => {
           <span>{isYearly ? 'Yearly Billing' : 'Monthly Billing'}</span>
         </div>
         
+        <div className={styles.switchContainer}>
+          <label htmlFor="snapshots" className={styles.switch}>
+            <input
+              type="checkbox"
+              id="snapshots"
+              checked={includeSnapshots}
+              onChange={() => setIncludeSnapshots(!includeSnapshots)}
+            />
+            <span className={styles.slider}></span>
+          </label>
+          <span>Snapshots</span>
+        </div>
+        
         <div className={styles.locationContainer}>
             <label htmlFor="server-location">
               Datacenter: &nbsp; 
@@ -184,6 +200,7 @@ const PricingCalculator: React.FC = () => {
         <div className={styles.priceBreakdown}>
           Base plan: €{basePlanPrice}/{isYearly ? 'year' : 'month'}
           {extraStorage > 0 && ` + Extra storage: €${extraStorageCost}/${isYearly ? 'year' : 'month'}`}
+          {includeSnapshots && ` + Snapshots: €${snapshotsCost}/${isYearly ? 'year' : 'month'}`}
         </div>
         <div className={styles.savings}>
           You save €{savings} per year with annual billing!
