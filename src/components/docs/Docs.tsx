@@ -56,10 +56,10 @@ const Docs = () => {
                         },
 
                         {
-                            title: "Opensource",
+                            title: "Transparent",
                             details:
-                                "<p className='text-center'>Transparent, Open-Source,<br>Opentelemetry Native</p>",
-                            icon: "⚗️",
+                                "<p className='text-center'>Open-Source Community,<br>Infinite Integrations</p>",
+                            icon: "⭐",
                             span: 3,
                         },
                     ],
