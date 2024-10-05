@@ -6,24 +6,7 @@ export const frontmatter = {
   pageType: 'custom'
 };
 
-
-
 const plans = [
-  {
-    name: 'Trial',
-    disk: '640GB NVMe', 
-    specs: {
-      ram: '4GB RAM',
-      cpu: '4x Intel vCPU',
-      storage: '10GB Storage',
-      transfer: '10GB/Month Transfer',
-      support: 'Email Support'
-    },
-    price: {
-      monthly: 0,
-      yearly: 0
-    }
-  },
   {
     name: 'Basic',
     disk: '640GB NVMe', 
@@ -91,20 +74,12 @@ const serverLocations = [
   { city: 'Toronto', region: 'Canada', country: 'CA', discount: false }
 ]
 
-export default function PricingCalculator() {
-  const [selectedPlan, setSelectedPlan] = useState(plans[1]) // Default to 'Basic'
+const PricingCalculator: React.FC = () => {
+  const [selectedPlan, setSelectedPlan] = useState(plans[0])
   const [isYearly, setIsYearly] = useState(true)
   const [extraStorage, setExtraStorage] = useState(0)
   const [selectedLocation, setSelectedLocation] = useState(serverLocations[0])
   const [includeSnapshots, setIncludeSnapshots] = useState(false)
-
-  useEffect(() => {
-    // Reset extra storage and snapshots when 'Trial' is selected
-    if (selectedPlan.name === 'Trial') {
-      setExtraStorage(0)
-      setIncludeSnapshots(false)
-    }
-  }, [selectedPlan])
 
   const handlePlanChange = (planName: string) => {
     const plan = plans.find(p => p.name === planName)
@@ -126,8 +101,6 @@ export default function PricingCalculator() {
   const snapshotsCost = includeSnapshots ? snapshotsPrice * (isYearly ? 12 : 1) : 0
   const totalPrice = basePlanPrice + extraStorageCost + snapshotsCost
   const savings = selectedPlan.price.monthly * 12 - selectedPlan.price.yearly
-
-  const isTrial = selectedPlan.name === 'Trial'
 
   return (
     <div className={styles.pricingCalculator}>      
@@ -162,23 +135,23 @@ export default function PricingCalculator() {
       </div>
 
       <div className={styles.optionsRow}>
+
         <div className={styles.locationContainer}>
-          <label htmlFor="server-location">
-            <select
-              id="server-location"
-              value={selectedLocation.city}
-              onChange={handleLocationChange}
-              className={styles.locationSelect}
-              disabled={isTrial}
-            >
-              {serverLocations.map((location) => (
-                <option key={location.city} value={location.city}>
-                  {location.city} ({location.region})
-                  {location.discount ? ' - 10% Off' : ''}
-                </option>
-              ))}
-            </select>
-          </label>
+            <label htmlFor="server-location">
+              <select
+                id="server-location"
+                value={selectedLocation.city}
+                onChange={handleLocationChange}
+                className={styles.locationSelect}
+              >
+                {serverLocations.map((location) => (
+                  <option key={location.city} value={location.city}>
+                    {location.city} ({location.region})
+                    {location.discount ? ' - 10% Off' : ''}
+                  </option>
+                ))}
+              </select>
+            </label>
         </div>
         
         <div className={styles.switchContainer}>
@@ -201,13 +174,14 @@ export default function PricingCalculator() {
               id="snapshots"
               checked={includeSnapshots}
               onChange={() => setIncludeSnapshots(!includeSnapshots)}
-              disabled={isTrial}
             />
             <span className={styles.slider}></span>
           </label>
           <span>Snapshots</span>
         </div>
         
+        
+
         <div className={styles.storageContainer}>
           <label htmlFor="extra-storage">
             Extra Storage (TB)
@@ -218,10 +192,10 @@ export default function PricingCalculator() {
               value={extraStorage}
               onChange={handleExtraStorageChange}
               className={styles.storageInput}
-              disabled={isTrial}
             />
           </label>
         </div>
+        
       </div>
 
       <div className={styles.pricingSummary}>
@@ -233,12 +207,12 @@ export default function PricingCalculator() {
           {extraStorage > 0 && ` + Extra storage: €${extraStorageCost}/${isYearly ? 'year' : 'month'}`}
           {includeSnapshots && ` + Snapshots: €${snapshotsCost}/${isYearly ? 'year' : 'month'}`}
         </div>
-        {!isTrial && (
-          <div className={styles.savings}>
-            You save €{savings} per year with annual billing!
-          </div>
-        )}
+        <div className={styles.savings}>
+          You save €{savings} per year with annual billing!
+        </div>
       </div>
     </div>
   )
 }
+
+export default PricingCalculator
