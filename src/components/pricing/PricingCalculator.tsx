@@ -8,6 +8,21 @@ export const frontmatter = {
 
 const plans = [
   {
+    name: 'Trial',
+    disk: '640GB NVMe', 
+    specs: {
+      ram: '4GB RAM',
+      cpu: '4x Intel vCPU',
+      storage: '10GB Storage',
+      transfer: '10GB/Month Transfer',
+      support: 'Email Support'
+    },
+    price: {
+      monthly: 0,
+      yearly: 0
+    }
+  },
+  {
     name: 'Basic',
     disk: '640GB NVMe', 
     specs: {
@@ -75,7 +90,7 @@ const serverLocations = [
 ]
 
 const PricingCalculator: React.FC = () => {
-  const [selectedPlan, setSelectedPlan] = useState(plans[0])
+  const [selectedPlan, setSelectedPlan] = useState(plans[1]) // Default to 'Basic'
   const [isYearly, setIsYearly] = useState(true)
   const [extraStorage, setExtraStorage] = useState(0)
   const [selectedLocation, setSelectedLocation] = useState(serverLocations[0])
@@ -83,7 +98,13 @@ const PricingCalculator: React.FC = () => {
 
   const handlePlanChange = (planName: string) => {
     const plan = plans.find(p => p.name === planName)
-    if (plan) setSelectedPlan(plan)
+    if (plan) {
+      setSelectedPlan(plan)
+      if (plan.name === 'Trial') {
+        setExtraStorage(0)
+        setIncludeSnapshots(false)
+      }
+    }
   }
 
   const handleExtraStorageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -101,6 +122,8 @@ const PricingCalculator: React.FC = () => {
   const snapshotsCost = includeSnapshots ? snapshotsPrice * (isYearly ? 12 : 1) : 0
   const totalPrice = basePlanPrice + extraStorageCost + snapshotsCost
   const savings = selectedPlan.price.monthly * 12 - selectedPlan.price.yearly
+
+  const isTrial = selectedPlan.name === 'Trial'
 
   return (
     <div className={styles.pricingCalculator}>      
@@ -143,6 +166,7 @@ const PricingCalculator: React.FC = () => {
                 value={selectedLocation.city}
                 onChange={handleLocationChange}
                 className={styles.locationSelect}
+                disabled={isTrial}
               >
                 {serverLocations.map((location) => (
                   <option key={location.city} value={location.city}>
@@ -174,14 +198,13 @@ const PricingCalculator: React.FC = () => {
               id="snapshots"
               checked={includeSnapshots}
               onChange={() => setIncludeSnapshots(!includeSnapshots)}
+              disabled={isTrial}
             />
             <span className={styles.slider}></span>
           </label>
           <span>Snapshots</span>
         </div>
         
-        
-
         <div className={styles.storageContainer}>
           <label htmlFor="extra-storage">
             Extra Storage (TB)
@@ -192,6 +215,7 @@ const PricingCalculator: React.FC = () => {
               value={extraStorage}
               onChange={handleExtraStorageChange}
               className={styles.storageInput}
+              disabled={isTrial}
             />
           </label>
         </div>
@@ -207,9 +231,11 @@ const PricingCalculator: React.FC = () => {
           {extraStorage > 0 && ` + Extra storage: €${extraStorageCost}/${isYearly ? 'year' : 'month'}`}
           {includeSnapshots && ` + Snapshots: €${snapshotsCost}/${isYearly ? 'year' : 'month'}`}
         </div>
-        <div className={styles.savings}>
-          You save €{savings} per year with annual billing!
-        </div>
+        {!isTrial && (
+          <div className={styles.savings}>
+            You save €{savings} per year with annual billing!
+          </div>
+        )}
       </div>
     </div>
   )
