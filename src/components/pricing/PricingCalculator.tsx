@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
-'use client'
 import styles from './PricingCalculator.module.css'
- 
+
 export const frontmatter = {
-import React, { useState, useEffect } from 'react'
   sidebar: false,
   pageType: 'custom'
 };
+
 
 
 const plans = [
