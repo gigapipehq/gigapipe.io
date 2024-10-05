@@ -223,8 +223,11 @@ const PricingCalculator: React.FC = () => {
       </div>
 
       <div className={styles.pricingSummary}>
-        <div className={styles.totalPrice}>
-          Total: €{totalPrice}/{isYearly ? 'year' : 'month'}
+        <div className={styles.totalPriceRow}>
+          <div className={styles.totalPrice}>
+            Total: €{totalPrice}/{isYearly ? 'year' : 'month'}
+          </div>
+          <a href="/signup" className={styles.signUpButton}>Sign Up</a>
         </div>
         <div className={styles.priceBreakdown}>
           Base plan: €{basePlanPrice}/{isYearly ? 'year' : 'month'}
@@ -236,9 +239,6 @@ const PricingCalculator: React.FC = () => {
             You save €{savings} per year with annual billing!
           </div>
         )}
-        <div className={styles.signUpContainer}>
-          <a href="/signup" className={styles.signUpButton}>Sign Up</a>
-        </div>
       </div>
     </div>
   )
