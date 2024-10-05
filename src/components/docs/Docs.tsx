@@ -58,7 +58,7 @@ const Docs = () => {
                         {
                             title: "Transparent",
                             details:
-                                "<p className='text-center'>Open-Source Community,<br>Infinite Integrations</p>",
+                                "<p className='text-center'>Open-Source Community<br>Open Integrations</p>",
                             icon: "⭐",
                             span: 3,
                         },
