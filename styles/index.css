@@ -65,3 +65,8 @@ img[alt*="Founders"] {
 .rspress-doc {
     min-width: 95%;
 }
+
+/* no zoom on logo */
+.medium-zoom-image {
+    pointer-events: none;
+}
