@@ -70,3 +70,9 @@ img[alt*="Founders"] {
 .medium-zoom-image {
     pointer-events: none;
 }
+
+/* title boost */
+.md\:text-7xl {
+    font-size: 5.1rem;
+    line-height: 1;
+}
