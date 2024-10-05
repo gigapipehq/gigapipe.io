@@ -34,6 +34,31 @@ export default defineConfig({
             }
           ]
           
+        },
+        {
+          text: "Integrations",
+          items: [
+            {
+              text: "Logs",
+              items: [
+                {
+                  text: "Opentelemetry",
+                  link: 'https://github.com/metrico/otel-collector'
+                },
+                {
+                  text: "Grafana Alloy",
+                  link: 'https://blog.qryn.dev/qryn-with-alloy'
+                },
+                {
+                  text: "Vector",
+                  link: 'https://oom.ro/posts/vector-qryn-logs/'
+                },
+                {
+                  text: 'Grafana Faro',
+                  link: 'https://community.grafana.com/t/how-to-configure-grafana-agent-with-faro-qryn/111795'
+                }
+              }
+          ]
         }
       
 
