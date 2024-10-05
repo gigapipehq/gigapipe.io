@@ -76,3 +76,8 @@ img[alt*="Founders"] {
     font-size: 5.1rem;
     line-height: 1;
 }
+
+/* Hero Tagline */
+.rspress-home-hero-tagline {
+    font-size: 1.4rem;
+}
