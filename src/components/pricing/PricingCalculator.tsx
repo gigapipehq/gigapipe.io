@@ -236,6 +236,9 @@ const PricingCalculator: React.FC = () => {
             You save €{savings} per year with annual billing!
           </div>
         )}
+        <div className={styles.signUpContainer}>
+          <a href="/signup" className={styles.signUpButton}>Sign Up</a>
+        </div>
       </div>
     </div>
   )
