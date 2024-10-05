@@ -51,7 +51,7 @@ const Docs = () => {
                             title: "Unmetered",
                             details:
                                 "<p className='text-center'>Flat cost Observability<br>Zero monthly suprises</p>",
-                            icon: "💸",
+                            icon: "📐",
                             span: 3,
                         },
 
