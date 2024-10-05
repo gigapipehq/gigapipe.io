@@ -57,7 +57,7 @@ export default function EarlyAccessForm() {
     display: 'flex',
     flexDirection: 'column',
     gap: '1rem',
-    maxWidth: '400px',
+    maxWidth: '500px',
     alignItems: 'flex-start'
   }
 
