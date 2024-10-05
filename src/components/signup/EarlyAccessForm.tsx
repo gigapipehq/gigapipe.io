@@ -87,7 +87,7 @@ export default function EarlyAccessForm() {
     React.createElement('input', {
       type: 'text',
       name: 'name',
-      placeholder: 'Name *',
+      placeholder: 'Full Name *',
       required: true,
       value: formData.name,
       onChange: handleChange,
