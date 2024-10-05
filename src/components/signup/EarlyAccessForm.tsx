@@ -127,9 +127,10 @@ export default function EarlyAccessForm() {
       style: inputStyle
     },
       React.createElement('option', { value: '' }, 'Select a package *'),
-      React.createElement('option', { value: 'basic' }, 'Basic'),
-      React.createElement('option', { value: 'medium' }, 'Medium'),
-      React.createElement('option', { value: 'large' }, 'Large')
+      React.createElement('option', { value: 'basic' }, 'Trial Package'),
+      React.createElement('option', { value: 'basic' }, 'Basic Package'),
+      React.createElement('option', { value: 'medium' }, 'Medium Package'),
+      React.createElement('option', { value: 'large' }, 'Large Package')
     ),
     React.createElement('textarea', {
       name: 'comments',
