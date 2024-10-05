@@ -84,7 +84,8 @@ img[alt*="Founders"] {
 
 /* background on form only */
 .rspress-doc:has(> form) {
-    background-image: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW84ZDFvd2ttMGt0aXJ5c3IwMjc2YjFybHlzcGZiNHh5MzBzOWE3ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/3ohhwzIw3bISRhQWME/giphy.webp);
+    background-size: 100% auto;
+    background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGlwZW5sNWZ2Z3B6a2JkOG16Nm56Nno0dGxwMWxmYW9zdmp6eHdyYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ll1dsS6ljOtxwWu4cS/giphy.webp);
 }
 
 
