@@ -157,3 +157,23 @@ input:checked + .slider:before {
   white-space: nowrap;
   border-width: 0;
 }
+
+.signUpContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.signUpButton {
+  background-color: #8839e9;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.signUpButton:hover {
+  background-color: #8839e9;
+}
