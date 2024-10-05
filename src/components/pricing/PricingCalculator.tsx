@@ -12,10 +12,10 @@ const plans = [
     disk: '640GB NVMe', 
     specs: {
       ram: '4GB RAM',
-      cpu: '4x Intel vCPU',
+      cpu: '4x Shared vCPU',
       storage: '10GB Shared',
       transfer: '10GB/Month Transfer',
-      support: 'Email Support'
+      support: 'Forum Support'
     },
     price: {
       monthly: 0,
@@ -45,7 +45,7 @@ const plans = [
       cpu: '10x Intel vCPU',
       storage: '2TB NVMe',
       transfer: '24TB/Month Transfer',
-      support: 'Email Support'
+      support: 'Helpdesk Support'
     },
     price: {
       monthly: 249,
