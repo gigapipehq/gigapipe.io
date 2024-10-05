@@ -13,6 +13,16 @@ export default defineConfig({
   description: 'Gigapipe: Polyglot Observability',
   
   globalStyles: path.join(__dirname, 'styles/index.css'),
+  builderConfig: {
+    html: {
+      tags: [
+        {
+          tag: 'script',
+          children: "window.RSPRESS_THEME = 'dark';",
+        },
+      ],
+    },
+  },
   themeConfig: {  
     darkMode: true,
     sidebar: {
