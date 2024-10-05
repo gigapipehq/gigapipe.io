@@ -58,5 +58,10 @@ img[alt*="Founders"] {
 
 /* reduce top padding */
 .md\:pt-16 {
-        padding-top: 1rem;
+    padding-top: 1rem;
+}
+
+/* span wider */
+.rspress-doc {
+    min-width: 95%;
 }
