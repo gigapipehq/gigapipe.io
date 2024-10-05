@@ -12,7 +12,7 @@ const Docs = () => {
                     hero: {
                         name: "Gigapipe",
                         text: "<p className='text-3xl'>Polyglot Observability</p>",
-                        tagline: "Your Logs, Metrics, Traces & Profiles",
+                        tagline: ".* Logs, Metrics, Traces & Profiles",
                         actions: [
                             { text: "About", link: "/about", theme: "alt" },
                             { text: "Plans", link: "/pricing", theme: "alt" },
