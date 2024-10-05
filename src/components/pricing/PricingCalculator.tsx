@@ -91,7 +91,7 @@ const serverLocations = [
 
 const PricingCalculator: React.FC = () => {
   const [selectedPlan, setSelectedPlan] = useState(plans[1]) // Default to 'Basic'
-  const [isYearly, setIsYearly] = useState(true)
+  const [isYearly, setIsYearly] = useState(false)
   const [extraStorage, setExtraStorage] = useState(0)
   const [selectedLocation, setSelectedLocation] = useState(serverLocations[0])
   const [includeSnapshots, setIncludeSnapshots] = useState(false)
