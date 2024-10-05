@@ -83,7 +83,7 @@ export default function EarlyAccessForm() {
     )
   } 
   
-  return React.createElement('form', { onSubmit: handleSubmit, style: formStyle },
+  return React.createElement('form', { onSubmit: handleSubmit, style: formStyle, id: 'signupForm' },
     React.createElement('input', {
       type: 'text',
       name: 'name',
