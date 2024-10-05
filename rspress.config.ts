@@ -57,7 +57,8 @@ export default defineConfig({
                   text: 'Grafana Faro',
                   link: 'https://community.grafana.com/t/how-to-configure-grafana-agent-with-faro-qryn/111795'
                 }
-              }
+              ]
+            }
           ]
         }
       
