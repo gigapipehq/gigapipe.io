@@ -13,7 +13,7 @@ const plans = [
     specs: {
       ram: '4GB RAM',
       cpu: '4x Intel vCPU',
-      storage: '10GB Storage',
+      storage: '10GB Shared',
       transfer: '10GB/Month Transfer',
       support: 'Email Support'
     },
