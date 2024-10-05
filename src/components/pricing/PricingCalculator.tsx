@@ -15,11 +15,11 @@ const plans = [
       cpu: '8x Intel vCPU',
       storage: '1TB NVMe',
       transfer: '16TB/Month Transfer',
-      support: "Email Support'
+      support: 'Email Support'
     },
     price: {
-      monthly: 99,
-      yearly: 990
+      monthly: 149,
+      yearly: 1490
     }
   },
   {
@@ -30,11 +30,11 @@ const plans = [
       cpu: '10x Intel vCPU',
       storage: '2TB NVMe',
       transfer: '24TB/Month Transfer',
-      support: "Email Support'
+      support: 'Email Support'
     },
     price: {
-      monthly: 149,
-      yearly: 1490
+      monthly: 249,
+      yearly: 2490
     }
   },
   {
@@ -45,11 +45,11 @@ const plans = [
       cpu: '12x Intel vCPU',
       storage: '3TB NVMe',
       transfer: '32TB/Month Transfer',
-      support: "Helpdesk Support'
+      support: 'Helpdesk Support'
     },
     price: {
-      monthly: 249,
-      yearly: 2490
+      monthly: 449,
+      yearly: 4490
     }
   }
 ]
