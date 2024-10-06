@@ -43,8 +43,10 @@ img[alt*="Founders"] {
 
 img[alt*="qryn_cloud"] {
     margin-top: 50px;
-    width: 70%;
+    width: 80%;
     filter: drop-shadow(9px 10px 4px #4444dd);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .floating {  
