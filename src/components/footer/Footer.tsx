@@ -23,13 +23,18 @@ export default function Footer() {
       fontFamily: 'Arial, sans-serif',
       width: '100%',
       boxSizing: 'border-box',
-      position: 'relative'
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      right: 0
     }}>
       <div style={{
         display: 'flex',
         justifyContent: 'space-between',
         flexWrap: 'wrap',
-        width: '100%'
+        width: '100%',
+        maxWidth: '1200px',
+        margin: '0 auto'
       }}>
         <div style={{ flex: '1 1 300px', marginBottom: '2rem' }}>
           <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>
