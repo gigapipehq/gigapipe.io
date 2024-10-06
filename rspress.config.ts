@@ -98,7 +98,7 @@ export default defineConfig({
       {
         icon: 'github',
         mode: 'link',
-        content: 'https://github.com/gigapipehq',
+        content: 'https://github.com/metrico/qryn',
       },
       {
         icon: 'linkedin',
