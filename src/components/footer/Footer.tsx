@@ -17,64 +17,16 @@ export default function Footer() {
 
   return (
     <footer style={{
-      backgroundColor: '#001529',
+      backgroundColor: 'transparent',
       color: 'white',
-      padding: '2rem',
-      fontFamily: 'Arial, sans-serif',
+      padding: '0rem',
       width: '100%',
       boxSizing: 'border-box',
-      position: 'absolute',
       bottom: 0,
       left: 0,
       right: 0
     }}>
-      <div style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        flexWrap: 'wrap',
-        width: '100%',
-        maxWidth: '1200px',
-        margin: '0 auto'
-      }}>
-        <div style={{ flex: '1 1 300px', marginBottom: '2rem' }}>
-          <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>
-            <span style={{ 
-              display: 'inline-block',
-              width: '30px',
-              height: '30px',
-              backgroundColor: 'white',
-              marginRight: '10px',
-              verticalAlign: 'middle'
-            }}></span>
-            Gigapipe
-          </h2>
-          <p>Removing the barriers to leveraging data</p>
-        </div>
-
-        <div style={{ flex: '1 1 200px', marginBottom: '2rem' }}>
-          <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>Home</h3>
-          <ul style={{ listStyle: 'none', padding: 0 }}>
-            <li style={{ marginBottom: '0.5rem' }}><a href="#" style={{ color: 'white', textDecoration: 'none' }}>What is Gigapipe?</a></li>
-            <li style={{ marginBottom: '0.5rem' }}><a href="#" style={{ color: 'white', textDecoration: 'none' }}>Contact</a></li>
-            <li style={{ marginBottom: '0.5rem' }}><a href="#" style={{ color: 'white', textDecoration: 'none' }}>Docs</a></li>
-            <li style={{ marginBottom: '0.5rem' }}><a href="#" style={{ color: 'white', textDecoration: 'none' }}>Login</a></li>
-          </ul>
-        </div>
-
-        <div style={{ flex: '1 1 200px', marginBottom: '2rem' }}>
-          <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>Solutions</h3>
-          <ul style={{ listStyle: 'none', padding: 0 }}>
-            <li style={{ marginBottom: '0.5rem' }}><a href="#" style={{ color: 'white', textDecoration: 'none' }}>Cloud Observability</a></li>
-            <li style={{ marginBottom: '0.5rem' }}><a href="#" style={{ color: 'white', textDecoration: 'none' }}>Telecom Observability</a></li>
-          </ul>
-        </div>
-
-        <div style={{ flex: '1 1 300px' }}>
-          <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>Contact us</h3>
-          <p style={{ marginBottom: '1rem' }}>info@gigapipe.com</p>
-        </div>
-      </div>
-
+      
       <div style={{
         borderTop: '1px solid rgba(255, 255, 255, 0.1)',
         marginTop: '2rem',
