@@ -39,7 +39,8 @@ export default function Footer() {
       }}>
         <p>&copy; 2024 HEPvest Holding BV</p>
         <div>
-          <a href="/legal" style={{ color: '#e5e7eb', textDecoration: 'none', marginRight: '1rem' }}>Service Terms</a>
+          <a href="/legal" style={{ color: '#e5e7eb', textDecoration: 'none', marginRight: '1rem' }}>Terms</a>
+          <a href="/legal/cookies" style={{ color: '#e5e7eb', textDecoration: 'none', marginRight: '1rem' }}>Cookies</a>
           <a href="mailto:info@gigapipe.com" style={{ color: '#e5e7eb', textDecoration: 'none' }}>Contact Us</a>
         </div>
       </div>
@@ -59,7 +60,7 @@ export default function Footer() {
           zIndex: 1000
         }}>
           <p style={{ margin: 0, flex: 1 }}>
-            We use cookies to improve your experience on our site. By continuing to use our site, you agree to our use of cookies.
+            We use cookies to improve your experience on our site. By continuing to use our site, you agree to the [Gigapipe Cookie Policy](/legal/cookies).
           </p>
           <button 
             onClick={handleAccept}
