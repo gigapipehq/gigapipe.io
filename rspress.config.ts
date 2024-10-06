@@ -25,8 +25,8 @@ export default defineConfig({
   themeConfig: {  
     darkMode: true,
     footer: {
-      message:
-        '<p>© 2024 HEPvest Holding BV. All Rights Reserved</p>',
+      copyright: '2024 HEPvest Holding BV',
+      message: 'All Rights Reserved'
     },
     sidebar: {
       '/docs/docs/':[
