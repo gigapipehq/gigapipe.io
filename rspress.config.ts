@@ -4,14 +4,13 @@ import  path from 'path'
 export default defineConfig({
   root: 'docs',
   base: '/',
-    title: 'Gigapipe',
+  title: 'Gigapipe: Polyglot Observability',
   icon: "/logo.svg",
   logo: {
     light: "/gigapipe-logo-color.svg",
     dark: "/Gigapipe-logo-outline@3x.svg",
   },
   description: 'Gigapipe: Polyglot Observability',
-  
   globalStyles: path.join(__dirname, 'styles/index.css'),
   builderConfig: {
     html: {
