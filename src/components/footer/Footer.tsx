@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { Link } from 'rspress/theme';
 export default function Footer() {
   const [cookieConsent, setCookieConsent] = useState(true);
 
@@ -60,7 +60,7 @@ export default function Footer() {
           zIndex: 1000
         }}>
           <p style={{ margin: 0, flex: 1 }}>
-            We use cookies to improve your experience on our site. By continuing to use our site, you agree to the [Gigapipe Cookie Policy](/legal/cookies).
+            We use cookies to improve your experience on our site. By continuing to use our site, you agree to the <Link className='text-primary' href="/legal/cookies">Gigapipe Cookie Policy.</Link>
           </p>
           <button 
             onClick={handleAccept}
