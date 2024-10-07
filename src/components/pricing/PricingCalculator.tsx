@@ -8,7 +8,7 @@ export const frontmatter = {
 
 const plans = [
   {
-    name: 'Trial',
+    name: 'TRIAL',
     disk: '640GB NVMe', 
     specs: {
       ram: '4GB RAM',
@@ -23,7 +23,7 @@ const plans = [
     }
   },
   {
-    name: 'Basic',
+    name: 'START UP',
     disk: '640GB NVMe', 
     specs: {
       ram: '32GB RAM',
@@ -38,7 +38,7 @@ const plans = [
     }
   },
   {
-    name: 'Medium',
+    name: 'SCALE UP',
     disk: '960GB NVMe',
     specs: {
       ram: '48GB RAM',
@@ -53,7 +53,7 @@ const plans = [
     }
   },
   {
-    name: 'Large',
+    name: 'ENTERPRISE',
     disk: '1.2TB NVMe',
     specs: {
       ram: '64GB RAM',
