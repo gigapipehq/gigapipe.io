@@ -1,3 +1,7 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 :root {
     --rp-c-brand: #7d12ff;
     --rp-c-brand-dark: #661fbc;
@@ -16,6 +20,7 @@
         var(--rp-c-brand-dark),
         var(--rp-c-brand)
     );
+    --footer-border: rgba(255, 255, 255, 0.1);
     color-scheme: dark light;
 }
 
