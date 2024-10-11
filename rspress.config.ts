@@ -34,6 +34,10 @@ export default defineConfig({
           text: "Documentation",
           items: [
             {
+              text: "Sign Up",
+              link: '/docs/signup'
+            },
+            {
               text: "Get Started",
               link: '/docs'
             },
