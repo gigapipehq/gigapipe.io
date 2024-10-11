@@ -3,8 +3,7 @@ import { HomeHero, HomeFeature } from "rspress/theme";
 
 const Docs = () => {
     return (
-        <div style={{ marginLeft: "-200px", marginRight:"-200px",padding:"0px" }}>
-          
+        <div className="ml-[-200px] mr-[-200px] p-0">
             <HomeHero
                 frontmatter={{
                     title: "Gigapipe Home",
@@ -66,11 +65,7 @@ const Docs = () => {
                 }}
                 routePath="/"
             />
-
-     
-
         </div>
-        
     );
 };
 
