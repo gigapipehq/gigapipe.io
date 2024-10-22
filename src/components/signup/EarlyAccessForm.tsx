@@ -43,12 +43,13 @@ export default function EarlyAccessForm() {
       const response = await fetch(FORM_URL, {
         method: 'POST',
         body: JSON.stringify(updatedFormData),
+        mode: 'no-cors',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type':'application/json'
         }
       })
-
-      if (response.ok) {
+      // no-cors mode response
+      if (response.status === 0) {
         setIsSubmitted(true)
       } else {
         throw new Error('Submission failed')
@@ -90,7 +91,7 @@ export default function EarlyAccessForm() {
     )
   } 
   
-  return React.createElement('form', { onSubmit: handleSubmit, style: formStyle, id: 'signupForm' },
+  return React.createElement('form', { style: formStyle, id: 'signupForm' },
     React.createElement('input', {
       type: 'text',
       name: 'name',
@@ -147,8 +148,9 @@ export default function EarlyAccessForm() {
       style: { ...inputStyle, minHeight: '100px' }
     }),
     React.createElement('button', {
-      type: 'submit',
+      type: 'button',
       disabled: isSubmitting || !isFormValid(),
+      onClick: handleSubmit,
       style: {
         ...buttonStyle,
         opacity: isSubmitting || !isFormValid() ? 0.5 : 1
