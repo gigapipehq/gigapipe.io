@@ -44,7 +44,7 @@ export default function EarlyAccessForm() {
         method: 'POST',
         body: JSON.stringify(updatedFormData),
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/x-www-form-urlencoded'
         }
       })
 
