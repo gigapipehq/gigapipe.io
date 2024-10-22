@@ -32,6 +32,13 @@ export default function EarlyAccessForm() {
     event.preventDefault()
     setIsSubmitting(true)
 
+  // Add the current date and time to the form data
+    const dateTime = new Date().toISOString();
+    const updatedFormData = {
+      ...formData,
+      dateTime // Adding the dateTime to the payload
+    };
+    
     try {
       const response = await fetch(FORM_URL, {
         method: 'POST',
