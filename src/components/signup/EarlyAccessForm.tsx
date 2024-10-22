@@ -42,7 +42,7 @@ export default function EarlyAccessForm() {
     try {
       const response = await fetch(FORM_URL, {
         method: 'POST',
-        body: JSON.stringify(formData),
+        body: JSON.stringify(updatedFormData),
         headers: {
           'Content-Type': 'application/json'
         }
