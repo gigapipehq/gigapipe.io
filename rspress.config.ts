@@ -79,11 +79,11 @@ export default defineConfig({
             { text: "About", link: "about" },
             { text: "Plans", link: "pricing" },
             {
-                text: "Products",
+                text: "Product",
                 items: [
-                    { text: "Explore", link: "grafana-explore" },
+                    { text: "Read", link: "grafana-explore" },
                     {
-                        text: "Ingestion",
+                        text: "Write",
                         link: "data-ingestion",
                     },
                 ],

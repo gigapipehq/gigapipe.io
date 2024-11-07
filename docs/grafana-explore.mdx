@@ -2,11 +2,15 @@ import SmoothIframe from '../src/components/SmoothIframe'
 
 # Explore Your Data with Ease Using Gigapipe
 
-Gigapipe is your comprehensive solution for real-time observability, seamlessly integrating into your existing infrastructure for complete visibility into logs, metrics, and traces. It is fully compatible with **Grafana** and even comes with its own custom managed Grafana for every account, enabling software engineers to explore data efficiently. Whether analyzing system health or troubleshooting, Gigapipe delivers the tools you need.
+Gigapipe is your comprehensive solution for real-time observability, seamlessly integrating into your existing infrastructure for complete visibility into logs, metrics, and traces. It is fully compatible with **Grafana** and even comes with its own custom managed Grafana for every account, enabling software engineers to explore data efficiently. Whether analyzing system health or troubleshooting, Gigapipe delivers the tools you need. Or if you prefer you can use Gigapipe's in house query engine!
 
-## Simple Integratio n with Grafana
+## Simple Integration with Grafana
 
 Gigapipe acts as a seamless endpoint, mirroring **Loki**, **Tempo**, and **Prometheus** data sources. You can use the custom-managed Grafana instance provided by Gigapipe, where all data sources are pre-configured, or integrate Gigapipe data sources into your current Grafana setup in just a few clicks. Simply add Gigapipe as a Loki, Tempo, or Prometheus data source, and you're ready to go.
+
+## Or use Gigapipe view directly
+
+Gigapipe also has its own in-house query engine for exploring your data. From here you can query your logs, metrics or traces as well as use advanced features for handling high cardinality and cleaning up unnecessary labels.
 
 ## Robust Support for Query Languages
 
@@ -14,9 +18,9 @@ Gigapipe supports multiple query languages, providing flexibility for engineers 
 
 | **Observability Data Type** | **Supported Query Language**                  | **Description**                                                   |
 |-----------------------------|-----------------------------------------------|-------------------------------------------------------------------|
-| **Logs**                    | [LogQL](https://grafana.com/docs/loki/latest/logql/) | Used for filtering, parsing, and aggregating logs. |
-| **Metrics**                 | [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/) | Standard query language for metric analysis. |
-| **Traces**                  | [Tempo TraceQL](https://grafana.com/docs/tempo/latest/querying/) | Tailored for distributed trace searching and analysis. |
+| **Logs**                    | [LogQL](https://grafana.com/docs/loki/latest/logql/) | Used for filtering, parsing, and aggregating logs.               |
+| **Metrics**                 | [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/) | Standard query language for metric analysis.                     |
+| **Traces**                  | [Tempo TraceQL](https://grafana.com/docs/tempo/latest/querying/) | Tailored for distributed trace searching and analysis.           |
 
 Gigapipe ensures robust query execution and visualization, allowing engineers to explore data efficiently using familiar languages.
 
