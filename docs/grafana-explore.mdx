@@ -1,0 +1,43 @@
+import SmoothIframe from '../src/components/SmoothIframe'
+
+# Explore Your Data with Ease Using Gigapipe
+
+Gigapipe is your comprehensive solution for real-time observability, seamlessly integrating into your existing infrastructure for complete visibility into logs, metrics, and traces. It is fully compatible with **Grafana** and even comes with its own custom managed Grafana for every account, enabling software engineers to explore data efficiently. Whether analyzing system health or troubleshooting, Gigapipe delivers the tools you need. Or if you prefer you can use Gigapipe's in house query engine!
+
+## Simple Integration with Grafana
+
+Gigapipe acts as a seamless endpoint, mirroring **Loki**, **Tempo**, and **Prometheus** data sources. You can use the custom-managed Grafana instance provided by Gigapipe, where all data sources are pre-configured, or integrate Gigapipe data sources into your current Grafana setup in just a few clicks. Simply add Gigapipe as a Loki, Tempo, or Prometheus data source, and you're ready to go.
+
+## Or use Gigapipe view directly
+
+Gigapipe also has its own in-house query engine for exploring your data. From here you can query your logs, metrics or traces as well as use advanced features for handling high cardinality and cleaning up unnecessary labels.
+
+## Robust Support for Query Languages
+
+Gigapipe supports multiple query languages, providing flexibility for engineers familiar with industry standards. The table below summarizes the query languages for each observability data type:
+
+| **Observability Data Type** | **Supported Query Language**                  | **Description**                                                   |
+|-----------------------------|-----------------------------------------------|-------------------------------------------------------------------|
+| **Logs**                    | [LogQL](https://grafana.com/docs/loki/latest/logql/) | Used for filtering, parsing, and aggregating logs.               |
+| **Metrics**                 | [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/) | Standard query language for metric analysis.                     |
+| **Traces**                  | [Tempo TraceQL](https://grafana.com/docs/tempo/latest/querying/) | Tailored for distributed trace searching and analysis.           |
+
+Gigapipe ensures robust query execution and visualization, allowing engineers to explore data efficiently using familiar languages.
+
+## Benefits of Using Gigapipe for Data Exploration
+
+- **Unified Observability Platform**: Monitor logs, metrics, and traces in one place.
+- **Scalable and High-Performance**: Handles high data volumes efficiently.
+- **Advanced Querying**: Supports multiple languages like **LogQL** and **PromQL** for precision analysis.
+- **Full Grafana Compatibility**: Leverage all dashboarding features while connecting to Gigapipe seamlessly.
+- **Leverage Grafana Alerts**: Use Grafana's extensive alerting suite to maximise the value of your data.
+
+## Getting Started
+
+1. **Set Up Your Gigapipe Instance**: Send your logs, metrics and traces in any of the popular protocols to the unified Gigapipe endpoint.
+2. **Launch Grafana**: Grafana will come preconfigured and pre-loading with all your data sources.
+3. **Start Querying and Visualizing**: Analyze data in real-time using your preferred query language.
+
+ <SmoothIframe src="https://app.arcade.software/share/xWio6WS465J42XseY3Fr" height="550px" />
+
+Gigapipe simplifies observability while allowing teams to utilize their expertise for actionable insights. Integrate Gigapipe with tools like Grafana to elevate monitoring practices without disruption. Take control of your logs, metrics, and traces with Gigapipe today.
