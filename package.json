@@ -15,7 +15,8 @@
   "devDependencies": {
     "rspress": "^1.31.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.2",
+    "@rspress/plugin-client-redirects": "^1.38.0"
   },
   "dependencies": {
     "@types/react": "^18.3.11",
