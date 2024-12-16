@@ -28,11 +28,11 @@ export default defineConfig({
       redirects: [
         {
           from: '/terms',
-          to: '/pricing',
+          to: '/legal',
         },
         {
           from: '/privacy-policy',
-          to: '/pricing',
+          to: '/legal',
         },
       ],
     }),
