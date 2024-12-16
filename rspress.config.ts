@@ -1,3 +1,4 @@
+import { pluginClientRedirects } from '@rspress/plugin-client-redirects';
 import { defineConfig } from 'rspress/config';
 import  path from 'path'
 
@@ -22,6 +23,18 @@ export default defineConfig({
       ],
     },
   },
+  pluginClientRedirects({
+    redirects: [
+      {
+        from: '/terms',
+        to: '/pricing',
+      },
+      {
+        from: '/privacy-policy',
+        to: '/pricing',
+      },
+    ],
+  }),
   themeConfig: {  
     darkMode: true,
     footer: {
