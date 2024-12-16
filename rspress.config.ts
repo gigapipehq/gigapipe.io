@@ -23,18 +23,20 @@ export default defineConfig({
       ],
     },
   },
-  pluginClientRedirects({
-    redirects: [
-      {
-        from: '/terms',
-        to: '/pricing',
-      },
-      {
-        from: '/privacy-policy',
-        to: '/pricing',
-      },
-    ],
-  }),
+  plugins: [
+    pluginClientRedirects({
+      redirects: [
+        {
+          from: '/terms',
+          to: '/pricing',
+        },
+        {
+          from: '/privacy-policy',
+          to: '/pricing',
+        },
+      ],
+    }),
+  ],
   themeConfig: {  
     darkMode: true,
     footer: {
