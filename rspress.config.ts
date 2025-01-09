@@ -1,5 +1,6 @@
-import { defineConfig } from "rspress/config";
-import path from "path";
+import { pluginClientRedirects } from '@rspress/plugin-client-redirects';
+import { defineConfig } from 'rspress/config';
+import  path from 'path'
 
 export default defineConfig({
     root: "docs",
@@ -22,10 +23,24 @@ export default defineConfig({
             ],
         },
     },
+    plugins: [
+      pluginClientRedirects({
+        redirects: [
+          {
+            from: '/terms',
+            to: '/legal',
+          },
+          {
+            from: '/privacy-policy',
+            to: '/legal',
+          },
+        ],
+      }),
+    ],
     themeConfig: {
         darkMode: true,
         footer: {
-            // copyright: '2024 HEPvest Holding BV',
+            copyright: '2024 HEPvest Holding BV',
             message: "All Rights Reserved",
         },
         sidebar: {

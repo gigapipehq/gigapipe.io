@@ -60,7 +60,7 @@ export default function Footer() {
           zIndex: 1000
         }}>
           <p style={{ margin: 0, flex: 1 }}>
-            We use cookies to improve your experience on our site. By continuing to use our site, you agree to the <Link className='text-primary' href="/legal/cookies">Gigapipe Cookie Policy.</Link>
+            We do not use any cookies on our website. Private areas of our site and services comply with the <Link className='text-primary' href="/legal/cookies">Gigapipe Cookie Policy.</Link>
           </p>
           <button 
             onClick={handleAccept}
@@ -75,6 +75,20 @@ export default function Footer() {
             }}
           >
             Accept
+          </button>
+          <button 
+            onClick={handleAccept}
+            style={{
+              backgroundColor: '#7c13ff',
+              color: 'white',
+              border: 'none',
+              padding: '0.5rem 1rem',
+              borderRadius: '4px',
+              cursor: 'pointer',
+              marginLeft: '1rem'
+            }}
+          >
+            Reject
           </button>
         </div>
       )}
