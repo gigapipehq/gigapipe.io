@@ -15,6 +15,7 @@ const plans = [
       cpu: '4x Shared vCPU',
       storage: '10GB Shared',
       transfer: '10GB/Month Transfer',
+      Redundancy: 'Single node',
       support: 'Forum Support'
     },
     price: {
@@ -30,6 +31,7 @@ const plans = [
       cpu: '8x Intel vCPU',
       storage: '1TB NVMe',
       transfer: '16TB/Month Transfer',
+      Redundancy: 'Single node',
       support: 'Email Support'
     },
     price: {
@@ -45,6 +47,7 @@ const plans = [
       cpu: '10x Intel vCPU',
       storage: '2TB NVMe',
       transfer: '24TB/Month Transfer',
+      Redundancy: 'Single node',
       support: 'Helpdesk Support'
     },
     price: {
@@ -60,6 +63,7 @@ const plans = [
       cpu: '12x Intel vCPU',
       storage: '3TB NVMe',
       transfer: '32TB/Month Transfer',
+      Redundancy: 'High Availability',
       support: 'Helpdesk Support'
     },
     price: {
