@@ -1,0 +1,49 @@
+# Data Ingestion with Gigapipe
+
+Gigapipe, powered by qryn, provides a polyglot and robust data ingestion support across logs, metrics, traces, and profiling. With compatibility for a wide range of protocols, agents, and API. 
+
+Gigapipe makes it simple to bring together observability data from diverse sources into a unified platform.
+
+Below is a detailed breakdown of all supported ingestion options, organized by data type.
+
+## Log Ingestion
+
+Gigapipe offers a variety of options to capture log data, supporting popular protocols, agents, and APIs for comprehensive compatibility.
+
+| **Log Ingestion**   | **Description** |
+|---------------------|-----------------|
+| **Protocols**       | - **Syslog**: Standard protocol for logging from Unix-based systems and network devices. <br/> - **Loki**: For integration with Grafana Loki-compatible sources. <br/> - **OpenTelemetry Logs**: For cross-platform, standardized logging. <br/> - **InfluxDB**: Supports log ingestion from InfluxDB sources. <br/> - **Elastic Common Schema (ECS)**: For structured log ingestion compatible with Elastic Stack. |
+| **Agents**          | - **Grafana Agent**: A lightweight agent that collects logs and forwards to qryn/Gigapipe. <br/> - **Fluentd / Fluent Bit**: For log forwarding in cloud-native and Kubernetes environments. <br/> - **Filebeat**: A part of the Elastic Stack that collects and forwards log files. <br/> - **Logstash**: A powerful data collection and processing engine for Elasticsearch. <br/> - **Vector**: High-performance agent for log data collection, processing, and forwarding. <br/> - **Amazon CloudWatch Agent**: Used to collect and send logs from AWS environments. |
+| **APIs**            | - **HTTP/REST API**: For sending logs via HTTP endpoints in JSON or other structured formats. <br/> - **Loki Push API**: For sending logs in Loki-compatible format. |
+
+## Metric Ingestion
+
+Gigapipe supports a wide range of protocols and agents for metric ingestion, making it easy to capture time-series data from popular monitoring tools.
+
+| **Metric Ingestion** | **Description** |
+|----------------------|-----------------|
+| **Protocols**        | - **Prometheus Remote Write**: For direct metric ingestion from Prometheus. <br/> - **Graphite**: For integration with Graphite-compatible sources. <br/> - **OpenTelemetry Metrics**: Standardized metric collection across environments. <br/> - **InfluxDB Line Protocol**: Enables ingestion from InfluxDB-compatible sources. |
+| **Agents**           | - **Grafana Agent**: Collects and forwards metrics to Gigapipe/qryn. <br/> - **Telegraf**: InfluxDB’s metrics collection agent, with support for numerous plugins. <br/> - **Prometheus Node Exporter**: For gathering hardware and OS metrics in Prometheus format. <br/> - **Vector**: High-performance collection and forwarding for metrics and logs. <br/> - **Amazon CloudWatch Agent**: Collects and sends system metrics from AWS environments. |
+| **APIs**             | - **Prometheus PushGateway**: Used for pushing ephemeral metrics to Gigapipe. <br/> - **HTTP/REST API**: For HTTP-based metric ingestion. <br/> - **Graphite API**: Allows metric ingestion in Graphite format. |
+
+## Trace Ingestion
+
+For distributed tracing, Gigapipe supports popular tracing protocols, providing easy integration for microservices and distributed applications.
+
+| **Trace Ingestion**  | **Description** |
+|----------------------|-----------------|
+| **Protocols**        | - **OpenTelemetry Traces**: Full support for cross-platform distributed tracing. <br/> - **Jaeger**: Popular open-source distributed tracing system for microservices. |
+| **Agents**           | - **OpenTelemetry Collector**: Collects trace data and forwards it to qryn/Gigapipe. <br/> - **Jaeger Agent**: Streams trace data directly to qryn-compatible destinations. |
+| **APIs**             | - **Jaeger Thrift**: Supports trace ingestion in Jaeger’s Thrift format. <br/> - **HTTP/REST API**: For flexible HTTP-based trace ingestion. |
+
+## Profiling Ingestion
+
+Profiling, a new feature in qryn, provides insights into resource utilization and code execution, making it easier to optimize application performance.
+
+| **Profiling Ingestion** | **Description** |
+|-------------------------|-----------------|
+| **Protocols**           | - **OpenTelemetry Profiling**: Standardized profiling format to track application resource use. |
+| **Agents**              | - **Grafana Agent**: Supports profiling collection alongside logs and metrics. <br/> - **Pyroscope Agent**: Collects profiling data from supported languages like Python and Go. <br/> - **Parca Agent**: Continuous profiling agent for in-depth application performance insights. |
+| **APIs**                | - **HTTP/REST API**: For sending profiling data to Gigapipe/qryn. |
+
+Gigapipe’s extensive support for leading protocols, agents, and APIs makes it easy to unify observability data across logs, metrics, traces, and profiling, providing a single source of truth for your infrastructure and applications.
