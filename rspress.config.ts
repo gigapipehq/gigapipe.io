@@ -11,6 +11,11 @@ export default defineConfig({
     light: "/gigapipe-logo-color.svg",
     dark: "/Gigapipe-logo-outline@3x.svg",
   },
+  head: [
+    '<meta property="og:title" content="Gigapipe: Polyglot Observability">',
+    '<meta property="og:url" content="https://gigapipe.com">',
+    '<meta property="og:image" content="https://i.imgur.com/w9MZrzK.png">',
+  ],
   description: 'Gigapipe: Polyglot Observability',
   globalStyles: path.join(__dirname, 'styles/index.css'),
   builderConfig: {
