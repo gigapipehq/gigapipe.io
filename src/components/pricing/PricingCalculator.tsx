@@ -8,7 +8,7 @@ export const frontmatter = {
 
 const plans = [
   {
-    name: 'TRIAL',
+    name: 'FREE TRIAL',
     disk: '640GB NVMe', 
     specs: {
       ram: '4GB RAM',
