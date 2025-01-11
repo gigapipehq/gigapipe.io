@@ -10,7 +10,6 @@ const plans = [
   {
     name: 'TRIAL',
     disk: '640GB NVMe', 
-    host: 'ssdnodes',
     specs: {
       ram: '4GB RAM',
       cpu: '4x Shared vCPU',
@@ -27,7 +26,6 @@ const plans = [
   {
     name: 'START UP',
     disk: '640GB NVMe', 
-    host: 'ssdnodes',
     specs: {
       ram: '32GB RAM',
       cpu: '8x Intel vCPU',
@@ -44,7 +42,6 @@ const plans = [
   {
     name: 'SCALE UP',
     disk: '960GB NVMe',
-    host: 'ssdnodes',
     specs: {
       ram: '48GB RAM',
       cpu: '10x Intel vCPU',
@@ -61,7 +58,6 @@ const plans = [
   {
     name: 'ENTERPRISE',
     disk: '1.2TB NVMe',
-    host: 'ssdnodes',
     specs: {
       ram: '64GB RAM',
       cpu: '12x Intel vCPU',
@@ -78,7 +74,6 @@ const plans = [
   {
     name: 'EXTREME',
     disk: '3TB SSD',
-    host: 'hetzner-ccx53',
     specs: {
       ram: '128GB RAM',
       cpu: '32x Intel vCPU',
@@ -95,7 +90,6 @@ const plans = [
   {
     name: 'SUPREME 👑',
     disk: '5TB SSD',
-    host: 'hetzner-ccx63',
     specs: {
       ram: '192GB RAM',
       cpu: '48x Intel vCPU',
