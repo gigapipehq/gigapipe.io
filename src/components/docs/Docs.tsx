@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { HomeHero, HomeFeature } from "rspress/theme";
 
 const Docs = () => {
+    const taglines = [
+        "Unmetered Logs, Metrics & Traces",
+        "Uncapped Logs, Metrics & Traces",
+        "Unlimited Logs, Metrics & Traces",
+        "Infinite Logs, Metrics & Traces",
+        "Fixed-Cost Observability SaaS",
+    ];
+
+    const [currentTagline, setCurrentTagline] = useState(taglines[0]);
+
+    useEffect(() => {
+        const randomIndex = Math.floor(Math.random() * taglines.length);
+        setCurrentTagline(taglines[randomIndex]);
+    }, []); // Empty dependency array means this runs once on mount
+
     return (
-        <div style={{ marginLeft: "-200px", marginRight:"-200px",padding:"0px" }}>
-          
+        <div style={{ marginLeft: "-200px", marginRight:"-200px", padding:"0px" }}>
             <HomeHero
                 frontmatter={{
                     title: "Gigapipe Home",
@@ -12,7 +26,7 @@ const Docs = () => {
                     hero: {
                         name: "Gigapipe",
                         text: "<p className='text-3xl'>Polyglot Observability</p>",
-                        tagline: "Unmetered Logs, Metrics & Traces",
+                        tagline: currentTagline,
                         actions: [
                             { text: "About", link: "/about", theme: "alt" },
                             { text: "Plans", link: "/pricing", theme: "alt" },
@@ -26,7 +40,6 @@ const Docs = () => {
                 }}
                 routePath="/"
             />
-
             <HomeFeature
                 frontmatter={{
                     title: "Gigapipe Features",
@@ -46,7 +59,6 @@ const Docs = () => {
                             icon: "⚡",
                             span: 3,
                         },
-
                         {
                             title: "Unmetered",
                             details:
@@ -54,7 +66,6 @@ const Docs = () => {
                             icon: "📐",
                             span: 3,
                         },
-
                         {
                             title: "Transparent",
                             details:
@@ -66,11 +77,7 @@ const Docs = () => {
                 }}
                 routePath="/"
             />
-
-     
-
         </div>
-        
     );
 };
 
