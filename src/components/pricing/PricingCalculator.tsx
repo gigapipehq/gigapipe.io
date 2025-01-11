@@ -56,7 +56,7 @@ const plans = [
     }
   },
   {
-    name: 'ENTERPRISE',
+    name: 'ENTERPRISE 👑',
     disk: '1.2TB NVMe',
     specs: {
       ram: '64GB RAM',
@@ -89,7 +89,7 @@ const plans = [
     }
   },
   {
-    name: 'SUPREME 👑',
+    name: 'SUPREME',
     disk: '5TB SSD',
     host: 'hetzner-ccx63',
     specs: {
