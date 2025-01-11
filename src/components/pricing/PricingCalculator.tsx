@@ -70,6 +70,40 @@ const plans = [
       monthly: 449,
       yearly: 4490
     }
+  },
+  {
+    name: 'EXTREME',
+    disk: '3TB SSD',
+    host: 'hetzner-ccx53',
+    specs: {
+      ram: '128GB RAM',
+      cpu: '32x Intel vCPU',
+      storage: '5TB SSD',
+      transfer: '50TB/Month Transfer',
+      Redundancy: 'Redudant (High Availability)',
+      support: 'Helpdesk Support'
+    },
+    price: {
+      monthly: 999,
+      yearly: 10999
+    }
+  },
+  {
+    name: 'SUPREME 👑',
+    disk: '5TB SSD',
+    host: 'hetzner-ccx63',
+    specs: {
+      ram: '192GB RAM',
+      cpu: '48x Intel vCPU',
+      storage: '10TB SSD',
+      transfer: '50TB/Month Transfer',
+      Redundancy: 'Redudant (High Availability)',
+      support: 'Helpdesk Support'
+    },
+    price: {
+      monthly: 1449,
+      yearly: 15999
+    }
   }
 ]
 
