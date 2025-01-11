@@ -71,9 +71,10 @@ const plans = [
       yearly: 4490
     }
   }
+]
 
-const extraStoragePrice = 100 // per TB per month
-const snapshotsPrice = 50 // per month
+const extraStoragePrice = 100; // per TB per month
+const snapshotsPrice = 50; // per month
 
 const serverLocations = [
   { city: 'Dallas', region: 'US Central', country: 'US', discount: false },
