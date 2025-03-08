@@ -15,289 +15,243 @@ There are just two types of _LogQL_ queries:
 
 <Tabs>
   <Tab label="Log Stream Selector">
+    ## ** Log Stream selector **
 
-## ** Log Stream selector **
+    The _stream selector_ block is always mandatory and determines which log streams should be included in your query using operators
 
-The _stream selector_ block is always mandatory and determines which log streams should be included in your query using operators
+    ```
+    {app="clickhouse"}
+    ```
 
-{app="clickhouse"}
+    In this example, logs that have a label `app` matching `clickhouse` will be included in the results
 
-markdown
-Copy code
+    ### Log Stream Selectors Operators
 
-In this example, logs that have a label `app` matching `clickhouse` will be included in the results
+    The following label operators are supported in label selectors:
 
-### Log Stream Selectors Operators
+    * `=`: equals
+    * `!=`: not equals
+    * `=~`: regex matches
+    * `!~`: regex does not match
 
-The following label operators are supported in label selectors:
+    #### Examples
 
-* `=`: equals
-* `!=`: not equals
-* `=~`: regex matches
-* `!~`: regex does not match
+    Return all log lines for the job systemd-journal:
 
-#### Examples
+    ```
+    {job="systemd-journal"}
+    ```
 
-Return all log lines for the job systemd-journal:
+    Return all log lines for the unit ssh.service:
 
-{job="systemd-journal"}
+    ```
+    {unit="ssh.service"}
+    ```
 
-lua
-Copy code
+    Return all log lines for the job systemd-journal and the unit cron.service:
 
--------
+    ```
+    {job="systemd-journal",unit="cron.service"}
+    ```
 
-Return all log lines for the unit ssh.service:
+    Show all log lines for 2 jobs with different names:
 
-{unit="ssh.service"}
-
-lua
-Copy code
-
--------
-
-Return all log lines for the job systemd-journal and the unit cron.service:
-
-{job="systemd-journal",unit="cron.service"}
-
-sql
-Copy code
-
--------
-
-Show all log lines for 2 jobs with different names:
-
-{job=~"qryn/systemd-journal|systemd-journal"}
-
-sql
-Copy code
-
+    ```
+    {job=~"qryn/systemd-journal|systemd-journal"}
+    ```
   </Tab>
   <Tab label="Filter Expression">
+    ## ** Filter Expression **
 
-## ** Filter Expression **
+    Once labels are selected the resulting data is filtered using filter expressions.
 
-Once labels are selected the resulting data is filtered using filter expressions.
+    ### Filter Expressions Operators
 
-### Filter Expressions Operators
+    The following filter operators are supported in expressions:
 
-The following filter operators are supported in expressions:
+    * `|=` : equals
+    * `!=` : not equals
+    * `|~` : regex matches
+    * `!~` : regex does not match
 
-* `|=` : equals
-* `!=` : not equals
-* `|~` : regex matches
-* `!~` : regex does not match
+    #### Examples
 
-#### Examples
+    Return lines including the text "error":
 
-Return lines including the text "error":
+    ```
+    {job="systemd-journal"} |= "error"
+    ```
 
-{job="systemd-journal"} |= "error"
+    Return lines not including the text "error":
 
-lua
-Copy code
+    ```
+    {job="systemd-journal"} != "error"
+    ```
 
--------
+    Return lines including the text "error" or "info" using regex:
 
-Return lines not including the text "error":
+    ```
+    {job="systemd-journal"} |~ "error|info"
+    ```
 
-{job="systemd-journal"} != "error"
+    Return lines not including the text "error" or "info" using regex:
 
-sql
-Copy code
+    ```
+    {job="systemd-journal"} !~ "error|info"
+    ```
 
--------
+    Return lines including the text "error" but not including "info":
 
-Return lines including the text "error" or "info" using regex:
+    ```
+    {job="systemd-journal"} |= "error" != "info"
+    ```
 
-{job="systemd-journal"} |~ "error|info"
+    Return lines including the text "Invalid user" and including ("default" or "qryn") using regex:
 
-sql
-Copy code
+    ```
+    {job="systemd-journal"} |~ "Invalid user (default|qryn)"
+    ```
 
--------
+    Return lines including the text "status 403" or "status 503" using regex:
 
-Return lines not including the text "error" or "info" using regex:
-
-{job="systemd-journal"} !~ "error|info"
-
-lua
-Copy code
-
--------
-
-Return lines including the text "error" but not including "info":
-
-{job="systemd-journal"} |= "error" != "info"
-
-sql
-Copy code
-
--------
-
-Return lines including the text "Invalid user" and including ("default" or "qryn") using regex:
-
-{job="systemd-journal"} |~ "Invalid user (default|qryn)"
-
-sql
-Copy code
-
--------
-
-Return lines including the text "status 403" or "status 503" using regex:
-
-{job="systemd-journal"} |~ "status [45]03"
-
-sql
-Copy code
-
+    ```
+    {job="systemd-journal"} |~ "status [45]03"
+    ```
   </Tab>
-</Tabs>
-
-<Tabs>
   <Tab label="Parser Expression">
+    ### ** Parser Expression **
 
-### ** Parser Expression **
-
-Parser expressions can parse and extract labels from the log content. Those extracted labels can then be used for filtering using label filter expressions or for metric aggregations without bloating cardinality.
-
+    Parser expressions can parse and extract labels from the log content. Those extracted labels can then be used for filtering using label filter expressions or for metric aggregations without bloating cardinality.
   </Tab>
   <Tab label="json">
+    ### ** json **
 
-### ** json **
+    The json parser operates in two modes:
 
-The json parser operates in two modes:
+    * without parameters:
+      * Adding `| json` to your pipeline will extract all json properties as labels if the log line is a valid json document. Nested properties are flattened into label keys using the _ separator.
+      * ```
+        {job="0.6611336793589486_json"} | json
+        ```
 
-* without parameters:
-  * Adding `| json` to your pipeline will extract all json properties as labels if the log line is a valid json document. Nested properties are flattened into label keys using the _ separator.
-  * ```{job="0.6611336793589486_json"} | json```
-
-* with parameters:
-  * Using `| json label="expression"` in your pipeline will extract only the specified json fields to labels. 
-  * ```{job="0.6611336793589486_json"} | json my_field="json_field"```
-
+    * with parameters:
+      * Using `| json label="expression"` in your pipeline will extract only the specified json fields to labels. 
+      * ```
+        {job="0.6611336793589486_json"} | json my_field="json_field"
+        ```
   </Tab>
   <Tab label="logfmt">
+    ### ** logfmt **
 
-### ** logfmt **
+    The logfmt parser extracts any `key=value` pairs from the processed logs.
 
-The logfmt parser extracts any `key=value` pairs from the processed logs.
+    ##### Input Example:
 
-##### Input Example:
+    ```
+    YYYY-MM-DDT00:00:00Z ... somelog name=qryn value=123 something=else
+    ```
 
-* ```YYYY-MM-DDT00:00:00Z ... somelog name=qryn value=123 something=else```
+    ##### LogQL:
 
-##### LogQL:
+    ```
+    {type="clickhouse"} |~"somelog" | logfmt
+    ```
 
-* ```{type="clickhouse"} |~"somelog" | logfmt```
+    ##### Extracted Labels:
 
-##### Extracted Labels:
-
-* ```{ name: "qryn", value: 123, something: "else" }```
-
+    ```
+    { name: "qryn", value: 123, something: "else" }
+    ```
   </Tab>
   <Tab label="regexp">
+    ### ** regexp **
 
-### ** regexp **
+    The regexp parser operates against log string and requires named groups for matching.
 
-The regexp parser operates against log string and requires named groups for matching.
+    Example: extract a new label named `token` from a string ie: 
 
-Example: extract a new label named `token` from a string ie: 
+    ```
+    YYYY-MM-DDT00:00:00Z ... Reserving 1.1Mb of memory
+    ```
 
-```YYYY-MM-DDT00:00:00Z ... Reserving 1.1Mb of memory```
-
- * ```{type="clickhouse"} |~"Reserving" | regexp "Reserving (?<token>\\d+.\\d+)"```
-
+    ```
+    {type="clickhouse"} |~"Reserving" | regexp "Reserving (?<token>\\d+.\\d+)"
+    ```
   </Tab>
 </Tabs>
 
 <Tabs>
   <Tab label="Range Vectors">
+    ### ** Range Vectors **
 
-### ** Range Vectors **
+    Just like Prometheus, LogQL supports aggregating data over a selected ranges to transform it into an instance vectors.
 
-Just like Prometheus, LogQL supports aggregating data over a selected ranges to transform it into an instance vectors.
+    The currently supported `range vector` functions are:
 
-The currently supported `range vector` functions are:
+    * `rate` : Calculates the number of entries per second
+    * `count_over_time` : Counts the entries for each log stream within the given range.
+    * `bytes_over_time` : Counts the number of bytes in each log stream in the range
+    * `bytes_rate` : Similar to bytes_over_time but converted to number of bytes per second
 
-* `rate` : Calculates the number of entries per second
-* `count_over_time` : Counts the entries for each log stream within the given range.
-* `bytes_over_time` : Counts the number of bytes in each log stream in the range
-* `bytes_rate` : Similar to bytes_over_time but converted to number of bytes per second
+    The following example counts all the log lines within the last five minutes for the Clickhouse job.
 
-The following example counts all the log lines within the last five minutes for the Clickhouse job.
-
-count_over_time({job=”clickhouse”}[5m])
-
-sql
-Copy code
-
+    ```
+    count_over_time({job="clickhouse"}[5m])
+    ```
   </Tab>
   <Tab label="Unwrap">
+    ### ** Unwrap **
 
-### ** Unwrap **
+    Unwrap Expressions allow for the unwrapping of a value to be used in an aggregation. It can extract any parsed json value.
 
-Unwrap Expressions allow for the unwrapping of a value to be used in an aggregation. It can extract any parsed json value.
+    Supported `unwrap range` functions for operating over unwrapped ranges are:
 
-Supported `unwrap range` functions for operating over unwrapped ranges are:
-
-* `rate(unwrapped-range)`: calculates per second rate of all values in the specified interval
-* `sum_over_time(unwrapped-range)`: the sum of all values in the specified interval
-* `avg_over_time(unwrapped-range)`: the average value of all points in the specified interval
-* `max_over_time(unwrapped-range)`: the maximum value of all points in the specified interval
-* `min_over_time(unwrapped-range)`: the minimum value of all points in the specified interval
-
+    * `rate(unwrapped-range)`: calculates per second rate of all values in the specified interval
+    * `sum_over_time(unwrapped-range)`: the sum of all values in the specified interval
+    * `avg_over_time(unwrapped-range)`: the average value of all points in the specified interval
+    * `max_over_time(unwrapped-range)`: the maximum value of all points in the specified interval
+    * `min_over_time(unwrapped-range)`: the minimum value of all points in the specified interval
   </Tab>
-</Tabs>
-
-<Tabs>
   <Tab label="Aggregate">
+    ### ** Aggregate **
 
-### ** Aggregate **
+    Like PromQL, LogQL supports a subset of built-in aggregation operators that can be used to aggregate elements of a single vector, resulting in a new vector of fewer elements with aggregated values:
 
-Like PromQL, LogQL supports a subset of built-in aggregation operators that can be used to aggregate elements of a single vector, resulting in a new vector of fewer elements with aggregated values:
+    * `sum` : Calculate the total of all instance vectors in the range at time
+    * `min` : Show the minimum value from all instance vectors in the range at time
+    * `max` : Show the maximum value from all instance vectors in the range at time
+    * `avg` : Calculate the average of the values from all instance vectors in the range at time
+    * `stddev` : Calculate the standard deviation of the values from all instance vectors in the range at time
+    * `stdvar` : Calculate the standard variance of the values from all instance vectors in the range at time
+    * `count` : Count the number of elements all instance vectors in the range at time
 
-* `sum` : Calculate the total of all instance vectors in the range at time
-* `min` : Show the minimum value from all instance vectors in the range at time
-* `max` : Show the maximum value from all instance vectors in the range at time
-* `avg` : Calculate the average of the values from all instance vectors in the range at time
-* `stddev` : Calculate the standard deviation of the values from all instance vectors in the range at time
-* `stdvar` : Calculate the standard variance of the values from all instance vectors in the range at time
-* `count` : Count the number of elements all instance vectors in the range at time
+    #### Examples
 
-#### Examples
+    Calculate the total of all instance vectors in the range at time:
 
-Calculate the total of all instance vectors in the range at time:
-
-sum(count_over_time({job="systemd-journal"}[1m]))
-
-markdown
-Copy code
-
+    ```
+    sum(count_over_time({job="systemd-journal"}[1m]))
+    ```
   </Tab>
   <Tab label="Comparison Ops">
+    ### ** Comparison Ops **
 
-### ** Comparison Ops **
+    Comparison Operators. Used for testing numeric values present in scalars and vectors.
 
-Comparison Operators. Used for testing numeric values present in scalars and vectors.
-
-* `==` : equal
-* `!=` : not equal
-* `>` : greater than
-* `>=` : greater than or equal to
-* `<` : less than
-* `<=` : less than or equal to
-
+    * `==` : equal
+    * `!=` : not equal
+    * `>` : greater than
+    * `>=` : greater than or equal to
+    * `<` : less than
+    * `<=` : less than or equal to
   </Tab>
   <Tab label="Logical Ops">
+    ### ** Logical Ops **
 
-### ** Logical Ops **
+    Operators can be used to add filter conditions:
 
-Operators can be used to add filter conditions:
-
-* `and` : Both expressions must be true
-* `or` : Either expression must be true
-
+    * `and` : Both expressions must be true
+    * `or` : Either expression must be true
   </Tab>
 </Tabs>
 
