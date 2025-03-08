@@ -4,6 +4,6 @@
     "name": "docs",
     "label": "Docs",
     "collapsible": true,
-    "collapsed": false
+    "collapsed": true
   }
 ]
