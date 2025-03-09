@@ -100,4 +100,8 @@ img[alt*="qryn_cloud"] {
     background-image: url(https://i.imgur.com/MAlOMOW.gif);
 }
 
+div[class^='sidebar'],div[class^='.sidebar'] {
+    opacity: 0;
+}
+
 
