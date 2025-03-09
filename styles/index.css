@@ -104,4 +104,8 @@ div[class^='sidebar'],div[class^='.sidebar'] {
     opacity: 0;
 }
 
+.rspress-sidebar {
+    opacity: 0;
+}
+
 
