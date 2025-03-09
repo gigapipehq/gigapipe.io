@@ -16,6 +16,7 @@
         var(--rp-c-brand-dark),
         var(--rp-c-brand)
     );
+    --rp-sidebar-width: '150px';
     color-scheme: dark light;
 }
 
