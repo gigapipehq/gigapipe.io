@@ -28,7 +28,7 @@ body {
     background-image: url("https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/header-bg-optimised-scaled-4.jpg");
     background-blend-mode: lighten;
     background-repeat: no-repeat;
- 
+    
 }
 
 img[alt*="Gigapipe"] {
@@ -109,4 +109,22 @@ div[class^='sidebar'],div[class^='.sidebar'] {
     opacity: 0;
 }
 
+.custom-content {
+    padding: 40px 14%;
+}
+.custom-content h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
 
+.custom-content h3 {
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+   
+}
+
+.custom-footer {
+    padding: 40px 14%;
+}
