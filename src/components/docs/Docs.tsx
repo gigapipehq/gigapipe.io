@@ -18,7 +18,7 @@ const Docs = () => {
     }, []); // Empty dependency array means this runs once on mount
 
     return (
-        <div style={{ marginLeft: "-200px", marginRight:"-200px", padding:"0px" }}>
+      <>
             <HomeHero
                 frontmatter={{
                     title: "Gigapipe Home",
@@ -77,7 +77,7 @@ const Docs = () => {
                 }}
                 routePath="/"
             />
-        </div>
+       </>
     );
 };
 

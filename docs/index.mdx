@@ -1,24 +1,26 @@
 ---
 sidebar: false
 outline: false
+navbar: true
+pageType: custom
+
 ---
 
 import Docs from '../src/components/docs/Docs'
+import Footer from '../src/components/footer/Footer'
 
 <Docs />
 
-<br /> 
+<div className="custom-content">
 
-<br />
+<h1>Gigapipe Observability 🔮</h1>
 
-<br />
-
-# Gigapipe Observability 🔮 
-
-Gigapipe is a polyglot observability platform designed to unify logs, metrics, and traces under a single, lightspeed OLAP database. 
+<h3> Gigapipe is a polyglot observability platform designed to unify logs, metrics, and traces under a single, lightspeed OLAP database. </h3>
 
 Unlike traditional observability tools that silo data and require multiple components, Gigapipe's all-in-one approach allows correlation between different data types and formats, enhancing troubleshooting and insight generation for engineering teams, devops and business intelligence.
 
 <a href="/about"><img src="/qryn_cloud.png" alt="qryn_cloud" /></a>
-
-
+</div>
+<div className="custom-footer">
+<Footer />
+</div>
