@@ -1,10 +1,10 @@
-import Theme from "rspress/theme";
+import { Layout as BasicLayout } from 'rspress/theme';
 
 import Footer from "../src/components/footer/Footer";
    
 
 const Layout = () => (
-    <Theme.Layout
+    <BasicLayout
 
         afterDocFooter={
            <Footer/>
@@ -13,7 +13,6 @@ const Layout = () => (
 );
 
 export default {
-    ...Theme,
     Layout,
 };
 
