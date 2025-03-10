@@ -1,6 +1,6 @@
 {
   "name": "gigapipe-homepage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "gigapipe.com",
   "main": "index.js",
   "scripts": {
