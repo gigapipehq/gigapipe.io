@@ -7,7 +7,9 @@ const Docs = () => {
         "Uncapped Logs, Metrics & Traces",
         "Unlimited Logs, Metrics & Traces",
         "Infinite Logs, Metrics & Traces",
-        "Fixed-Cost Observability SaaS",
+        "Fixed-Cost Observability Cloud",
+        "Polyglot Observability Cloud",
+        "Open-Source Polyglot Observability",
     ];
 
     const [currentTagline, setCurrentTagline] = useState(taglines[0]);
