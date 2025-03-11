@@ -52,19 +52,16 @@ export default defineConfig({
   ],
   themeConfig: {  
     darkMode: true,
+    hideNavbar: 'auto',
     footer: {
-      copyright: '2024 HEPvest Holding BV',
-      message: 'All Rights Reserved'
+     // copyright: '2024 HEPvest Holding BV',
+      message: '2024 HEPvest Holding BV All Rights Reserved'
     },
     sidebar: {
-      '/docs/docs':[
+      '/docs/':[
         {
           text: "Documentation",
           items: [
-            {
-              text: "Sign Up",
-              link: '/docs/signup'
-            },
             {
               text: "Get Started",
               link: '/docs'
@@ -117,7 +114,21 @@ export default defineConfig({
         link: "signup" 
       },
       { text: "Docs", 
-        link: "/docs/" 
+        link: "docs/index" ,
+        items: [
+          {
+            text: "Get Started",
+            link: '/docs/index'
+          },
+          {
+            text: "Explore Data",
+            link: '/docs/demo'
+          },
+          {
+            text: "API Endpoints",
+            link: '/docs/api'
+          }
+        ]
       },
       { text: "Blog", 
         link: "https://blog.qryn.dev" 
