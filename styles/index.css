@@ -138,3 +138,11 @@ img[alt*="qryn_cloud"] {
 .rspress-doc-container {
     max-width: 100%;
 }
+
+.pb-12 {
+    padding-bottom: 10px;
+}
+
+.md\:pb-16 {
+    padding-bottom: 1rem;
+}
