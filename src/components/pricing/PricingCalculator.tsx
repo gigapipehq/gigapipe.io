@@ -61,7 +61,7 @@ const plans = [
     specs: {
       ram: '64GB RAM',
       cpu: '16x Intel vCPU',
-      storage: '1250GB NVMe',
+      storage: '1.25TB NVMe',
       transfer: '5TB/Month Transfer',
       Redundancy: 'High Availability',
       support: 'Helpdesk Support'
@@ -78,7 +78,7 @@ const plans = [
     specs: {
       ram: '128GB RAM',
       cpu: '32x Intel vCPU',
-      storage: '2250GB NVMe',
+      storage: '2.25TB NVMe',
       transfer: '10TB/Month Transfer',
       Redundancy: 'High Availability',
       support: 'Helpdesk Support'
@@ -95,7 +95,7 @@ const plans = [
     specs: {
       ram: '192GB RAM',
       cpu: '48x Intel vCPU',
-      storage: '3500GB NVMe',
+      storage: '3.5TB NVMe',
       transfer: '15TB/Month Transfer',
       Redundancy: 'High Availability',
       support: 'Helpdesk Support'
