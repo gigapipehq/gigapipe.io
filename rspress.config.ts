@@ -60,12 +60,22 @@ export default defineConfig({
     sidebar: {
       '/docs/':[
         {
-          text: "Documentation",
+          text: "Get Started",
           items: [
             {
-              text: "Get Started",
+              text: "Cloud Hosted",
               link: '/docs/'
             },
+            {
+              text: "Open Source",
+              link: '/docs/oss'
+            },
+            ]
+          
+        },
+        {
+          text: "Documentation",
+          items: [
             {
               text: "Explore Data",
               link: '/docs/demo'
@@ -102,6 +112,70 @@ export default defineConfig({
                 {
                   text: "Vector",
                   link: 'https://oom.ro/posts/vector-qryn-logs/'
+                }
+              ]
+            },
+            {
+              text: "Metrics",
+              items: [
+                {
+                  text: "Opentelemetry",
+                  link: 'https://github.com/metrico/otel-collector'
+                },
+                {
+                  text: "Grafana Alloy",
+                  link: 'https://blog.qryn.dev/qryn-with-alloy'
+                },
+                {
+                  text: "Vector",
+                  link: 'https://oom.ro/posts/vector-qryn-logs/'
+                },
+                {
+                  text: "Telegraf",
+                  link: "https://www.influxdata.com/time-series-platform/telegraf/"
+                },
+                {
+                  text: "Cloudwatch",
+                  link: "https://aws.amazon.com/cloudwatch/"
+                },
+                {
+                  text: "Prometheus Exporter",
+                  link: "https://prometheus.io/docs/guides/node-exporter/"
+                }
+                
+              ]
+            },
+            {
+              text: "Tracing",
+              items: [
+                {
+                  text: "Opentelemetry",
+                  link: 'https://github.com/metrico/otel-collector'
+                },
+                {
+                  text: "Grafana Alloy",
+                  link: 'https://blog.qryn.dev/qryn-with-alloy'
+                },
+                {
+                  text: "Jaeger",
+                  link: 'https://www.jaegertracing.io/'
+                }
+              ]
+            },
+            {
+              text: "Profiling",
+              items: [
+                {
+                  text: "Pyroscope SDK",
+                  link: 'https://grafana.com/docs/pyroscope/latest/configure-client/language-sdks/'
+                },
+                 {
+                  text: "Parca SDK",
+                  link: 'https://www.parca.dev/'
+                },
+                 {
+                  text: "Grafana Agent",
+                  link: 'https://grafana.com/docs/agent/latest/'
                 }
               ]
             }
