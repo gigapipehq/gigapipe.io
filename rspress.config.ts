@@ -212,8 +212,11 @@ export default defineConfig({
           }
         ]
       },
+      { text: "OSS", 
+        link: "https://github.com/metrico/qryn" 
+      },
       { text: "Blog", 
-        link: "https://blog.qryn.dev" 
+        link: "https://blog.gigapipe.com" 
       }
     ],
     socialLinks: [
@@ -230,7 +233,7 @@ export default defineConfig({
       {
         icon: { svg: `<image src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/qryn.png" style="filter: grayscale(1);"/>`},
         mode: 'link',
-        content: 'https://blog.qryn.dev',
+        content: 'https://blog.gigapipe.com',
       },
     ],
   },
