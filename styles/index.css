@@ -110,12 +110,18 @@ img[alt*="qryn_cloud"] {
 } */
 
 .custom-content {
-    padding: 40px 14%;
+    padding: 35px 8%;
 }
 .custom-content h1 {
     font-size: 3rem;
     font-weight: 600;
     margin-bottom: 20px;
+}
+
+.custom-content h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
 .custom-content h3 {
