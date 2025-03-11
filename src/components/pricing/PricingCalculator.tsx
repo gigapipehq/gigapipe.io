@@ -115,11 +115,11 @@ const extraStoragePrice = 100; // per TB per month
 const snapshotsPrice = 100; // per month
 
 const serverLocations = [
-  { city: 'Falkenstein', region: 'Germany', country: 'DE', discount: false },
-  { city: 'Nuremberg', region: 'Germany', country: 'DE', discount: false },
-  { city: 'Helsinki', region: 'Finland', country: 'DE', discount: false },
-  { city: 'Ashburn', region: 'US EAST', country: 'US', discount: false },
-  { city: 'Hillsboro', region: 'US WEST', country: 'US', discount: false },
+  { city: 'FSN', region: 'Germany', country: 'DE', discount: false },
+  { city: 'NBG', region: 'Germany', country: 'DE', discount: false },
+  { city: 'HEL', region: 'Finland', country: 'DE', discount: false },
+  { city: 'ASH', region: 'US-East', country: 'US', discount: false },
+  { city: 'HIL', region: 'US-West', country: 'US', discount: false },
 ]
 
 const serverOtherLocations = [
