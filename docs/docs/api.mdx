@@ -2,11 +2,11 @@ import { Tab, Tabs } from 'rspress/theme';
 
 # 🔻 API Support
 
-Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and supports the following APIs
+Gigapipe is powered by the latest version of [qryn](https://qryn.dev) and supports the following APIs
 
 <Tabs>
             <Tab label="Loki">
-            | **Name**             | **Type**         | **QRYN**      | **QRYN Cloud**      | **APIs.**                  |   
+            | **Name**             | **Type**         | **OSS**      | **CLOUD**      | **APIs.**                  |   
             |----------------------|------------------|---------------|---------------------|----------------------------|
             | Push                 | POST             | 🟢             | 🟢             | `/loki/api/v1/push`        |
             | Query                | GET              | 🟢             | 🟢             | `/loki/api/v1/query`       |
@@ -30,7 +30,7 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
             📦 [Logstash](https://opensearch.org/docs/latest/tools/logstash/index/)<br/>
             </Tab>
             <Tab label="Prometheus">
-            | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud**| **APIs.**                       |
+            | **Name**             | **Type**           | **OSS**       | **CLOUD**| **APIs.**                       |
             |----------------------|--------------------|----------------|----------------|-----------------------------------|
             | Remote Write         | POST               | 🟢             | 🟢             |  `/api/v1/prom/remote/write`      |
             | Query Range          | GET/POST           | 🟢             | 🟢             | `/api/v1/query_range`             |
@@ -50,7 +50,7 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
             📦 [Opentelemetry](https://github.com/metrico/otel-collector)<br/>
             </Tab>
             <Tab label="Tempo">
-            | **Name**             | **Type**           | **QRYN**            | **QRYN Cloud**| **APIs.**                   | 
+            | **Name**             | **Type**           | **OSS**            | **CLOUD**| **APIs.**                   | 
             |----------------------|--------------------|---------------------|---------------|-----------------------------------|
             | Push (Tempo)         | POST               | 🟢                  | 🟢             | `/tempo/api/push`                 | 
             | Push (Zipkin)        | POST               | 🟢                  | 🟢             | `/api/v2/spans`                   |
@@ -71,7 +71,7 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
             📦 [Opentelemetry](https://github.com/metrico/otel-collector)<br/>
             </Tab>
             <Tab label="Opentelemetry">
-            | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud** | **APIs.**                       |   
+            | **Name**             | **Type**           | **OSS**       | **CLOUD** | **APIs.**                       |   
             |----------------------|--------------------|----------------|----------------|---------------------------------|
             | OTLPPush             | POST               | 🟢             |🟢             | `/v1/traces`         |
             | OTLPLogPush          | POST               | 🟢             |🟢             | `/v1/logs`         |
@@ -84,23 +84,23 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
 
             ⭐ Any Opentelemetry compatible collector can be used without modifications
 
-            📦 [OTEL Collector for qryn](https://github.com/metrico/otel-collector/)<br/>
+            📦 [OTEL Collector for Gigapipe](https://github.com/metrico/otel-collector/)<br/>
             📦 [Grafana Alloy](https://grafana.com/docs/alloy/latest/)<br/>
             📦 [Grafana Agent](https://grafana.com/docs/agent/latest/)<br/>
             </Tab>
             <Tab label="Influx">
-            | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud** | **APIs.**                       |   
+            | **Name**             | **Type**           | **OSS**       | **CLOUD** | **APIs.**                       |   
             |----------------------|--------------------|----------------|----------------|---------------------------------|
             | Write                | POST               | 🟢             |🟢             | `/influx/api/v2/write`       |
             | Health               | GET                | 🟢             |🟢             | `/influx/health`        |
 
             ##### Compatible Agents
-            ⭐ Any InfluxDB v2 compatible client can be used with qryn without modifications
+            ⭐ Any InfluxDB v2 compatible client can be used with Gigapipe without modifications
             
             📦 [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/)<br/>
             </Tab>
             <Tab label="Elastic">
-            | **Name**             | **Type**           | **QRYN**      | **QRYN Cloud**| **APIs.**                   |  
+            | **Name**             | **Type**           | **OSS**      | **CLOUD**| **APIs.**                   |  
             |----------------------|--------------------|---------------|---------------|-----------------------------|
             | Index                | POST               | 🟢             | 🟢          |  `/:target/_doc`            |
             | Index                | POST               | 🟢             | 🟢          | `/:target/_create/:id`      |
@@ -113,7 +113,7 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
             
             #### Index API
             ```bash
-            curl -X POST "qryn:3100/test-index/_doc/1234" -H 'Content-Type: application/json' -d'
+            curl -X POST "gigapipe:3100/test-index/_doc/1234" -H 'Content-Type: application/json' -d'
             ```
             ```json
             {
@@ -128,10 +128,10 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
             { "message" : "hello", "user": "qryn" }
             ```
             ```bash
-            curl -s -H "Content-Type: application/x-ndjson" -XPOST http://qryn/_bulk --data-binary "@bulkreq"
+            curl -s -H "Content-Type: application/x-ndjson" -XPOST http://gigapipe/_bulk --data-binary "@bulkreq"
             ```
             
-            > Replace the **qryn** URL from the example to match your actual deployment!
+            > Replace the **gigapipe** URL from the example to match your actual deployment!
             
             Either type will get converted to the following `LogQL` insert
             ```json
@@ -154,7 +154,7 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
 
             </Tab>
             <Tab label="Datadog">
-            | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud** | **APIs.**                       |   
+            | **Name**             | **Type**           | **OSS**       | **CLOUD** | **APIs.**                       |   
             |----------------------|--------------------|----------------|----------------|---------------------------------|
             | Logs                 | POST               | 🟢             |🟢             | `/api/v2/logs` |
             | Series               | POST               | 🟢             |🟢             | `/api/v2/series`  |
@@ -162,7 +162,7 @@ Gigapipe is powered by an extended version of [qryn](https://qryn.dev) and suppo
 
             </Tab>
             <Tab label="NewRelic">
-            | **Name**             | **Type**           | **QRYN**       | **QRYN Cloud** | **APIs.**                       |   
+            | **Name**             | **Type**           | **OSS**       | **CLOUD** | **APIs.**                       |   
             |----------------------|--------------------|----------------|----------------|---------------------------------|
             | [Logs](https://docs.newrelic.com/docs/logs/log-api/introduction-log-api/)| POST               | 🟢             |🟡             | `/log/v1` |
             
