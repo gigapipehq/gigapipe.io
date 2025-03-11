@@ -77,6 +77,10 @@ export default defineConfig({
             {
               text: "API Endpoints",
               link: '/docs/api'
+            },
+            {
+              text: "FAQ",
+              link: '/docs/faq'
             }
           ]
           
