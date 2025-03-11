@@ -25,12 +25,12 @@ const plans = [
   },
   {
     name: 'START UP',
-    disk: '640GB NVMe', 
+    disk: '160GB NVMe', 
     specs: {
       ram: '16GB RAM',
       cpu: '4x Intel vCPU',
-      storage: '160GB NVMe',
-      transfer: '1.6TB/Month Transfer',
+      storage: '600GB NVMe',
+      transfer: '1.5TB/Month Transfer',
       Redundancy: 'Standalone Node',
       support: 'Email Support'
     },
@@ -41,12 +41,12 @@ const plans = [
   },
   {
     name: 'SCALE UP',
-    disk: '960GB NVMe',
+    disk: '240GB NVMe',
     specs: {
       ram: '32GB RAM',
       cpu: '8x Intel vCPU',
-      storage: '240GB NVMe',
-      transfer: '2.4TB/Month Transfer',
+      storage: '850GB NVMe',
+      transfer: '3TB/Month Transfer',
       Redundancy: 'Standalone Node',
       support: 'Helpdesk Support'
     },
@@ -57,12 +57,12 @@ const plans = [
   },
   {
     name: 'ENTERPRISE 👑',
-    disk: '1.2TB NVMe',
+    disk: '360GB NVMe',
     specs: {
       ram: '64GB RAM',
       cpu: '16x Intel vCPU',
-      storage: '360GB NVMe',
-      transfer: '3.2TB/Month Transfer',
+      storage: '1250GB NVMe',
+      transfer: '5TB/Month Transfer',
       Redundancy: 'High Availability',
       support: 'Helpdesk Support'
     },
@@ -73,13 +73,13 @@ const plans = [
   },
   {
     name: 'EXTREME',
-    disk: '3TB SSD',
+    disk: '600GB SSD',
     host: 'hetzner-ccx53',
     specs: {
       ram: '128GB RAM',
       cpu: '32x Intel vCPU',
-      storage: '600GB SSD',
-      transfer: '5TB/Month Transfer',
+      storage: '2250GB NVMe',
+      transfer: '10TB/Month Transfer',
       Redundancy: 'High Availability',
       support: 'Helpdesk Support'
     },
@@ -90,13 +90,13 @@ const plans = [
   },
   {
     name: 'SUPREME',
-    disk: '5TB SSD',
+    disk: '960GB SSD',
     host: 'hetzner-ccx63',
     specs: {
       ram: '192GB RAM',
       cpu: '48x Intel vCPU',
-      storage: '960GB SSD',
-      transfer: '5TB/Month Transfer',
+      storage: '3500GB NVMe',
+      transfer: '15TB/Month Transfer',
       Redundancy: 'High Availability',
       support: 'Helpdesk Support'
     },
