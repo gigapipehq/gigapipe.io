@@ -3,5 +3,10 @@
     "text": "Get Started",
     "link": "/docs",
     "activeMatch": "^/docs/"
+  },
+  {
+    "text": "Get Started",
+    "link": "/docs/docs",
+    "activeMatch": "^/docs.html"
   }
 ]
