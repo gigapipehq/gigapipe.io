@@ -257,7 +257,7 @@ const PricingCalculator: React.FC = () => {
         
         <div className={styles.storageContainer}>
           <label htmlFor="extra-storage">
-            Extra Storage (TB)
+            + Storage (TB)
             <input
               type="number"
               id="extra-storage"
