@@ -7,14 +7,14 @@ Gigapipe provides a polyglot and robust data ingestion API - supporting logs, me
 <Tabs>
     <Tab label="Logs">
         💡 Gigapipe supports Log ingestion from multiple sources
-        #### Supported Protocols
+        #### 📍 Supported Protocols
         🪵 **Loki**: Ready for integration with Grafana Loki-compatible sources<br/>
         🪵 **OpenTelemetry Logs**: For cross-platform, standardized logging<br/>
         🪵 **InfluxDB**: Supports log ingestion from InfluxDB sources<br/>
         🪵 **Elastic**: For structured log ingestion compatible with Elastic Stack<br/>
         🪵 **Syslog**: Standard protocol for Unix-based systems and network devices<br/>
 
-        #### Supported Agents
+        #### 📍 Supported Agents
         📦 [Grafana Alloy](https://grafana.com/docs/alloy/latest/)<br/>
         📦 [Fluentd / Fluent Bit](https://www.fluentd.org/)<br/>
         📦 [Filebeat](https://www.elastic.co/beats/filebeat)<br/>
@@ -22,27 +22,27 @@ Gigapipe provides a polyglot and robust data ingestion API - supporting logs, me
         📦 [Vector](https://vector.dev/)<br/>
         📦 [Amazon CloudWatch Agent](https://aws.amazon.com/cloudwatch/)<br/>
 
-        #### [APIs](/docs/api)
+        #### 📍 [APIs](/docs/api)
         - **HTTP/REST API**: For sending logs via HTTP endpoints in JSON or other structured formats<br/>
         - **Loki Push API**: For sending logs in Loki-compatible format
     </Tab>
 
     <Tab label="Metrics">
         💡 Gigapipe supports Metrics ingestion from multiple sources
-        #### Supported Protocols
+        #### 📍 Supported Protocols
         🌡️ **Prometheus Remote Write**: For direct metric ingestion from Prometheus<br/>
         🌡️ **Graphite**: For integration with Graphite-compatible sources<br/>
         🌡️ **OpenTelemetry Metrics**: Standardized metric collection across environments<br/>
         🌡️ **InfluxDB Line Protocol**: Enables ingestion from InfluxDB-compatible sources<br/>
 
-        #### Supported Agents
+        #### 📍 Supported Agents
         📦 [Grafana Alloy](https://grafana.com/docs/alloy/latest/)<br/>
         📦 [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/)<br/>
         📦 [Prometheus Node Exporter](https://prometheus.io/docs/guides/node-exporter/)<br/>
         📦 [Vector](https://vector.dev/)<br/>
         📦 [Amazon CloudWatch Agent](https://aws.amazon.com/cloudwatch/)<br/>
 
-        #### [APIs](/docs/api)
+        #### 📍 [APIs](/docs/api)
         - **Prometheus PushGateway**: Used for pushing ephemeral metrics to Gigapipe<br/>
         - **HTTP/REST API**: For HTTP-based metric ingestion<br/>
         - **Graphite API**: Allows metric ingestion in Graphite format<br/>
@@ -50,16 +50,16 @@ Gigapipe provides a polyglot and robust data ingestion API - supporting logs, me
 
     <Tab label="Traces">
         💡 Gigapipe supports Traces ingestion from multiple sources
-        #### Supported Protocols
+        #### 📍 Supported Protocols
         👣 **OpenTelemetry Traces**: Full support for cross-platform distributed tracing<br/>
         👣 **Jaeger**: Popular open-source distributed tracing system for microservices<br/>
 
-        #### Supported Agents
+        #### 📍 Supported Agents
         📦 [OpenTelemetry Collector](https://opentelemetry.io/docs/collector/)<br/>
         📦 [Grafana Alloy](https://grafana.com/docs/alloy/latest/)<br/>
         📦 [Jaeger Agent](https://www.jaegertracing.io/)<br/>
 
-        #### [APIs](/docs/api)
+        #### 📍 [APIs](/docs/api)
         - **Jaeger Thrift**: Supports trace ingestion in Jaeger's Thrift format<br/>
         - **HTTP/REST API**: For flexible HTTP-based trace ingestion<br/>
     </Tab>
