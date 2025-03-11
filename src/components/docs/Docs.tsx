@@ -62,14 +62,14 @@ const Docs = () => {
                         {
                             title: "Unmetered",
                             details:
-                                "<p className='text-center'>Flat cost Observability<br>Zero monthly suprises</p>",
+                                "<p className='text-center'>Flat Cost Observability<br>Zero monthly suprises</p>",
                             icon: "📐",
                             span: 3,
                         },
                         {
-                            title: "Transparent",
+                            title: "Open Source",
                             details:
-                                "<p className='text-center'>Open-Source Community<br>Open Integrations</p>",
+                                "<p className='text-center'>Open-Source != Open Core<br>AGPLv3, Unlimited Usage</p>",
                             icon: "⭐",
                             span: 3,
                         },
