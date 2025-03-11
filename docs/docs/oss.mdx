@@ -17,14 +17,27 @@ Welcome to your _ready-to-use_ managed Observability stack - _just add data_ ☘
       #### Install Gigapipe Open-Source on your Infrastructure.
 
       <Tabs>
+            <Tab label="Quick Start">
+            Quick Start? Use our [OSS Gigapipe Demo](https://github.com/metrico/gigapipe-oss-demo)
+
+            The Demo ships ready with Gigapipe, Grafana, ClickHouse and everything you need!<br>
+            Batteries include configs, data generators and datasources for: 
+            - Logs
+            - Metrics
+            - Traces
+            - Profiles
+
+            </Tab>
             <Tab label="Docker">
-            Deploy `gigapipe` using Docker
+            Deploy `gigapipe` using Docker or K8s
 
             ```
             ghcr.io/metrico/gigapipe:latest
             ```
 
-            Quick Start? Use our [OSS Demo](https://github.com/metrico/gigapipe-oss-demo)
+            > Configure Gigapipe using [ENV Settings](/docs/config)
+
+            > Gigapipe requires ClickHouse for data storage
             
             </Tab>
             <Tab label="Docker Compose">
@@ -45,7 +58,9 @@ Welcome to your _ready-to-use_ managed Observability stack - _just add data_ ☘
                 - CLICKHOUSE_DB=qryn
             ```
 
-            Quick Start? Use our [OSS Demo](https://github.com/metrico/gigapipe-oss-demo)
+            > Configure Gigapipe using [ENV Settings](/docs/config)
+
+            > Gigapipe requires ClickHouse for data storage
             
             </Tab>
             
@@ -53,7 +68,7 @@ Welcome to your _ready-to-use_ managed Observability stack - _just add data_ ☘
 
       ### Step 2
 
-      #### Configure your Observability Agent to send Logs, Metrics and Traces to Gigapipe
+      #### Configure your Observability Agents to send Logs, Metrics and Traces to Gigapipe
 
       <Tabs>
             <Tab label="Logs">
