@@ -8,5 +8,10 @@
     "text": "Get Started",
     "link": "/docs",
     "activeMatch": "^/docs/index.html"
+  },
+  {
+    "text": "Get Started",
+    "link": "/docs",
+    "activeMatch": "^/docs.html"
   }
 ]
