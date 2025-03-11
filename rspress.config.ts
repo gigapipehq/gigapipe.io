@@ -64,11 +64,15 @@ export default defineConfig({
           items: [
             {
               text: "Get Started",
-              link: '/docs'
+              link: '/docs/'
             },
             {
               text: "Explore Data",
               link: '/docs/demo'
+            },
+            {
+              text: "Ingest Data",
+              link: '/docs/ingestion'
             },
             {
               text: "API Endpoints",
