@@ -28,7 +28,7 @@ body {
     background-image: url("https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/header-bg-optimised-scaled-4.jpg");
     background-blend-mode: lighten;
     background-repeat: no-repeat;
-    
+    max-width: 100%;
 }
 
 img[alt*="Gigapipe"] {
@@ -127,4 +127,8 @@ div[class^='sidebar'],div[class^='.sidebar'] {
 
 .custom-footer {
     padding: 40px 14%;
+}
+
+.rspress-doc-container {
+    max-width: 100%;
 }
