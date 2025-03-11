@@ -57,7 +57,7 @@ export default defineConfig({
       message: 'All Rights Reserved'
     },
     sidebar: {
-      '/docs/docs/':[
+      '/docs/':[
         {
           text: "Documentation",
           items: [
@@ -117,13 +117,10 @@ export default defineConfig({
         link: "signup" 
       },
       { text: "Docs", 
-        link: "docs" 
+        link: "/docs/" 
       },
       { text: "Blog", 
         link: "https://blog.qryn.dev" 
-      },
-      { text: "Contact", 
-        link: "mailto://info@gigapipe.com" 
       }
     ],
     socialLinks: [
