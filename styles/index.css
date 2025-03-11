@@ -110,39 +110,32 @@ img[alt*="qryn_cloud"] {
 } */
 
 .custom-content {
-    padding: 35px 8%;
+    padding: 35px 10%;
 }
 .custom-content h1 {
     font-size: 3rem;
     font-weight: 600;
     margin-bottom: 20px;
 }
-
 .custom-content h2 {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 10px;
 }
-
 .custom-content h3 {
     font-size: 1.15rem;
     font-weight: 400;
     margin-bottom: 20px;
-   
 }
-
 .custom-footer {
-    padding: 10px 8%;
+    padding: 10px 10%;
 }
-
 .rspress-doc-container {
     max-width: 100%;
 }
-
 .pb-12 {
     padding-bottom: 10px;
 }
-
 .md\:pb-16 {
     padding-bottom: 1rem;
 }
