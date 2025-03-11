@@ -138,7 +138,7 @@ export default defineConfig({
                 },
                 {
                   text: "Telegraf",
-                  link: "https://github.com/metrico/qryn/wiki/Telegraf-HTTP-Input"
+                  link: "https://vector.dev/docs/reference/configuration/sinks/influxdb_metrics/"
                 },
                 {
                   text: "Cloudwatch",
