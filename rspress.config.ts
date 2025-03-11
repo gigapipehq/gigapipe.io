@@ -57,7 +57,7 @@ export default defineConfig({
       message: 'All Rights Reserved'
     },
     sidebar: {
-      '/docs/docs/':[
+      '/docs/':[
         {
           text: "Documentation",
           items: [
