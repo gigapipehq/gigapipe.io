@@ -104,6 +104,7 @@ export default defineConfig({
           items: [
             {
               text: "Logs",
+              collapsed: true, 
               items: [
                 {
                   text: "Opentelemetry",
@@ -121,6 +122,7 @@ export default defineConfig({
             },
             {
               text: "Metrics",
+              collapsed: true, 
               items: [
                 {
                   text: "Opentelemetry",
@@ -151,6 +153,7 @@ export default defineConfig({
             },
             {
               text: "Tracing",
+              collapsed: true, 
               items: [
                 {
                   text: "Opentelemetry",
@@ -168,6 +171,7 @@ export default defineConfig({
             },
             {
               text: "Profiling",
+              collapsed: true, 
               items: [
                 {
                   text: "Pyroscope SDK",
