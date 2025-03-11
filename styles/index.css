@@ -144,3 +144,7 @@ img[alt*="qryn_cloud"] {
 .img_small {
    height: 50px;
 }
+
+.img_inline {
+   display: inline-block;
+}
