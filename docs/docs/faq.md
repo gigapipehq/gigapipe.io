@@ -1,5 +1,7 @@
 # Frequently Asked Questions
 
+### Gigapipe Cloud
+
 #### 👂 How quickly does data appear?
 Data ingested through the API is available within a couple of seconds.
 
@@ -14,3 +16,22 @@ Data is automatically rotated when your storage reaches ~90% capacity to make sp
 
 - ⛽ Example 1: ~15GB/day hep ingestion with 1TB storage = ~2 months of data rotation<br>
 - ⛽ Example 2: ~30GB/day hep ingestion with 1TB storage = ~1 month of data rotation<br>
+
+### Gigapipe Open Source
+
+#### 👂 What happened to qryn?
+Nothing. Gigapipe is qryn. qryn is Gigapipe. We just simplified our branding.
+
+#### 👂 What is the license for gigapipe?
+Gigapipe OSS (formerly qryn) is distributed under the AGPLv3 License.
+
+#### 👂 What is the differebce between OSS and Cloud?
+Codewise, none. All features are exactly the same with no tricks or "open core. 
+
+The Cloud version offers some parallel capabilities, including:
+
+- ⛽ Cardinality Management and Label Compaction
+- ⛽ Advanced Caching of Query Results
+- ⛽ Partitioning and User Provisioning
+- ⛽ Custom Rotation and Cold Storage at DB level
+
