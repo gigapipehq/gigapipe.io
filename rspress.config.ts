@@ -89,6 +89,10 @@ export default defineConfig({
               link: '/docs/api'
             },
             {
+              text: "Configuration",
+              link: '/docs/config'
+            },
+            {
               text: "FAQ",
               link: '/docs/faq'
             }
@@ -199,21 +203,14 @@ export default defineConfig({
         link: "docs/index" ,
         items: [
           {
-            text: "Get Started",
+            text: "Cloud",
             link: '/docs/index'
           },
           {
-            text: "Explore Data",
-            link: '/docs/demo'
-          },
-          {
-            text: "API Endpoints",
-            link: '/docs/api'
+            text: "Opensource",
+            link: '/docs/oss'
           }
         ]
-      },
-      { text: "OSS", 
-        link: "https://github.com/metrico/qryn" 
       },
       { text: "Blog", 
         link: "https://blog.gigapipe.com" 
