@@ -138,7 +138,7 @@ export default defineConfig({
                 },
                 {
                   text: "Telegraf",
-                  link: "https://www.influxdata.com/time-series-platform/telegraf/"
+                  link: "https://github.com/metrico/qryn/wiki/Telegraf-HTTP-Input"
                 },
                 {
                   text: "Cloudwatch",
@@ -146,7 +146,7 @@ export default defineConfig({
                 },
                 {
                   text: "Prometheus Exporter",
-                  link: "https://prometheus.io/docs/guides/node-exporter/"
+                  link: "https://vector.dev/docs/reference/configuration/sinks/prometheus_remote_write/"
                 }
                 
               ]
@@ -165,7 +165,7 @@ export default defineConfig({
                 },
                 {
                   text: "Jaeger",
-                  link: 'https://www.jaegertracing.io/'
+                  link: 'https://blog.gigapipe.com/opentelemetry-collector-qryn'
                 }
               ]
             },
@@ -175,7 +175,7 @@ export default defineConfig({
               items: [
                 {
                   text: "Pyroscope SDK",
-                  link: 'https://grafana.com/docs/pyroscope/latest/configure-client/language-sdks/'
+                  link: 'https://blog.gigapipe.com/pyroscope-qryn'
                 },
                  {
                   text: "Parca SDK",
