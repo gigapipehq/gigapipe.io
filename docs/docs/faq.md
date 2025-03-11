@@ -26,10 +26,11 @@ Nothing. Gigapipe is qryn. qryn is Gigapipe. We just simplified our branding.
 Gigapipe OSS (formerly qryn) is distributed under the AGPLv3 License.
 
 #### 👂 What is the differebce between OSS and Cloud?
-Codewise, none. All features are exactly the same with no tricks or "open core. 
+Codewise, none. All features are exactly the same with no "open core" tricks. 
 
 The Cloud version offers some parallel capabilities, including:
 
+- ⛽ Hosted Resources and Automatic Upgrades
 - ⛽ Cardinality Management and Label Compaction
 - ⛽ Advanced Caching of Query Results
 - ⛽ Partitioning and User Provisioning
