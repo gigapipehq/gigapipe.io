@@ -10,6 +10,7 @@ const plans = [
   {
     name: 'FREE TRIAL',
     disk: '640GB NVMe', 
+    host: 'hetzner-shared',
     specs: {
       ram: '4GB RAM',
       cpu: '2x Shared vCPU',
@@ -26,6 +27,7 @@ const plans = [
   {
     name: 'START UP',
     disk: '160GB NVMe', 
+    host: 'hetzner-ccx23',
     specs: {
       ram: '16GB RAM',
       cpu: '4x Intel vCPU',
@@ -42,6 +44,7 @@ const plans = [
   {
     name: 'SCALE UP',
     disk: '240GB NVMe',
+    host: 'hetzner-ccx33',
     specs: {
       ram: '32GB RAM',
       cpu: '8x Intel vCPU',
@@ -58,6 +61,7 @@ const plans = [
   {
     name: 'ENTERPRISE 👑',
     disk: '360GB NVMe',
+    host: 'hetzner-ccx43',
     specs: {
       ram: '64GB RAM',
       cpu: '16x Intel vCPU',
@@ -108,9 +112,17 @@ const plans = [
 ]
 
 const extraStoragePrice = 100; // per TB per month
-const snapshotsPrice = 50; // per month
+const snapshotsPrice = 100; // per month
 
 const serverLocations = [
+  { city: 'Falkenstein', region: 'Germany', country: 'DE', discount: false },
+  { city: 'Nuremberg', region: 'Germany', country: 'DE', discount: false },
+  { city: 'Helsinki', region: 'Finland', country: 'DE', discount: false },
+  { city: 'Ashburn', region: 'US EAST', country: 'US', discount: false },
+  { city: 'Hillsboro', region: 'US WEST', country: 'US', discount: false },
+]
+
+const serverOtherLocations = [
   { city: 'Dallas', region: 'US Central', country: 'US', discount: false },
   { city: 'Atlanta', region: 'US East', country: 'US', discount: false },
   { city: 'Los Angeles', region: 'US West', country: 'US', discount: false },
