@@ -10,9 +10,10 @@ const plans = [
   {
     name: 'FREE TRIAL',
     disk: '640GB NVMe', 
+    host: 'hetzner-shared',
     specs: {
       ram: '4GB RAM',
-      cpu: '4x Shared vCPU',
+      cpu: '2x Shared vCPU',
       storage: '10GB Shared',
       transfer: '10GB/Month Transfer',
       Redundancy: 'Shared Node',
@@ -25,92 +26,103 @@ const plans = [
   },
   {
     name: 'START UP',
-    disk: '640GB NVMe', 
+    disk: '160GB NVMe', 
+    host: 'hetzner-ccx23',
     specs: {
-      ram: '32GB RAM',
-      cpu: '8x Intel vCPU',
-      storage: '1TB NVMe',
-      transfer: '16TB/Month Transfer',
+      ram: '16GB RAM',
+      cpu: '4x Intel vCPU',
+      storage: '600GB NVMe',
+      transfer: '1.5TB/Month Transfer',
       Redundancy: 'Standalone Node',
       support: 'Email Support'
     },
     price: {
-      monthly: 149,
-      yearly: 1490
+      monthly: 275,
+      yearly: 2750
     }
   },
   {
     name: 'SCALE UP',
-    disk: '960GB NVMe',
+    disk: '240GB NVMe',
+    host: 'hetzner-ccx33',
     specs: {
-      ram: '48GB RAM',
-      cpu: '10x Intel vCPU',
-      storage: '2TB NVMe',
-      transfer: '24TB/Month Transfer',
+      ram: '32GB RAM',
+      cpu: '8x Intel vCPU',
+      storage: '850GB NVMe',
+      transfer: '3TB/Month Transfer',
       Redundancy: 'Standalone Node',
       support: 'Helpdesk Support'
     },
     price: {
-      monthly: 249,
-      yearly: 2490
+      monthly: 550,
+      yearly: 5500
     }
   },
   {
     name: 'ENTERPRISE 👑',
-    disk: '1.2TB NVMe',
+    disk: '360GB NVMe',
+    host: 'hetzner-ccx43',
     specs: {
       ram: '64GB RAM',
-      cpu: '12x Intel vCPU',
-      storage: '3TB NVMe',
-      transfer: '32TB/Month Transfer',
-      Redundancy: 'Redudant (High Availability)',
+      cpu: '16x Intel vCPU',
+      storage: '1.25TB NVMe',
+      transfer: '5TB/Month Transfer',
+      Redundancy: 'High Availability',
       support: 'Helpdesk Support'
     },
     price: {
-      monthly: 449,
-      yearly: 4490
+      monthly: 1100,
+      yearly: 11000
     }
   },
   {
     name: 'EXTREME',
-    disk: '3TB SSD',
+    disk: '600GB SSD',
     host: 'hetzner-ccx53',
     specs: {
       ram: '128GB RAM',
       cpu: '32x Intel vCPU',
-      storage: '5TB SSD',
-      transfer: '50TB/Month Transfer',
-      Redundancy: 'Redudant (High Availability)',
+      storage: '2.25TB NVMe',
+      transfer: '10TB/Month Transfer',
+      Redundancy: 'High Availability',
       support: 'Helpdesk Support'
     },
     price: {
-      monthly: 999,
-      yearly: 10999
+      monthly: 2150,
+      yearly: 21500
     }
   },
   {
     name: 'SUPREME',
-    disk: '5TB SSD',
+    disk: '960GB SSD',
     host: 'hetzner-ccx63',
     specs: {
       ram: '192GB RAM',
       cpu: '48x Intel vCPU',
-      storage: '10TB SSD',
-      transfer: '50TB/Month Transfer',
-      Redundancy: 'Redudant (High Availability)',
+      storage: '3.5TB NVMe',
+      transfer: '15TB/Month Transfer',
+      Redundancy: 'High Availability',
       support: 'Helpdesk Support'
     },
     price: {
-      monthly: 1449,
-      yearly: 15999
+      monthly: 3250,
+      yearly: 32500
     }
   }
 ]
 
 const extraStoragePrice = 100; // per TB per month
-const snapshotsPrice = 50; // per month
+const snapshotsPrice = 100; // per month
 
 const serverLocations = [
+  { city: 'Falkenstein', region: 'Germany', country: 'DE', discount: false },
+  { city: 'Nuremberg', region: 'Germany', country: 'DE', discount: false },
+  { city: 'Helsinki', region: 'Finland', country: 'DE', discount: false },
+  { city: 'Ashburn', region: 'US EAST', country: 'US', discount: false },
+  { city: 'Hillsboro', region: 'US WEST', country: 'US', discount: false },
+]
+
+const serverOtherLocations = [
   { city: 'Dallas', region: 'US Central', country: 'US', discount: false },
   { city: 'Atlanta', region: 'US East', country: 'US', discount: false },
   { city: 'Los Angeles', region: 'US West', country: 'US', discount: false },
