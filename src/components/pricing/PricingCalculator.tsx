@@ -12,7 +12,7 @@ const plans = [
     disk: '640GB NVMe', 
     specs: {
       ram: '4GB RAM',
-      cpu: '4x Shared vCPU',
+      cpu: '2x Shared vCPU',
       storage: '10GB Shared',
       transfer: '10GB/Month Transfer',
       Redundancy: 'Shared Node',
@@ -27,32 +27,32 @@ const plans = [
     name: 'START UP',
     disk: '640GB NVMe', 
     specs: {
-      ram: '32GB RAM',
-      cpu: '8x Intel vCPU',
-      storage: '1TB NVMe',
-      transfer: '16TB/Month Transfer',
+      ram: '16GB RAM',
+      cpu: '4x Intel vCPU',
+      storage: '160GB NVMe',
+      transfer: '1.6TB/Month Transfer',
       Redundancy: 'Standalone Node',
       support: 'Email Support'
     },
     price: {
-      monthly: 149,
-      yearly: 1490
+      monthly: 275,
+      yearly: 2750
     }
   },
   {
     name: 'SCALE UP',
     disk: '960GB NVMe',
     specs: {
-      ram: '48GB RAM',
-      cpu: '10x Intel vCPU',
-      storage: '2TB NVMe',
-      transfer: '24TB/Month Transfer',
+      ram: '32GB RAM',
+      cpu: '8x Intel vCPU',
+      storage: '240GB NVMe',
+      transfer: '2.4TB/Month Transfer',
       Redundancy: 'Standalone Node',
       support: 'Helpdesk Support'
     },
     price: {
-      monthly: 249,
-      yearly: 2490
+      monthly: 550,
+      yearly: 5500
     }
   },
   {
@@ -60,15 +60,15 @@ const plans = [
     disk: '1.2TB NVMe',
     specs: {
       ram: '64GB RAM',
-      cpu: '12x Intel vCPU',
-      storage: '3TB NVMe',
-      transfer: '32TB/Month Transfer',
-      Redundancy: 'Redudant (High Availability)',
+      cpu: '16x Intel vCPU',
+      storage: '360GB NVMe',
+      transfer: '3.2TB/Month Transfer',
+      Redundancy: 'High Availability',
       support: 'Helpdesk Support'
     },
     price: {
-      monthly: 449,
-      yearly: 4490
+      monthly: 1100,
+      yearly: 11000
     }
   },
   {
@@ -78,14 +78,14 @@ const plans = [
     specs: {
       ram: '128GB RAM',
       cpu: '32x Intel vCPU',
-      storage: '5TB SSD',
-      transfer: '50TB/Month Transfer',
-      Redundancy: 'Redudant (High Availability)',
+      storage: '600GB SSD',
+      transfer: '5TB/Month Transfer',
+      Redundancy: 'High Availability',
       support: 'Helpdesk Support'
     },
     price: {
-      monthly: 999,
-      yearly: 10999
+      monthly: 2150,
+      yearly: 21500
     }
   },
   {
@@ -95,14 +95,14 @@ const plans = [
     specs: {
       ram: '192GB RAM',
       cpu: '48x Intel vCPU',
-      storage: '10TB SSD',
-      transfer: '50TB/Month Transfer',
-      Redundancy: 'Redudant (High Availability)',
+      storage: '960GB SSD',
+      transfer: '5TB/Month Transfer',
+      Redundancy: 'High Availability',
       support: 'Helpdesk Support'
     },
     price: {
-      monthly: 1449,
-      yearly: 15999
+      monthly: 3250,
+      yearly: 32500
     }
   }
 ]
