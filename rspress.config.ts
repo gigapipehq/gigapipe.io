@@ -215,7 +215,7 @@ export default defineConfig({
             link: '/docs/oss'
           },
           {
-            text: "API",
+            text: "Gigapipe API",
             link: '/docs/api'
           }
         ]
