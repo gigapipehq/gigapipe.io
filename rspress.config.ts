@@ -112,7 +112,7 @@ export default defineConfig({
                 },
                 {
                   text: "Grafana Alloy",
-                  link: 'https://blog.qryn.dev/qryn-with-alloy'
+                  link: 'https://blog.gigapipe.com/qryn-with-alloy'
                 },
                 {
                   text: "Vector",
@@ -130,7 +130,7 @@ export default defineConfig({
                 },
                 {
                   text: "Grafana Alloy",
-                  link: 'https://blog.qryn.dev/qryn-with-alloy'
+                  link: 'https://blog.gigapipe.com/qryn-with-alloy'
                 },
                 {
                   text: "Vector",
@@ -161,7 +161,7 @@ export default defineConfig({
                 },
                 {
                   text: "Grafana Alloy",
-                  link: 'https://blog.qryn.dev/qryn-with-alloy'
+                  link: 'https://blog.gigapipe.com/qryn-with-alloy'
                 },
                 {
                   text: "Jaeger",
