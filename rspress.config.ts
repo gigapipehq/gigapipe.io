@@ -203,12 +203,16 @@ export default defineConfig({
         link: "docs/index" ,
         items: [
           {
-            text: "Cloud",
+            text: "Cloud Service",
             link: '/docs/index'
           },
           {
-            text: "Opensource",
+            text: "Open Source",
             link: '/docs/oss'
+          },
+          {
+            text: "API",
+            link: '/docs/api'
           }
         ]
       },
