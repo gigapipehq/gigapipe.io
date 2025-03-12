@@ -111,6 +111,10 @@ img[alt*="qryn_cloud"] {
 
 .custom-content {
     padding: 35px 10%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='482' fill='none' viewBox='0 0 1440 482'%3E%3Cpath stroke='%23A020F0' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M-50 200c150-100 300 100 450 50s300-150 450-100 300 200 450 150 300-100 450-50'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 .custom-content h1 {
     font-size: 3rem;
@@ -126,12 +130,6 @@ img[alt*="qryn_cloud"] {
     font-size: 1.15rem;
     font-weight: 400;
     margin-bottom: 20px;
-}
-.custom_content {
-    background-image: url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='482' fill='none' viewBox='0 0 1440 482'%3E%3Cpath stroke='%23A020F0' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M-50 200c150-100 300 100 450 50s300-150 450-100 300 200 450 150 300-100 450-50'/%3E%3C/svg%3E);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
 }
 
 .custom-footer {
