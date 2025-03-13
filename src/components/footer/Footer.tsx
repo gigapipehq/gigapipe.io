@@ -17,25 +17,26 @@ export default function Footer() {
 
   return (
     <footer style={{
-      marginTop: '200px',
       backgroundColor: 'transparent',
+      position: 'relative',
       color: '#e5e7eb',
-      padding: '0rem',
-      width: '100%',
+      
       boxSizing: 'border-box',
+      display: 'flex',
+      justifyContent: 'space-between',
       bottom: 0,
       left: 0,
-      right: 0
+      
     }}>
       
       <div style={{
         borderTop: '1px solid rgba(255, 255, 255, 0.1)',
-        marginTop: '2rem',
         paddingTop: '1rem',
         display: 'flex',
         justifyContent: 'space-between',
         flexWrap: 'wrap',
-        width: '100%'
+        width: '100%',
+        paddingBottom: '40px'
       }}>
         <p>&copy; 2024 HEPvest Holding BV</p>
         <div>
