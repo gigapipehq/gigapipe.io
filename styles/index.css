@@ -108,6 +108,7 @@ img[alt*="Founders"] {
     background-repeat: no-repeat;
     background-size: contain;
 }
+
 .custom-content {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='482' fill='none' viewBox='0 0 1440 482'%3E%3Cpath stroke='%23A020F0' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M-50 200c150-100 300 100 450 50s300-150 450-100 300 200 450 150 300-100 450-50'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
@@ -148,11 +149,13 @@ img[alt*="Founders"] {
     flex:1;
     
 }
+
 .custom-content h2 {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 10px;
 }
+
 .custom-content h3 {
 
     font-size: 1.15rem;
@@ -167,16 +170,18 @@ img[alt*="Founders"] {
 .custom-footer {
     padding: 10px 10%;
 }
+
 .rspress-doc-container {
     max-width: 100%;
 }
+
 .pb-12 {
     padding-bottom: 10px;
 }
+
 .md\:pb-16 {
     padding-bottom: 1rem;
 }
-
 
 .img_small {
    height: 50px;
@@ -187,7 +192,7 @@ img[alt*="Founders"] {
 }
 
 .rspress-doc-footer {
-   padding: 0 0px !important;
+   padding: 0 1px !important;
 }
 
 
@@ -220,8 +225,6 @@ img[alt*="Founders"] {
         outline: none;
     }
 }
-
-
 
 iframe {
     width: 100%;
