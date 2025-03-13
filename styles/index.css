@@ -186,6 +186,9 @@ img[alt*="Founders"] {
    display: inline-block;
 }
 
+.rspress-doc-footer {
+   padding: 0 0px;
+}
 
 
 @media screen and (min-width: 1279px) {
