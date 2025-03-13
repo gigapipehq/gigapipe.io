@@ -17,6 +17,7 @@
         var(--rp-c-brand)
     );
     --rp-sidebar-width: '150px';
+    --rp-aside-width: '200px';
     color-scheme: dark light;
 }
 
@@ -192,7 +193,7 @@ img[alt*="Founders"] {
 }
 
 .rspress-doc-footer {
-   padding: 0 1px !important;
+   padding: 0px 10% !important;
 }
 
 
