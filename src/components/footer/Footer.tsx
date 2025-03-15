@@ -30,8 +30,7 @@ export default function Footer() {
     }}>
       
       <div style={{
-        borderTop: '1px solid rgba(255, 255, 255, 0.1)',
-        paddingTop: '1rem',
+        paddingTop: '2rem',
         display: 'flex',
         justifyContent: 'space-between',
         flexWrap: 'wrap',
