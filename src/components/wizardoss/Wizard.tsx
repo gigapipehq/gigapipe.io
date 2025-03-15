@@ -21,27 +21,27 @@ import {
 const steps = [
   {
     id: "install",
-    title: "Install Gigapipe Open-Source",
+    title: "Install",
     description: "Install Gigapipe Open-Source on your Infrastructure.",
   },
   {
     id: "configure",
-    title: "Configure Observability Agents",
+    title: "Ingest",
     description: "Configure your Observability Agents to send Data to Gigapipe",
   },
   {
     id: "explore",
-    title: "Explore with Grafana",
+    title: "Explore",
     description: "Use Grafana to start Exploring your Gigapipe dataset",
   },
   {
     id: "extend",
-    title: "Sky is the limit!",
+    title: "Extend",
     description: "Any tutorial or example from Grafana Cloud should work as-is in Gigapipe.",
   },
   {
     id: "done",
-    title: "You're all set!",
+    title: "Done",
     description: "There's no step 5! You're already done!",
   },
 ]
@@ -58,13 +58,13 @@ const Tabs = ({ defaultValue, className, children }) => {
     return child
   })
 
-  return <div className={`tabs ${className || ""}`}>{childrenWithProps}</div>
+  return <div className={`gp-wizard-tabs ${className || ""}`}>{childrenWithProps}</div>
 }
 
 const TabsList = ({ className, children, activeTab, setActiveTab }) => {
   // Count children to determine grid columns
   const childCount = React.Children.count(children)
-  const gridClass = childCount === 3 ? "tabs-list-3" : "tabs-list-5"
+  const gridClass = childCount === 3 ? "gp-wizard-tabs-list-3" : "gp-wizard-tabs-list-5"
 
   // Clone children and pass activeTab state
   const childrenWithProps = React.Children.map(children, (child) => {
@@ -74,13 +74,13 @@ const TabsList = ({ className, children, activeTab, setActiveTab }) => {
     return child
   })
 
-  return <div className={`tabs-list ${gridClass} ${className || ""}`}>{childrenWithProps}</div>
+  return <div className={`gp-wizard-tabs-list ${gridClass} ${className || ""}`}>{childrenWithProps}</div>
 }
 
 const TabsTrigger = ({ value, children, activeTab, setActiveTab }) => {
   return (
     <button
-      className="tab-trigger"
+      className="gp-wizard-tab-trigger"
       data-state={activeTab === value ? "active" : "inactive"}
       onClick={() => setActiveTab(value)}
     >
@@ -91,7 +91,10 @@ const TabsTrigger = ({ value, children, activeTab, setActiveTab }) => {
 
 const TabsContent = ({ value, className, children, activeTab }) => {
   return (
-    <div className={`tab-content ${className || ""}`} data-state={activeTab === value ? "active" : "inactive"}>
+    <div
+      className={`gp-wizard-tab-content ${className || ""}`}
+      data-state={activeTab === value ? "active" : "inactive"}
+    >
       {children}
     </div>
   )
@@ -99,11 +102,15 @@ const TabsContent = ({ value, className, children, activeTab }) => {
 
 // Button component
 const Button = ({ variant = "primary", size, disabled, onClick, className, children }) => {
-  const variantClass = variant === "outline" ? "button-outline" : "button-primary"
-  const sizeClass = size === "sm" ? "button-sm" : ""
+  const variantClass = variant === "outline" ? "gp-wizard-button-outline" : "gp-wizard-button-primary"
+  const sizeClass = size === "sm" ? "gp-wizard-button-sm" : ""
 
   return (
-    <button className={`button ${variantClass} ${sizeClass} ${className || ""}`} disabled={disabled} onClick={onClick}>
+    <button
+      className={`gp-wizard-button ${variantClass} ${sizeClass} ${className || ""}`}
+      disabled={disabled}
+      onClick={onClick}
+    >
       {children}
     </button>
   )
@@ -111,28 +118,28 @@ const Button = ({ variant = "primary", size, disabled, onClick, className, child
 
 // Card components
 const Card = ({ className, children }) => {
-  return <div className={`card ${className || ""}`}>{children}</div>
+  return <div className={`gp-wizard-card-component ${className || ""}`}>{children}</div>
 }
 
 const CardHeader = ({ className, children }) => {
-  return <div className={`card-header ${className || ""}`}>{children}</div>
+  return <div className={`gp-wizard-card-header ${className || ""}`}>{children}</div>
 }
 
 const CardTitle = ({ className, children }) => {
-  return <h3 className={`card-title ${className || ""}`}>{children}</h3>
+  return <h3 className={`gp-wizard-card-title ${className || ""}`}>{children}</h3>
 }
 
 const CardContent = ({ className, children }) => {
-  return <div className={`card-content ${className || ""}`}>{children}</div>
+  return <div className={`gp-wizard-card-content ${className || ""}`}>{children}</div>
 }
 
 const CardFooter = ({ className, children }) => {
-  return <div className={`card-footer ${className || ""}`}>{children}</div>
+  return <div className={`gp-wizard-card-footer ${className || ""}`}>{children}</div>
 }
 
 // Badge component
 const Badge = ({ className, children }) => {
-  return <span className={`badge ${className || ""}`}>{children}</span>
+  return <span className={`gp-wizard-badge ${className || ""}`}>{children}</span>
 }
 
 export default function Wizard() {
@@ -155,47 +162,50 @@ export default function Wizard() {
   }
 
   return (
-    <div className="wizard-container">
-      <div className="wizard-card">
-        <div className="wizard-header">
-          <div className="flex justify-between">
+    <div className="gp-wizard-container">
+      <div className="gp-wizard-card">
+        <div className="gp-wizard-header">
+          <div className="gp-wizard-flex gp-wizard-justify-between">
             <div>
-              <h2 className="wizard-title">🏁 Get Started with Gigapipe Open-Source</h2>
-              <p className="wizard-description">
+              <h2 className="gp-wizard-title">🏁 Get Started with Gigapipe Open-Source</h2>
+              <p className="gp-wizard-description">
                 Welcome to your <em>ready-to-use</em> managed Observability stack - <em>just add data</em> ☘️
               </p>
             </div>
           </div>
         </div>
 
-        <div className="wizard-progress">
-          <div className="wizard-steps">
+        <div className="gp-wizard-progress">
+          <div className="gp-wizard-steps">
             {steps.map((step, index) => (
-              <div key={step.id} className="wizard-step">
+              <div key={step.id} className="gp-wizard-step">
                 <button
                   onClick={() => goToStep(index)}
-                  className={`step-button ${currentStep === index ? "active" : index < currentStep ? "completed" : ""}`}
+                  className={`gp-wizard-step-button ${currentStep === index ? "active" : index < currentStep ? "completed" : ""}`}
                 >
                   {index < currentStep ? <Check /> : <span>{index + 1}</span>}
                 </button>
-                <span className={`step-label ${currentStep === index ? "active" : ""}`}>
+                <span className={`gp-wizard-step-label ${currentStep === index ? "active" : ""}`}>
                   {step.title.split(" ")[0]}
                 </span>
               </div>
             ))}
           </div>
-          <div className="progress-bar">
-            <div className="progress-indicator" style={{ width: `${(currentStep / (steps.length - 1)) * 100}%` }} />
+          <div className="gp-wizard-progress-bar">
+            <div
+              className="gp-wizard-progress-indicator"
+              style={{ width: `${(currentStep / (steps.length - 1)) * 100}%` }}
+            />
           </div>
         </div>
 
-        <div className="wizard-content">
-          <div className="space-y">
+        <div className="gp-wizard-content">
+          <div className="gp-wizard-space-y">
             <div>
-              <h3 className="step-heading">
+              <h3 className="gp-wizard-step-heading">
                 Step {currentStep + 1}: {steps[currentStep].title}
               </h3>
-              <p className="step-subheading">{steps[currentStep].description}</p>
+              <p className="gp-wizard-step-subheading">{steps[currentStep].description}</p>
             </div>
 
             {currentStep === 0 && <InstallStep />}
@@ -206,7 +216,7 @@ export default function Wizard() {
           </div>
         </div>
 
-        <div className="wizard-footer">
+        <div className="gp-wizard-footer">
           <Button variant="outline" onClick={prevStep} disabled={currentStep === 0}>
             <ChevronLeft /> Previous
           </Button>
@@ -215,22 +225,13 @@ export default function Wizard() {
           </Button>
         </div>
       </div>
-      <div className="community-text">
-        <p>
-          Dealing with issues?{" "}
-          <a href="#" className="community-link">
-            Join our community
-          </a>{" "}
-          and connect with other users for help.
-        </p>
-      </div>
     </div>
   )
 }
 
 function InstallStep() {
   return (
-    <Tabs defaultValue="quickstart" className="tabs">
+    <Tabs defaultValue="quickstart" className="gp-wizard-tabs">
       <TabsList>
         <TabsTrigger value="quickstart">Quickstart</TabsTrigger>
         <TabsTrigger value="docker">Docker</TabsTrigger>
@@ -238,38 +239,38 @@ function InstallStep() {
       </TabsList>
 
       <TabsContent value="quickstart">
-        <div className="panel">
-          <h4 className="panel-heading">Quick Start? Use our OSS Gigapipe Demo</h4>
-          <p className="mb-4">The demo ships with Gigapipe, Grafana and ClickHouse ready to use</p>
-          <div className="flex gap-2">
-            <Button variant="outline" className="flex gap-2">
+        <div className="gp-wizard-panel">
+          <h4 className="gp-wizard-panel-heading">Quick Start? Use our OSS Gigapipe Demo</h4>
+          <p className="gp-wizard-mb-4">The demo ships with Gigapipe, Grafana and ClickHouse ready to use</p>
+          <div className="gp-wizard-flex gp-wizard-gap-2">
+            <Button variant="outline" className="gp-wizard-flex gp-wizard-gap-2">
               <Github />
               <a href="https://github.com/metrico/gigapipe-oss-demo" target="_blank" rel="noopener noreferrer">
                 Gigapipe Demo Repository
               </a>
             </Button>
-            <Badge className="badge-green">🔋 batteries included</Badge>
+            <Badge className="gp-wizard-badge-green">🔋 batteries included</Badge>
           </div>
-          <p className="text-xs mt-2">Ships with config, data and datasources</p>
+          <p className="gp-wizard-text-xs gp-wizard-mt-2">Ships with config, data and datasources</p>
         </div>
       </TabsContent>
 
       <TabsContent value="docker">
-        <div className="panel">
-          <h4 className="panel-heading">Deploy using Docker or K8s</h4>
-          <div className="panel-code">ghcr.io/metrico/gigapipe:latest</div>
-          <div className="space-y">
-            <div className="flex gap-2">
-              <span className="panel-item-icon">▶</span>
+        <div className="gp-wizard-panel">
+          <h4 className="gp-wizard-panel-heading">Deploy using Docker or K8s</h4>
+          <div className="gp-wizard-panel-code">ghcr.io/metrico/gigapipe:latest</div>
+          <div className="gp-wizard-space-y">
+            <div className="gp-wizard-flex gp-wizard-gap-2">
+              <span className="gp-wizard-panel-item-icon">▶</span>
               <p>
                 Configure Gigapipe using{" "}
-                <a href="/docs/config" className="community-link">
+                <a href="/docs/config" className="gp-wizard-community-link">
                   ENV Settings
                 </a>
               </p>
             </div>
-            <div className="flex gap-2">
-              <span className="panel-item-icon">▶</span>
+            <div className="gp-wizard-flex gp-wizard-gap-2">
+              <span className="gp-wizard-panel-item-icon">▶</span>
               <p>Gigapipe requires ClickHouse for data storage</p>
             </div>
           </div>
@@ -277,9 +278,9 @@ function InstallStep() {
       </TabsContent>
 
       <TabsContent value="docker-compose">
-        <div className="panel">
-          <h4 className="panel-heading">Deploy using Docker Compose</h4>
-          <pre className="panel-pre">
+        <div className="gp-wizard-panel">
+          <h4 className="gp-wizard-panel-heading">Deploy using Docker Compose</h4>
+          <pre className="gp-wizard-panel-pre">
             {`gigapipe:
   image: ghcr.io/metrico/gigapipe:latest
   container_name: gigapipe
@@ -294,30 +295,31 @@ function InstallStep() {
     - CLICKHOUSE_AUTH=gigapipe:demo
     - CLICKHOUSE_DB=qryn`}
           </pre>
-          <div className="space-y">
-            <div className="flex gap-2">
-              <span className="panel-item-icon">▶</span>
+          <div className="gp-wizard-space-y">
+            <div className="gp-wizard-flex gp-wizard-gap-2">
+              <span className="gp-wizard-panel-item-icon">▶</span>
               <p>
                 Configure Gigapipe using{" "}
-                <a href="/docs/config" className="community-link">
+                <a href="/docs/config" className="gp-wizard-community-link">
                   ENV Settings
                 </a>
               </p>
             </div>
-            <div className="flex gap-2">
-              <span className="panel-item-icon">▶</span>
+            <div className="gp-wizard-flex gp-wizard-gap-2">
+              <span className="gp-wizard-panel-item-icon">▶</span>
               <p>Gigapipe requires ClickHouse for data storage</p>
             </div>
           </div>
         </div>
       </TabsContent>
     </Tabs>
+
   )
 }
 
 function ConfigureStep() {
   return (
-    <Tabs defaultValue="logs" className="tabs">
+    <Tabs defaultValue="logs" className="gp-wizard-tabs">
       <TabsList>
         <TabsTrigger value="logs">Logs</TabsTrigger>
         <TabsTrigger value="metrics">Metrics</TabsTrigger>
@@ -327,9 +329,9 @@ function ConfigureStep() {
       </TabsList>
 
       <TabsContent value="logs">
-        <div className="panel">
-          <h4 className="panel-heading">⭐ Use any Loki compatible Agent or Client</h4>
-          <div className="panel-list">
+        <div className="gp-wizard-panel">
+          <h4 className="gp-wizard-panel-heading">⭐ Use any Loki compatible Agent or Client</h4>
+          <div className="gp-wizard-panel-list">
             {[
               { name: "Grafana Alloy", url: "https://grafana.com/docs/alloy/latest/" },
               { name: "Grafana Agent", url: "https://grafana.com/docs/agent/latest/" },
@@ -339,10 +341,16 @@ function ConfigureStep() {
               { name: "Fluentd", url: "https://www.fluentd.org/" },
               { name: "Logstash", url: "https://opensearch.org/docs/latest/tools/logstash/index/" },
             ].map((agent) => (
-              <a key={agent.name} href={agent.url} target="_blank" rel="noopener noreferrer" className="panel-item">
-                <Package className="panel-item-icon" />
-                <span className="panel-item-text">{agent.name}</span>
-                <ExternalLink className="panel-item-external" />
+              <a
+                key={agent.name}
+                href={agent.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="gp-wizard-panel-item"
+              >
+                <Package className="gp-wizard-panel-item-icon" />
+                <span className="gp-wizard-panel-item-text">{agent.name}</span>
+                <ExternalLink className="gp-wizard-panel-item-external" />
               </a>
             ))}
           </div>
@@ -350,19 +358,25 @@ function ConfigureStep() {
       </TabsContent>
 
       <TabsContent value="metrics">
-        <div className="panel">
-          <h4 className="panel-heading">⭐ Use any Prometheus compatible Agent or Client</h4>
-          <div className="panel-list">
+        <div className="gp-wizard-panel">
+          <h4 className="gp-wizard-panel-heading">⭐ Use any Prometheus compatible Agent or Client</h4>
+          <div className="gp-wizard-panel-list">
             {[
               { name: "Grafana Alloy", url: "https://grafana.com/docs/alloy/latest/" },
               { name: "Grafana Agent", url: "https://grafana.com/docs/agent/latest/" },
               { name: "Vector", url: "https://vector.dev/" },
               { name: "Opentelemetry", url: "https://github.com/metrico/otel-collector" },
             ].map((agent) => (
-              <a key={agent.name} href={agent.url} target="_blank" rel="noopener noreferrer" className="panel-item">
-                <BarChart3 className="panel-item-icon" />
-                <span className="panel-item-text">{agent.name}</span>
-                <ExternalLink className="panel-item-external" />
+              <a
+                key={agent.name}
+                href={agent.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="gp-wizard-panel-item"
+              >
+                <BarChart3 className="gp-wizard-panel-item-icon" />
+                <span className="gp-wizard-panel-item-text">{agent.name}</span>
+                <ExternalLink className="gp-wizard-panel-item-external" />
               </a>
             ))}
           </div>
@@ -370,19 +384,25 @@ function ConfigureStep() {
       </TabsContent>
 
       <TabsContent value="traces">
-        <div className="panel">
-          <h4 className="panel-heading">⭐ Use any Tempo/Zipkin compatible Agent or Client</h4>
-          <div className="panel-list">
+        <div className="gp-wizard-panel">
+          <h4 className="gp-wizard-panel-heading">⭐ Use any Tempo/Zipkin compatible Agent or Client</h4>
+          <div className="gp-wizard-panel-list">
             {[
               { name: "Grafana Alloy", url: "https://grafana.com/docs/alloy/latest/" },
               { name: "Grafana Agent", url: "https://grafana.com/docs/agent/latest/" },
               { name: "Zipkin", url: "https://zipkin.io/" },
               { name: "Opentelemetry", url: "https://github.com/metrico/otel-collector" },
             ].map((agent) => (
-              <a key={agent.name} href={agent.url} target="_blank" rel="noopener noreferrer" className="panel-item">
-                <Activity className="panel-item-icon" />
-                <span className="panel-item-text">{agent.name}</span>
-                <ExternalLink className="panel-item-external" />
+              <a
+                key={agent.name}
+                href={agent.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="gp-wizard-panel-item"
+              >
+                <Activity className="gp-wizard-panel-item-icon" />
+                <span className="gp-wizard-panel-item-text">{agent.name}</span>
+                <ExternalLink className="gp-wizard-panel-item-external" />
               </a>
             ))}
           </div>
@@ -390,9 +410,9 @@ function ConfigureStep() {
       </TabsContent>
 
       <TabsContent value="profiles">
-        <div className="panel">
-          <h4 className="panel-heading">⭐ Use any Pyroscope SDK compatible Agent or Client</h4>
-          <div className="panel-list">
+        <div className="gp-wizard-panel">
+          <h4 className="gp-wizard-panel-heading">⭐ Use any Pyroscope SDK compatible Agent or Client</h4>
+          <div className="gp-wizard-panel-list">
             {[
               {
                 name: "Grafana Pyroscope SDK",
@@ -403,10 +423,16 @@ function ConfigureStep() {
                 url: "https://grafana.com/docs/pyroscope/latest/configure-client/grafana-agent/go_pull/",
               },
             ].map((agent) => (
-              <a key={agent.name} href={agent.url} target="_blank" rel="noopener noreferrer" className="panel-item">
-                <Layers className="panel-item-icon" />
-                <span className="panel-item-text">{agent.name}</span>
-                <ExternalLink className="panel-item-external" />
+              <a
+                key={agent.name}
+                href={agent.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="gp-wizard-panel-item"
+              >
+                <Layers className="gp-wizard-panel-item-icon" />
+                <span className="gp-wizard-panel-item-text">{agent.name}</span>
+                <ExternalLink className="gp-wizard-panel-item-external" />
               </a>
             ))}
           </div>
@@ -414,23 +440,23 @@ function ConfigureStep() {
       </TabsContent>
 
       <TabsContent value="opentelemetry">
-        <div className="panel">
-          <h4 className="panel-heading">⭐ Use Gigapipe with Opentelemetry Agents</h4>
-          <div className="flex-col gap-4">
+        <div className="gp-wizard-panel">
+          <h4 className="gp-wizard-panel-heading">⭐ Use Gigapipe with Opentelemetry Agents</h4>
+          <div className="gp-wizard-flex-col gp-wizard-gap-4">
             <a
               href="https://github.com/metrico/otel-collector"
               target="_blank"
               rel="noopener noreferrer"
-              className="panel-item"
+              className="gp-wizard-panel-item"
             >
-              <Package className="panel-item-icon" />
-              <span className="panel-item-text">Gigapipe OTel Collector</span>
-              <ExternalLink className="panel-item-external" />
+              <Package className="gp-wizard-panel-item-icon" />
+              <span className="gp-wizard-panel-item-text">Gigapipe OTel Collector</span>
+              <ExternalLink className="gp-wizard-panel-item-external" />
             </a>
-            <p className="text-sm mt-4">
+            <p className="gp-wizard-text-sm gp-wizard-mt-4">
               The <strong>gigapipe-otel-collector</strong> is designed to store observability data (Traces, Logs,
               Metrics, Profiles) from multiple vendors/platforms into{" "}
-              <a href="https://github.com/clickhouse/clicklhouse" className="community-link">
+              <a href="https://github.com/clickhouse/clicklhouse" className="gp-wizard-community-link">
                 ClickHouse
               </a>{" "}
               using gigapipe fingerprinting and table formats transparently accessible through gigapipe APIs via LogQL,
@@ -439,7 +465,7 @@ function ConfigureStep() {
             <img
               src="https://github.com/metrico/otel-collector/assets/1423657/692b54e9-88ef-49c8-996d-5dbd73ee0782"
               alt="Gigapipe OTel Collector Architecture"
-              className="rounded-lg border w-full max-h-64 object-contain bg-white mt-4"
+              className="gp-wizard-rounded-lg gp-wizard-border gp-wizard-w-full gp-wizard-max-h-64 gp-wizard-object-contain gp-wizard-bg-white gp-wizard-mt-4"
             />
           </div>
         </div>
@@ -450,7 +476,7 @@ function ConfigureStep() {
 
 function ExploreStep() {
   return (
-    <Tabs defaultValue="logs" className="tabs">
+    <Tabs defaultValue="logs" className="gp-wizard-tabs">
       <TabsList>
         <TabsTrigger value="logs">Logs</TabsTrigger>
         <TabsTrigger value="metrics">Metrics</TabsTrigger>
@@ -460,12 +486,12 @@ function ExploreStep() {
       </TabsList>
 
       <TabsContent value="logs">
-        <div className="panel">
-          <h4 className="panel-heading">⭐ Explore Logs using the native Loki Datasource</h4>
-          <div className="media-container">
+        <div className="gp-wizard-panel">
+          <h4 className="gp-wizard-panel-heading">⭐ Explore Logs using the native Loki Datasource</h4>
+          <div className="gp-wizard-media-container">
             <iframe
               src="https://demo.arcade.software/GKaq4SJRBPYyCZgoWBoM?embed"
-              className="media-iframe"
+              className="gp-wizard-media-iframe"
               title="Gigapipe Logs Demo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -475,12 +501,12 @@ function ExploreStep() {
       </TabsContent>
 
       <TabsContent value="metrics">
-        <div className="panel">
-          <h4 className="panel-heading">⭐ Explore Metrics using the native Prometheus/Mimir Datasource</h4>
-          <div className="media-container">
+        <div className="gp-wizard-panel">
+          <h4 className="gp-wizard-panel-heading">⭐ Explore Metrics using the native Prometheus/Mimir Datasource</h4>
+          <div className="gp-wizard-media-container">
             <iframe
               src="https://demo.arcade.software/r2A4ia93hPs96pyiaFQx?embed"
-              className="media-iframe"
+              className="gp-wizard-media-iframe"
               title="Gigapipe Metrics Demo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -490,12 +516,12 @@ function ExploreStep() {
       </TabsContent>
 
       <TabsContent value="traces">
-        <div className="panel">
-          <h4 className="panel-heading">⭐ Explore Traces using the native Tempo Datasource</h4>
-          <div className="media-container">
+        <div className="gp-wizard-panel">
+          <h4 className="gp-wizard-panel-heading">⭐ Explore Traces using the native Tempo Datasource</h4>
+          <div className="gp-wizard-media-container">
             <iframe
               src="https://demo.arcade.software/G43G6ja4CHJYpF9rc3V2?embed"
-              className="media-iframe"
+              className="gp-wizard-media-iframe"
               title="Gigapipe Traces Demo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -505,26 +531,28 @@ function ExploreStep() {
       </TabsContent>
 
       <TabsContent value="profiles">
-        <div className="panel">
-          <h4 className="panel-heading">⭐ Explore Profiles using the native Pyroscope Datasource</h4>
-          <div className="media-container">
+        <div className="gp-wizard-panel">
+          <h4 className="gp-wizard-panel-heading">⭐ Explore Profiles using the native Pyroscope Datasource</h4>
+          <div className="gp-wizard-media-container">
             <img
               src="https://github.com/metrico/qryn-docs/assets/1423657/3fe7167e-504a-42c0-bf51-bdb090ce0f6b"
               alt="Gigapipe Profiles Demo"
-              className="media-image"
+              className="gp-wizard-media-image"
             />
           </div>
         </div>
       </TabsContent>
 
       <TabsContent value="view">
-        <div className="panel">
-          <h4 className="panel-heading">⭐ No Grafana? Explore Logs, Metrics and Traces using Gigapipe View</h4>
-          <div className="media-container">
+        <div className="gp-wizard-panel">
+          <h4 className="gp-wizard-panel-heading">
+            ⭐ No Grafana? Explore Logs, Metrics and Traces using Gigapipe View
+          </h4>
+          <div className="gp-wizard-media-container">
             <img
               src="https://user-images.githubusercontent.com/1423657/200136242-f4133229-ee7c-45e0-8228-8734cf56140a.gif"
               alt="Gigapipe View Demo"
-              className="media-image-cover"
+              className="gp-wizard-media-image-cover"
             />
           </div>
         </div>
@@ -535,28 +563,17 @@ function ExploreStep() {
 
 function ExtendStep() {
   return (
-    <div className="space-y">
-      <div className="panel">
-        <h4 className="panel-heading">Any tutorial or example from Grafana Cloud should work as-is in Gigapipe</h4>
-        <div className="media-container">
-          <img
-            src="https://user-images.githubusercontent.com/1423657/184538094-13c11500-24ef-4468-9f33-dc9d564238e3.gif"
-            alt="Gigapipe Demo"
-            className="media-image-cover"
-          />
-        </div>
-      </div>
-
-      <div className="grid grid-3">
+    <div className="gp-wizard-space-y">
+      <div className="gp-wizard-grid gp-wizard-grid-3">
         <Card>
           <CardHeader>
             <CardTitle>Grafana Dashboards</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-sm">Import any Grafana dashboard directly into your Gigapipe setup.</p>
+            <p className="gp-wizard-text-sm">Import any Grafana dashboard directly into your Gigapipe setup.</p>
           </CardContent>
           <CardFooter>
-            <Button variant="outline" size="sm" className="w-full">
+            <Button variant="outline" size="sm" className="gp-wizard-w-full">
               <ExternalLink /> Browse Dashboards
             </Button>
           </CardFooter>
@@ -567,10 +584,10 @@ function ExtendStep() {
             <CardTitle>Alerting Rules</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-sm">Set up alerting rules just like you would in Grafana Cloud.</p>
+            <p className="gp-wizard-text-sm">Set up alerting rules just like you would in Grafana Cloud.</p>
           </CardContent>
           <CardFooter>
-            <Button variant="outline" size="sm" className="w-full">
+            <Button variant="outline" size="sm" className="gp-wizard-w-full">
               <ExternalLink /> Learn More
             </Button>
           </CardFooter>
@@ -581,47 +598,46 @@ function ExtendStep() {
             <CardTitle>Integrations</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-sm">Connect with your existing tools and services seamlessly.</p>
+            <p className="gp-wizard-text-sm">Connect with your existing tools and services seamlessly.</p>
           </CardContent>
           <CardFooter>
-            <Button variant="outline" size="sm" className="w-full">
+            <Button variant="outline" size="sm" className="gp-wizard-w-full">
               <ExternalLink /> View Integrations
             </Button>
           </CardFooter>
         </Card>
       </div>
+
     </div>
   )
 }
 
 function DoneStep() {
   return (
-    <div className="space-y success-container">
-      <div className="py-8 flex-col items-center">
-        <div className="success-icon">
+    <div className="gp-wizard-space-y gp-wizard-success-container">
+      <div className="gp-wizard-py-8 gp-wizard-flex-col gp-wizard-items-center">
+        <div className="gp-wizard-success-icon">
           <Check />
         </div>
-        <h3 className="success-title">You're all set! 🎉</h3>
-        <p className="success-text">
+        <h3 className="gp-wizard-success-title">You're all set! 🎉</h3>
+        <p className="gp-wizard-success-text">
           If you've used <strong>Grafana</strong> or <strong>Grafana Cloud</strong> before,{" "}
           <em>You will feel right at home.</em>
         </p>
-        <p className="success-text mt-2">
-          ... and since there's nothing new to learn, the Team can just focus on <em>data.</em>{" "}
-          <strong>Whoo-hoo!</strong> 🎉
-        </p>
       </div>
 
-      <div className="grid grid-2">
+      <div className="gp-wizard-grid gp-wizard-grid-2">
         <Card>
           <CardHeader>
             <CardTitle>Join Our Community</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-sm">Connect with other Gigapipe users, share your experiences, and get help.</p>
+            <p className="gp-wizard-text-sm">
+              Connect with other Gigapipe users, share your experiences, and get help.
+            </p>
           </CardContent>
           <CardFooter>
-            <Button variant="outline" size="sm" className="w-full">
+            <Button variant="outline" size="sm" className="gp-wizard-w-full">
               <ExternalLink /> Join Community
             </Button>
           </CardFooter>
@@ -632,20 +648,16 @@ function DoneStep() {
             <CardTitle>GitHub Repository</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-sm">Check out our open-source code, report issues, or contribute.</p>
+            <p className="gp-wizard-text-sm">Check out our open-source code, report issues, or contribute.</p>
           </CardContent>
           <CardFooter>
-            <Button variant="outline" size="sm" className="w-full">
+            <Button variant="outline" size="sm" className="gp-wizard-w-full">
               <Github /> View on GitHub
             </Button>
           </CardFooter>
         </Card>
       </div>
 
-      <div className="warning-box">
-        <h4 className="warning-title">AGPLv3 License</h4>
-        <p className="warning-text">Gigapipe is licensed under the AGPLv3 License and available on Github</p>
-      </div>
     </div>
   )
 }
