@@ -61,7 +61,7 @@ export default function Footer() {
           zIndex: 1000
         }}>
           <p style={{ margin: 0, flex: 1 }}>
-            We do not use any cookies on our website. Private areas of our site and services comply with the <Link className='text-primary' href="/legal/cookies">Gigapipe Cookie Policy.</Link>
+            We leverage temporary anonymous cookies in compliance with the <Link className='text-primary' href="/legal/cookies">Gigapipe Cookie Policy.</Link>
           </p>
           <button 
             onClick={handleAccept}
