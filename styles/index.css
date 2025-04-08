@@ -231,3 +231,7 @@ iframe {
     width: 100%;
 }
 
+.rspress-doc [class^=language-] code {
+    background-color: black;
+}
+
