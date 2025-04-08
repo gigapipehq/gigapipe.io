@@ -536,7 +536,7 @@ function ExploreStep() {
           <div className="gp-wizard-media-container">
             <img
               src="https://github.com/metrico/qryn-docs/assets/1423657/3fe7167e-504a-42c0-bf51-bdb090ce0f6b"
-              alt="Gigapipe Profiles Demo"
+              alt="Profiles Demo"
               className="gp-wizard-media-image"
             />
           </div>
@@ -551,7 +551,7 @@ function ExploreStep() {
           <div className="gp-wizard-media-container">
             <img
               src="https://user-images.githubusercontent.com/1423657/200136242-f4133229-ee7c-45e0-8228-8734cf56140a.gif"
-              alt="Gigapipe View Demo"
+              alt="View Demo"
               className="gp-wizard-media-image-cover"
             />
           </div>
