@@ -201,28 +201,28 @@ export default defineConfig({
       { text: "About", 
         link: "about" 
       },
+      { text: "Docs", 
+        link: "docs/index" ,
+        items: [
+          {
+            text: "Cloud Docs",
+            link: '/docs/index'
+          },
+          {
+            text: "OSS Docs",
+            link: '/docs/oss'
+          },
+          {
+            text: "API Docs",
+            link: '/docs/api'
+          }
+        ]
+      },
       { text: "Plans", 
         link: "pricing" 
       },
       { text: "Sign Up", 
         link: "signup" 
-      },
-      { text: "Docs", 
-        link: "docs/index" ,
-        items: [
-          {
-            text: "Cloud Service",
-            link: '/docs/index'
-          },
-          {
-            text: "Open Source",
-            link: '/docs/oss'
-          },
-          {
-            text: "Gigapipe API",
-            link: '/docs/api'
-          }
-        ]
       },
       { text: "Blog", 
         link: "https://blog.gigapipe.com" 
