@@ -8,16 +8,16 @@ export const frontmatter = {
 
 const plans = [
   {
-    name: 'FREE TRIAL',
-    disk: '640GB NVMe', 
+    name: 'OPEN-SOURCE',
+    disk: 'Unmetered', 
     host: 'hetzner-shared',
     specs: {
-      ram: '4GB RAM',
-      cpu: '2x Shared vCPU',
-      storage: '10GB Shared',
-      transfer: '10GB/Month Transfer',
-      Redundancy: 'Shared Node',
-      support: 'Forum Support'
+      ram: '♾️ RAM',
+      cpu: '♾️ vCPU',
+      storage: '♾️ Storage',
+      transfer: '♾️ Usage',
+      Redundancy: 'On-Prem DIY',
+      support: 'Community Support'
     },
     price: {
       monthly: 0,
