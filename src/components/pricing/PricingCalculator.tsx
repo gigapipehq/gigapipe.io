@@ -16,7 +16,7 @@ const plans = [
       cpu: '♾️ vCPU',
       storage: '♾️ Storage',
       transfer: '♾️ Usage',
-      Redundancy: 'On-Prem DIY',
+      Redundancy: '♾️ AGPLv3',
       support: 'Community Support'
     },
     price: {
