@@ -52,6 +52,26 @@ Welcome to your _ready-to-use_ managed Observability stack - _just add data_ ☘
             > Gigapipe requires ClickHouse for data storage
             
             </Tab>
+            <Tab label="Binary">
+            ⭐ Deploy `gigapipe` in seconds using our static binaries
+
+            ```tsx title="Binary Download (amd64)"
+            curl -fsSL github.com/metrico/gigapipe/releases/latest/download/gigapipe -O \
+            && chmod +x gigapipe
+            ```
+
+            ```tsx title="Binary Download (arm64)"
+            curl -fsSL github.com/metrico/gigapipe/releases/latest/download/gigapipe_arm64 -O \
+            && chmod +x gigapipe_arm64
+            ```
+
+            📦 [Packages](https://github.com/metrico/gigapipe/releases) are available for `deb` and `rpm` based distributions
+
+            > Configure Gigapipe using [ENV Settings](/docs/config)
+
+            > Gigapipe requires ClickHouse for data storage
+            
+            </Tab>
             <Tab label="Demo Quickstart">
             Quick Start? Use our [OSS Gigapipe Demo](https://github.com/metrico/gigapipe-oss-demo)
 
