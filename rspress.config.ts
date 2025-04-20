@@ -23,6 +23,7 @@ export default defineConfig({
     '<meta name="twitter:title" content="Gigapipe: Polyglot Observability">',
     '<meta name="twitter:description" content="Gigapipe: Polyglot Observability">',
     '<meta name="twitter:image" content="https://i.imgur.com/w9MZrzK.png">',
+    '<meta name="google-site-verification" content="-54v8hYAOz9iDYUlZ4A9YjAsv1T-V1oTVd7g8RnYcfU" />',
   ],
   description: 'Gigapipe: Polyglot Observability',
   globalStyles: path.join(__dirname, 'styles/index.css'),
