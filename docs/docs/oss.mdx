@@ -49,7 +49,91 @@ Welcome to your _ready-to-use_ managed Observability stack - _just add data_ ☘
 
             > Configure Gigapipe using [ENV Settings](/docs/config)
 
-            > Gigapipe requires ClickHouse for data storage
+            > Here's a [full example](https://github.com/gigapipehq/gigapipe-oss-demo/blob/main/docker-compose-base.yml) including Gigapipe, ClickHouse and Grafana
+
+            ```yaml title="Full-Stack Docker Compose"
+            volumes:
+                grafana_data: {}
+                clickhouse_data: {}
+            
+            services:
+
+              gigapipe:
+                image: ghcr.io/metrico/gigapipe:latest
+                container_name: gigapipe
+                hostname: gigapipe
+                pull_policy: always
+                restart: unless-stopped
+                expose:
+                  - 3100
+                ports:
+                  - "3100:3100"
+                environment:
+                  - CLICKHOUSE_SERVER=clickhouse-server
+                  - CLICKHOUSE_PORT=9000
+                  - CLICKHOUSE_AUTH=gigapipe:demo
+                  - CLICKHOUSE_DB=qryn
+                  - PORT=3100
+                depends_on:
+                  clickhouse-server:
+                    condition: service_healthy
+                logging:
+                  driver: "local"
+                  options:
+                    max-size: "5m"
+                    max-file: "5"
+
+              clickhouse-server:
+                image: clickhouse/clickhouse-server:24.9.1-alpine
+                container_name: clickhouse-server
+                hostname: clickhouse
+                restart: unless-stopped
+                volumes:
+                  - clickhouse_data:/var/lib/clickhouse
+                  - ./clickhouse/opentelemetry_zipkin.sql:/docker-entrypoint-initdb.d/opentelemetry_zipkin.sql
+                environment:
+                  - CLICKHOUSE_USER=gigapipe
+                  - CLICKHOUSE_PASSWORD=demo
+                ports:
+                  - 8123:8123
+                  - 9000:9000
+                healthcheck:
+                  test: ['CMD', 'wget', '--spider', '-q', '127.0.0.1:8123/ping']
+                  interval: 1s
+                  timeout: 1s
+                  retries: 30
+                logging:
+                  driver: "local"
+                  options:
+                    max-size: "10m"
+                    max-file: "5"
+              grafana:
+                image: grafana/grafana-oss:11.5.0
+                container_name: grafana
+                volumes:
+                  - grafana_data:/var/lib/grafana
+                  - ./grafana/provisioning/:/etc/grafana/provisioning/
+                environment:
+                  - GF_SECURITY_ADMIN_USER=${ADMIN_USER:-admin}
+                  - GF_SECURITY_ADMIN_PASSWORD=${ADMIN_PASSWORD:-admin}
+                  - GF_USERS_ALLOW_SIGN_UP=false
+                  - GF_USERS_DEFAULT_THEME=light
+                  - GF_EXPLORE_ENABLED=true
+                  - GF_ALERTING_ENABLED=false
+                  - GF_UNIFIED_ALERTING_ENABLED=true
+                  - GF_FEATURE_TOGGLES_ENABLE=traceToMetrics,publicDashboards,tempoApmTable
+                  - GF_INSTALL_PLUGINS=grafana-pyroscope-app,https://storage.googleapis.com/integration-artifacts/grafana-lokiexplore-app/grafana-lokiexplore-app-latest.zip;grafana-lokiexplore-app
+                restart: unless-stopped
+                ports:
+                  - 3000:3000
+                depends_on:
+                  - gigapipe
+                logging:
+                  driver: "local"
+                  options:
+                    max-size: "5m"
+                    max-file: "5"
+            ```
             
             </Tab>
             <Tab label="Binary">
